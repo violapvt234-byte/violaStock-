@@ -318,6 +318,30 @@
 
 <div id="toastContainer" class="toast-container"></div>
 
+<!-- App Access PIN Modal (Appears immediately when opening web) -->
+<div id="appPinModal" class="modal" style="display: block; z-index: 9999;">
+    <div class="modal-content" style="max-width: 400px; margin-top: 15vh; text-align: center;">
+        <h3 style="color: #38bdf8;">🔒 Enter System PIN</h3>
+        <p style="font-size: 13px; color: #94a3b8;">මෙම පද්ධතියට පිවිසීමට ඔබේ ආරක්‍ෂක PIN අංකය ඇතුළත් කරන්න.</p>
+        <div class="form-group" style="text-align: left;">
+            <label>4-Digit PIN (Default: 6060):</label>
+            <input type="password" id="appPinInput" placeholder="Enter PIN" maxlength="6" style="text-align: center; font-size: 20px; letter-spacing: 5px;">
+        </div>
+        <button class="action-btn" onclick="verifyAppPin()">Unlock System</button>
+        <div style="margin-top: 15px;">
+            <a href="javascript:void(0)" onclick="triggerSystemPinOtp()" style="color: #38bdf8; font-size: 13px; text-decoration: underline;">Forgot PIN? (Get OTP to Email)</a>
+        </div>
+        <!-- Forgot PIN OTP Step inside modal -->
+        <div id="pinOtpBox" style="display: none; margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+            <div class="form-group" style="text-align: left;">
+                <label>Enter 6-Digit OTP:</label>
+                <input type="text" id="systemOtpInput" placeholder="Enter OTP" maxlength="6">
+            </div>
+            <button class="action-btn" style="background: #10b981;" onclick="verifySystemPinOtp()">Verify & Reset PIN to 6060</button>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="header-area" id="headerArea">
         <div class="top-buttons no-print">
@@ -412,14 +436,34 @@
     <div class="modal-content">
         <span class="close" onclick="closeSettings()">&times;</span>
         <h3 style="margin-top:0;">⚙️ Settings & Customization</h3>
+        
+        <div style="background: rgba(15, 23, 42, 0.6); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <span id="settingsRoleStatus" style="font-size: 13px; font-weight: bold;">Status: Viewer Mode</span>
+            <button id="settingsAuthBtn" onclick="toggleAuthRole()" style="background: #0284c7; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold;">🔑 Switch to Admin</button>
+        </div>
+
         <div class="form-group">
             <label>Store / System Name:</label>
             <input type="text" id="storeNameInput" placeholder="Enter Store Name...">
         </div>
         <button class="action-btn" onclick="saveStoreSettings()">Save Store Identity</button>
         <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+        
+        <h4 style="color:#f1f5f9;">🔐 Change System PIN (Default: 6060)</h4>
+        <div class="form-group">
+            <label>New System PIN:</label>
+            <input type="text" id="newSystemPinInput" placeholder="Enter new PIN" maxlength="6">
+        </div>
+        <button class="action-btn" style="background: #10b981;" onclick="updateSystemPin()">Update System PIN</button>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
         <h4 style="color:#f1f5f9;">🔑 Admin Password</h4>
         <button class="action-btn" style="background: linear-gradient(135deg, #0284c7, #38bdf8);" onclick="openPasswordChangeModal()">Change Password</button>
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+        <h4 style="color:#f1f5f9;">📂 PC Auto-Backup Folder Setup</h4>
+        <p style="font-size: 13px; color: #94a3b8;">আপনার පරිගණකයේ 'Backup' ෆෝල්ඩරය තෝරන්න. එවිට සියලුම දත්ත ස්වයංක්‍රීයව එහි බැකප් වනු ඇත.</p>
+        <button class="action-btn" style="background: #10b981;" onclick="setupAutoBackupFolder()">📁 Select Backup Folder</button>
+        <div id="backupStatusText" style="font-size: 13px; margin-top: 8px; color: #34d399;">Backup Folder: Not Set</div>
         <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
         <h4 style="color:#f1f5f9;">📂 Upload Excel File to Master Database</h4>
         <input type="file" id="excelFile" accept=".xlsx, .xls" style="margin-bottom: 8px; padding: 6px; border: 1px dashed var(--border-color); border-radius: 6px; width: 100%;" onchange="handleExcelUpload(event)">
@@ -472,6 +516,7 @@
 </div>
 
 <script>
+    let SYSTEM_PIN = "6060";
     let ADMIN_PASSWORD = "1234";
     let isAdminLoggedIn = false;
     let itemDatabase = JSON.parse(localStorage.getItem('master_item_db')) || {};
@@ -479,9 +524,10 @@
     let stockList = JSON.parse(localStorage.getItem('stock_list_items')) || [];
     let storeName = localStorage.getItem('store_custom_name') || "Viola Stock List & POS System";
     let generatedOtp = "";
+    let systemPinOtp = "";
     const targetEmail = "violapv234@gmail.com";
+    let backupDirHandle = null;
 
-    // මෙන්න ඔබේ නිවැරදි කරගත් Firebase වින්‍යාසය (Config)
     const firebaseConfig = {
         apiKey: "AIzaSy...", 
         authDomain: "viola-stok-191c8.firebaseapp.com",
@@ -494,6 +540,7 @@
 
     let dbRef = null;
     let pwdRef = null;
+    let pinRef = null;
 
     window.onload = function() {
         initFirebase();
@@ -533,12 +580,79 @@
                         ADMIN_PASSWORD = localPwd;
                     }
                 });
+
+                pinRef = firebase.database().ref('system_pin');
+                pinRef.on('value', (snapshot) => {
+                    const cloudPin = snapshot.val();
+                    if (cloudPin) {
+                        SYSTEM_PIN = cloudPin;
+                        localStorage.setItem('system_custom_pin', SYSTEM_PIN);
+                    } else {
+                        let localPin = localStorage.getItem('system_custom_pin') || "6060";
+                        pinRef.set(localPin);
+                        SYSTEM_PIN = localPin;
+                    }
+                });
             } else {
                 ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
+                SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "6060";
             }
         } catch(e) {
             ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
+            SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "6060";
         }
+    }
+
+    // App Startup PIN Verification
+    function verifyAppPin() {
+        let enteredPin = document.getElementById('appPinInput').value.trim();
+        if (enteredPin === SYSTEM_PIN) {
+            document.getElementById('appPinModal').style.display = 'none';
+        } else {
+            alert("❌ Incorrect PIN! Try again.");
+        }
+    }
+
+    function triggerSystemPinOtp() {
+        systemPinOtp = Math.floor(100000 + Math.random() * 900000).toString();
+        let formData = new FormData();
+        formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY");
+        formData.append("email", targetEmail);
+        formData.append("subject", "System PIN Reset OTP");
+        formData.append("message", "Your System PIN Reset OTP is: " + systemPinOtp);
+        fetch("https://api.web3forms.com/submit", { method: "POST", body: formData })
+        .then(res => res.json()).then(data => {
+            if (data.success) alert("📧 OTP sent to " + targetEmail);
+            else alert("❌ Failed to send email. Check API key.");
+        });
+        document.getElementById('pinOtpBox').style.display = 'block';
+    }
+
+    function verifySystemPinOtp() {
+        let userOtp = document.getElementById('systemOtpInput').value.trim();
+        if (userOtp === systemPinOtp) {
+            SYSTEM_PIN = "6060";
+            localStorage.setItem('system_custom_pin', "6060");
+            if (pinRef) pinRef.set("6060");
+            alert("✅ PIN successfully reset to default: 6060");
+            document.getElementById('appPinModal').style.display = 'none';
+        } else {
+            alert("❌ Incorrect OTP!");
+        }
+    }
+
+    function updateSystemPin() {
+        if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); return; }
+        let newPin = document.getElementById('newSystemPinInput').value.trim();
+        if (newPin.length < 4) {
+            alert("PIN must be at least 4 characters long!");
+            return;
+        }
+        SYSTEM_PIN = newPin;
+        localStorage.setItem('system_custom_pin', SYSTEM_PIN);
+        if (pinRef) pinRef.set(SYSTEM_PIN);
+        document.getElementById('newSystemPinInput').value = '';
+        alert("✅ System PIN updated successfully!");
     }
 
     function toggleAuthRole() {
@@ -560,18 +674,66 @@
 
     function updateUIMode() {
         let authBtn = document.getElementById('authRoleBtn');
+        let settingsAuthBtn = document.getElementById('settingsAuthBtn');
+        let settingsRoleStatus = document.getElementById('settingsRoleStatus');
         let processBtn = document.getElementById('processBtn');
         let inputs = document.querySelectorAll('.form-grid input, .form-grid select');
 
         if (isAdminLoggedIn) {
             authBtn.innerText = "👑 Admin Mode (Click to Switch)";
             authBtn.style.background = "#10b981";
+            
+            settingsAuthBtn.innerText = "🔒 Switch to Viewer";
+            settingsAuthBtn.style.background = "#f43f5e";
+            settingsRoleStatus.innerText = "Status: 👑 Admin Mode Active";
+            settingsRoleStatus.style.color = "#34d399";
+
             processBtn.style.display = "block";
             inputs.forEach(el => el.removeAttribute('disabled'));
         } else {
             authBtn.innerText = "🔑 Viewer Mode (Click to Switch)";
             authBtn.style.background = "#0284c7";
+            
+            settingsAuthBtn.innerText = "🔑 Switch to Admin";
+            settingsAuthBtn.style.background = "#0284c7";
+            settingsRoleStatus.innerText = "Status: 🔑 Viewer Mode Active";
+            settingsRoleStatus.style.color = "#38bdf8";
+
             processBtn.style.display = "none";
+            inputs.forEach(el => el.setAttribute('disabled', 'true'));
+        }
+    }
+
+    async function setupAutoBackupFolder() {
+        if (!window.showDirectoryPicker) {
+            alert("⚠️ Your browser does not support automatic folder access. Please use Google Chrome or Microsoft Edge.");
+            return;
+        }
+        try {
+            backupDirHandle = await window.showDirectoryPicker();
+            document.getElementById('backupStatusText').innerText = "Backup Folder: Connected Successfully! ✅";
+            alert("✅ Backup folder linked successfully! All updates will now automatically save to your PC folder.");
+            triggerAutoBackup();
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    async function triggerAutoBackup() {
+        if (!backupDirHandle) return;
+        try {
+            const fileHandle = await backupDirHandle.getFileHandle("stock_backup.json", { create: true });
+            const writable = await fileHandle.createWritable();
+            const backupData = {
+                storeName: storeName,
+                lastUpdated: new Date().toISOString(),
+                stockList: stockList,
+                itemDatabase: itemDatabase
+            };
+            await writable.write(JSON.stringify(backupData, null, 2));
+            await writable.close();
+        } catch (e) {
+            console.error("Auto backup failed:", e);
         }
     }
 
@@ -580,6 +742,7 @@
         localStorage.setItem('stock_boxes', JSON.stringify(boxes));
         localStorage.setItem('master_item_db', JSON.stringify(itemDatabase));
         if (dbRef) dbRef.set(stockList);
+        triggerAutoBackup();
     }
 
     function updateModeColor() {
@@ -645,8 +808,14 @@
 
     function openSettings() {
         if (!isAdminLoggedIn) {
-            let pwd = prompt("⚙️ Enter Admin Password:");
-            if (pwd === ADMIN_PASSWORD) { isAdminLoggedIn = true; updateUIMode(); } else { alert("❌ Incorrect Password!"); return; }
+            let pwd = prompt("⚙️ Enter Admin Password to open Settings:");
+            if (pwd === ADMIN_PASSWORD) { 
+                isAdminLoggedIn = true; 
+                updateUIMode(); 
+            } else { 
+                alert("❌ Incorrect Password!"); 
+                return; 
+            }
         }
         document.getElementById('settingsModal').style.display = 'block';
     }
@@ -654,12 +823,14 @@
     function closeSettings() { document.getElementById('settingsModal').style.display = 'none'; }
     function openPasswordChangeModal() { document.getElementById('passwordModal').style.display = 'block'; }
     function closePasswordModal() { document.getElementById('passwordModal').style.display = 'none'; }
+    
     function verifyCurrentPassword() {
         if (document.getElementById('currentPwdInput').value === ADMIN_PASSWORD) {
             document.getElementById('pwdStep1').style.display = 'none';
             document.getElementById('pwdStep2').style.display = 'block';
         } else { alert("❌ Incorrect Password!"); }
     }
+
     function triggerOtpRequest() {
         generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
         let formData = new FormData();
@@ -675,12 +846,14 @@
         document.getElementById('pwdStep1').style.display = 'none';
         document.getElementById('pwdStepOtp').style.display = 'block';
     }
+
     function verifyOtpCode() {
         if (document.getElementById('otpCodeInput').value.trim() === generatedOtp) {
             document.getElementById('pwdStepOtp').style.display = 'none';
             document.getElementById('pwdStep2').style.display = 'block';
         } else { alert("❌ Incorrect OTP!"); }
     }
+
     function saveNewPassword() {
         let newPwd = document.getElementById('newPwdInput').value;
         if (newPwd.length < 4 || newPwd !== document.getElementById('confirmPwdInput').value) {
@@ -697,7 +870,7 @@
     function closeStockSummaryModal() { document.getElementById('stockSummaryModal').style.display = 'none'; }
 
     function handleExcelUpload(event) {
-        let file = event.target.files[0];
+        let file = event.target.files.files ? event.target.files.files[0] : event.target.files[0];
         if (!file) return;
         let reader = new FileReader();
         reader.onload = function(e) {
@@ -761,7 +934,8 @@
         tableBody.innerHTML = '';
         stockList.forEach((item, index) => {
             let row = tableBody.insertRow();
-            row.innerHTML = `<td>${item.boxNo}</td><td>${item.sku}</td><td>${item.name}</td><td>${item.category}</td><td>${item.brand || '-'}</td><td><span class="qty-badge">${item.qty}</span></td><td><button style="background:#f43f5e; color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;" onclick="deleteRow(${index})">Delete</button></td>`;
+            let actionTd = isAdminLoggedIn ? `<td><button style="background:#f43f5e; color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;" onclick="deleteRow(${index})">Delete</button></td>` : `<td>-</td>`;
+            row.innerHTML = `<td>${item.boxNo}</td><td>${item.sku}</td><td>${item.name}</td><td>${item.category}</td><td>${item.brand || '-'}</td><td><span class="qty-badge">${item.qty}</span></td>${actionTd}`;
         });
         document.getElementById('totalQty').innerText = stockList.length;
         document.getElementById('btnTotalQty').innerText = stockList.length;
