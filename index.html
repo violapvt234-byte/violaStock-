@@ -624,6 +624,7 @@
     let itemDbRef = null;
     let pwdRef = null;
     let pinRef = null;
+    let settingsRef = null;
 
     window.onload = function() {
         loadSystemData();
@@ -706,6 +707,18 @@
                         SYSTEM_PIN = localPin;
                     }
                 });
+
+                settingsRef = firebase.database().ref('system_settings');
+                settingsRef.on('value', (snapshot) => {
+                    const settings = snapshot.val();
+                    if (settings) {
+                        if (settings.storeName) { storeName = settings.storeName; localStorage.setItem('viola_store_name', storeName); }
+                        if (settings.customHeaderLogo !== undefined) { customHeaderLogo = settings.customHeaderLogo; localStorage.setItem('viola_header_logo', customHeaderLogo); }
+                        if (settings.customLogoOpacity !== undefined) { customLogoOpacity = settings.customLogoOpacity; localStorage.setItem('viola_logo_opacity', customLogoOpacity); }
+                        if (settings.titleTextColor) { titleTextColor = settings.titleTextColor; localStorage.setItem('viola_title_color', titleTextColor); }
+                        applyStoreIdentity();
+                    }
+                });
             } else {
                 ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
                 SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "1234";
@@ -713,6 +726,23 @@
         } catch(e) {
             ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
             SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "1234";
+        }
+    }
+
+    function saveSettingsToFirebase() {
+        let settingsData = {
+            storeName: storeName,
+            customHeaderLogo: customHeaderLogo,
+            customLogoOpacity: customLogoOpacity,
+            titleTextColor: titleTextColor
+        };
+        localStorage.setItem('viola_store_name', storeName);
+        localStorage.setItem('viola_header_logo', customHeaderLogo);
+        localStorage.setItem('viola_logo_opacity', customLogoOpacity);
+        localStorage.setItem('viola_title_color', titleTextColor);
+
+        if (settingsRef) {
+            settingsRef.set(settingsData);
         }
     }
 
@@ -853,15 +883,16 @@
         reader.onload = function(e) {
             try {
                 let backupData = JSON.parse(e.target.result);
-                if (backupData.storeName) { storeName = backupData.storeName; localStorage.setItem('viola_store_name', storeName); }
+                if (backupData.storeName) storeName = backupData.storeName;
                 if (backupData.systemPin) { SYSTEM_PIN = backupData.systemPin; localStorage.setItem('system_custom_pin', SYSTEM_PIN); if (pinRef) pinRef.set(SYSTEM_PIN); }
                 if (backupData.adminPassword) { ADMIN_PASSWORD = backupData.adminPassword; localStorage.setItem('admin_custom_pwd', ADMIN_PASSWORD); if (pwdRef) pwdRef.set(ADMIN_PASSWORD); }
                 if (backupData.itemDatabase) { itemDatabase = backupData.itemDatabase; localStorage.setItem('viola_item_db', JSON.stringify(itemDatabase)); if (itemDbRef) itemDbRef.set(itemDatabase); }
                 if (backupData.stockList) { stockList = backupData.stockList; localStorage.setItem('viola_stock_list', JSON.stringify(stockList)); if (dbRef) dbRef.set(stockList); }
-                if (backupData.customHeaderLogo !== undefined) { customHeaderLogo = backupData.customHeaderLogo; localStorage.setItem('viola_header_logo', customHeaderLogo); }
-                if (backupData.customLogoOpacity !== undefined) { customLogoOpacity = backupData.customLogoOpacity; localStorage.setItem('viola_logo_opacity', customLogoOpacity); }
-                if (backupData.titleTextColor) { titleTextColor = backupData.titleTextColor; localStorage.setItem('viola_title_color', titleTextColor); }
+                if (backupData.customHeaderLogo !== undefined) customHeaderLogo = backupData.customHeaderLogo;
+                if (backupData.customLogoOpacity !== undefined) customLogoOpacity = backupData.customLogoOpacity;
+                if (backupData.titleTextColor) titleTextColor = backupData.titleTextColor;
 
+                saveSettingsToFirebase();
                 applyStoreIdentity();
                 updateBoxDropdown();
                 populateDatalists();
@@ -911,19 +942,18 @@
         let nameInput = document.getElementById('storeNameInput').value.trim();
         if (nameInput) {
             storeName = nameInput;
-            localStorage.setItem('viola_store_name', storeName);
-            applyStoreIdentity();
-            alert("Store name updated!");
+            saveSettingsToFirebase();
+            alert("Store name updated & synced globally!");
         }
     }
 
     function updateTitleColor(color) {
         titleTextColor = color;
-        localStorage.setItem('viola_title_color', titleTextColor);
         let headerArea = document.getElementById('headerArea');
         headerArea.style.setProperty('--title-color', titleTextColor);
         document.getElementById('titleColorPicker').value = titleTextColor;
         document.getElementById('titleColorText').value = titleTextColor;
+        saveSettingsToFirebase();
     }
 
     function handleHeaderLogoUpload(event) {
@@ -933,9 +963,8 @@
         let reader = new FileReader();
         reader.onload = function(e) {
             customHeaderLogo = e.target.result;
-            localStorage.setItem('viola_header_logo', customHeaderLogo);
-            applyStoreIdentity();
-            alert("✅ Header background logo uploaded successfully!");
+            saveSettingsToFirebase();
+            alert("✅ Header background logo uploaded & synced globally!");
             event.target.value = '';
         };
         reader.readAsDataURL(file);
@@ -943,18 +972,17 @@
 
     function updateLogoOpacity(val) {
         customLogoOpacity = parseFloat(val);
-        localStorage.setItem('viola_logo_opacity', customLogoOpacity);
         document.getElementById('opacityValLabel').innerText = customLogoOpacity;
         let headerArea = document.getElementById('headerArea');
         headerArea.style.setProperty('--header-bg-opacity', customLogoOpacity);
+        saveSettingsToFirebase();
     }
 
     function resetHeaderLogo() {
         if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); return; }
         customHeaderLogo = "";
-        localStorage.removeItem('viola_header_logo');
-        applyStoreIdentity();
-        alert("✅ Custom logo removed!");
+        saveSettingsToFirebase();
+        alert("✅ Custom logo removed globally!");
     }
 
     function switchSettingsTab(tabId, btnEl) {
