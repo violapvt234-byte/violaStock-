@@ -1,0 +1,1198 @@
+id,variant_id,product_name,product_type,product_code,sku,category,brand,price,cost_price,base_unit,unit_quantity,tax_rate (%),product_description,variant_name,variant_sku,variant_product_code,variant_cost_price,variant_price,variant_qty,variant_status
+2,,Button Down Shirt & Culotte Set,single,5819221036,VCSFK0171,Full Kit,Viola,7990,6200,unit,51,0,,,,,,,,
+4,,Floral One Shoulder Frock,single,9102167795,VLSFR006,laxary,Viola,7690,6000,pcs,32,0,,,,,,,,
+10,,Bathik Night Wear,single,0285160014,VCBNW0005,Night Wear,Vyla,2690,2500,pcs,13,0,,,,,,,,
+13,,ADDA Slippers,single,6992249256,S0021,Slippers,ADDA,4690,3200,pcs,9,0,,,,,,,,
+15,,Banny T Shirt,single,5651261851,TS005,Crop Top,Banny,3290,2500,pcs,13,0,,,,,,,,
+16,,Bathik Crop Top Long Sleeve,single,2088271113,B0017,Bathik,N/A,2890,2000,pcs,6,0,,,,,,,,
+18,,Bathik Crop Top Normal,single,2380762962,B0018,Bathik,N/A,3190,2300,pcs,6,0,,,,,,,,
+19,,Bathik Saree,single,9976852616,BS001,Bathik Saree,N/A,5600,5600,pcs,22,0,,,,,,,,
+25,,Floral V Neck Frock *,single,1233280587,VCSFR0013,Frocks,Viola,4190,3500,pcs,13,0,Size check 04 ,,,,,,,
+26,,Floral V Neck Frock XL,single,1215178820,VCSFR011,Frocks,Viola,3000,3000,pcs,13,0,,,,,,,,
+27,,Floral V Neck Frock S,single,4350061349,VCSFR010,Frocks,Viola,3000,3000,pcs,14,0,,,,,,,,
+28,,Floral V Neck Frock M,single,3366186278,VCSFR009,Frocks,Viola,3000,3000,pcs,14,0,,,,,,,,
+29,,Full Kit,single,5923477193,FK0019,Full Kit,N/A,3800,3800,pcs,10,0,,,,,,,,
+31,,Goodly T Shirt,single,9108816980,TS006,Goodly Cotton,Goodly,2790,1500,pcs,24,0,,,,,,,,
+32,,Hand Bag,single,9584375355,B0011,Box Bag,N/A,5000,5000,pcs,6,0,,,,,,,,
+33,,Kids T Shirt,single,4301274762,KTS007,U+ Kids,U+ ,3890,2300,pcs,12,0,,,,,,,,
+34,,KITO Slippers,single,2037593483,S0022,Slippers,KITO,4690,3000,pcs,6,0,,,,,,,,
+35,,Dual Pattern Button Down Kurta XL,single,2614533926,VCSKT003,Kurtha Top,Viola,6290,5800,pcs,19,0,,,,,,,,
+41,,Ladies Bata,single,0264197176,B0022,Bata,Mixstar,3290,1000,pcs,11,0,,,,,,,,
+43,,Ladies Hats,single,1215488194,H009,Hats,N/A,2990,1500,pcs,9,0,,,,,,,,
+48,,Lether Belt,single,9998384473,B0020,Belt,N/A,2490,1500,pcs,25,0,,,,,,,,
+52,117,Midnight Blossom Frock # - Red,variable,7699048526,VCSFR016-PIN,Viola Frock,Viola,4690,4990,pcs,15,0,,Red,VCSFR016-PIN,7329686380,4990,4690,6,1
+52,118,Midnight Blossom Frock # - White,variable,7699048526,VCSFR016-GRE,Viola Frock,Viola,4690,4990,pcs,15,0,,White,VCSFR016-GRE,6176441952,4990,4690,7,1
+53,,Mini Bag,single,9660166847,B0013,Mini Bag,N/A,8500,8500,pcs,3,0,,,,,,,,
+54,,Oval Bag,single,3452061389,B0014,Oval Bag,N/A,4190,3500,pcs,6,0,,,,,,,,
+55,,Over Coat,single,6871725320,OC0020,Over Coat,N/A,3990,2000,pcs,11,0,"Dark Green, Light Green, Off White, White, Blue",,,,,,,
+56,,Plain Hats,single,3492188615,H0010,Hats,N/A,1890,1000,pcs,4,0,,,,,,,,
+57,,Printed Bag,single,3035706821,B0012,Printed,N/A,7000,7000,pcs,3,0,,,,,,,,
+58,,Sweet Peony Frock S,single,7563933624,VCSFR017,Viola Frock,Viola,4600,4600,pcs,18,0,,,,,,,,
+59,,Sweet Peony Frock M,single,6908026423,VCSFR018,Viola Frock,Viola,4790,3500,pcs,19,0,,,,,,,,
+60,,Sweet Peony Frock *,single,6432364042,VCSFR019,Frocks,Viola,4790,3500,pcs,16,0,Size check 03 pec *1pec damage,,,,,,,
+63,,Vintage Weave Small Woven  Bag,single,0031888461,VCBB002,Woven Bag Small,N/A,4990,3500,pcs,1,0,,,,,,,,
+64,,Costal Breeze Woven Bag meadium,single,3077496978,VCBB001,bag meadium,N/A,4890,3600,pcs,3,0,,,,,,,,
+65,,Yellow Ditsy Floral Frock L,single,3642743229,VCSFR004,Viola Frock,Viola,4890,4000,pcs,16,0,,,,,,,,
+66,,Yellow Ditsy Floral Frock XL,single,6411855449,VCSFR003,Viola Frock,Viola,4890,4000,pcs,16,0,,,,,,,,
+67,,Yellow Ditsy Floral Frock S,single,5058205638,VCSFR002,Viola Frock,Viola,4890,4000,pcs,16,0,,,,,,,,
+68,724,Yellow Ditsy Floral Frock * - XL,variable,6724893017,VCSFR001-XL,Frock,Viola,4890,4000,pcs,63,0,Size check 04,XL,VCSFR001-XL,5403179452,4000,4890,16,1
+68,725,Yellow Ditsy Floral Frock * - L,variable,6724893017,VCSFR001-L,Frock,Viola,4890,4000,pcs,63,0,Size check 04,L,VCSFR001-L,9953586962,4000,4890,16,1
+68,726,Yellow Ditsy Floral Frock * - M,variable,6724893017,VCSFR001-M,Frock,Viola,4890,4000,pcs,63,0,Size check 04,M,VCSFR001-M,5647505862,4000,4890,16,1
+68,727,Yellow Ditsy Floral Frock * - S,variable,6724893017,VCSFR001-S,Frock,Viola,4890,4000,pcs,63,0,Size check 04,S,VCSFR001-S,9749908646,4000,4890,15,1
+70,,Classic Comfort Shorts,single,3637820952,VDBST0016,Short,Vyla,990,800,pcs,5,0,Purple & Black,,,,,,,
+73,,Patch Denim Shorts @,single,7673863287,VDBST0019,Short,Vyla,3490,3200,pcs,4,0,,,,,,,,
+74,,Denim Shorts L,single,7113634218,VCBST0020,Short,Vyla,3290,3000,pcs,6,0,,,,,,,,
+75,,Autumn Lace Skirt,single,2130513353,VCBSK0024,laxary,Katelina,6890,5200,pcs,6,0,"White 2, Cream 2, Brown 2, Black 2",,,,,,,
+76,,Embroidered Eyelet Skirt,single,2463771988,VLBSK0022,Skirt,Vyla,4790,3500,pcs,8,0,,,,,,,,
+77,,Ruby Ruffle Skirt,single,2971837551,VLBSK0023,laxary,Vyla,5690,5000,pcs,12,0,,,,,,,,
+79,,Pocket Mini Skirt,single,0986918574,VCBSK0025,Skirt,MAKQVA JEANS,4390,3500,pcs,4,0,"S 1, M 1, L 2",,,,,,,
+80,,Denim Drift Skirt,single,4294044493,VCBSK0026,laxary,JR Fashion,5190,4200,pcs,2,0,,,,,,,,
+81,,Honey Floral Skirt,single,6443002620,VCBSK027,laxary,JR Fashion,4990,4500,pcs,15,0,,,,,,,,
+83,,Frayed Front Slit Skirt,single,7634244129,VCBSK0029,Skirt,YG Fashion,5990,5990,pcs,9,0,,,,,,,,
+84,,Belted Utility Midi Skirt,single,2321255104,VLBSK0030,Skirt,YG Fashion,5990,5990,pcs,7,0,,,,,,,,
+85,,Ripped Slit Skirt,single,8897398117,VCBSK0031,Skirt,YG Fashion,5990,5990,pcs,10,0,,,,,,,,
+86,,Modern Slit Skirt,single,5687344463,VCBSK0032,Skirt,YG Fashion,5990,5990,pcs,6,0,,,,,,,,
+88,,Slit Mini Skirt,single,2353412686,VCBSK0034,laxary,DU dideal,5190,3000,pcs,1,0,,,,,,,,
+90,,Denim Skirt,single,2918158152,VCBSK0037,Skirt,Vyla,3890,3000,pcs,14,0,3pcs Damage,,,,,,,
+91,,Floral Printed Skort,single,4512481656,VCBSK0040,Skirt,Fashion Shopping,4890,3000,pcs,4,0,,,,,,,,
+92,,Floral A Line Skirt,single,8187665997,VCBSK0041,Skirt,Fashion Shopping,4690,3000,pcs,3,0,,,,,,,,
+93,,Tropical Petal Shorts,single,8003698376,VCBSK0042,Short,Fashion Shopping,3890,3000,pcs,12,0,,,,,,,,
+94,,Cotton Jump Suit,single,9789498065,VCBJS0040,laxary,Vyla,8790,3500,pcs,7,0,"Orange, Black, Green, Blue, Gray, Brown",,,,,,,
+95,,Denim Jump Suit,single,8027120804,VCBJS0041,Jump Suit,old navy,7290,3000,pcs,1,0,,,,,,,,
+96,,Fresh Bloom Frock,single,7571850107,VLBFR0042,laxary,Vyla,9290,5000,pcs,13,0,"Off White 2, Light Blue 2, Black 2, Pink 2, Yellow 2, White 2, Green 1",,,,,,,
+97,,Lacy Button Frock,single,7383107488,VLBFR0043,laxary,Vyla,9790,5000,pcs,9,0,"Pink 2, Green 2, White 2, Black 1, Off White 2",,,,,,,
+98,,Lace Smock Frock,single,4234344834,VLBFR0044,laxary,Vyla,8690,5000,pcs,6,0,Yellow 3 & White 3,,,,,,,
+99,,Daisy Chain Frock,single,4035686635,VLBFR0045,Frock,Vyla,8490,5000,pcs,7,0,"Brown 2, Black 2, Yellow 2, White 2",,,,,,,
+100,,Lace Bloom Frock #,single,1092351434,VLBFR0046,laxary,Vyla,7890,5000,pcs,5,0,"Off White, Pink, Black, White, Blue",,,,,,,
+101,,Floral Eyelet Tiered Frock # *,single,9003424267,VLBFR0047,laxary,Vyla,8590,5000,pcs,5,0,"Light Blue, Off white, Pink, Black, Green
+
+Damage 1 pec *",,,,,,,
+102,,Floral Bow Neck Frock,single,2923250568,VLBFR0048,laxary,Vyla,8490,5000,pcs,4,0,"Off White, Black, Light Blue, Pink, White",,,,,,,
+103,,Sun Kissed Maxi Frock,single,4245797883,VLBFR0049,laxary,Vyla,6990,5000,pcs,8,0,"Off White, Yellow, Pink, Orange, Blue, Black, Green, Purple
+",,,,,,,
+104,,Blossom Bow Frock,single,6014575920,VLBFR0050,laxary,Vyla,8790,5000,pcs,6,0,"Green, White, Peach, Light Blue, Black, Off White",,,,,,,
+105,,Crochet Mesh Frock,single,0842185040,VLBFR0051,laxary,Vyla,9290,5000,pcs,5,0,"Brown, Pink, Black, Off White, White, Light Green",,,,,,,
+106,,Classic Gather Frock,single,7698589480,VLBFR0052,laxary,Vyla,8990,5000,pcs,4,0,"Gray, White, Dark Gray
+",,,,,,,
+107,,Angelic Lace Frock,single,2073550758,VLBFR0053,laxary,DD Fashion,8990,5000,pcs,5,0,"White, Green, Red, Gray, Dark Green",,,,,,,
+111,,Luna Pants,single,9614881336,VCBPT0057,laxary,Preeya Closet,6890,3500,pcs,22,0,"Light Brown 5, Dark Brown 5, Green 5, Off White 5, White 5",,,,,,,
+117,,Banny T Shirt,single,1072555115,VCBTS0081,T Shirt,Banny,3790,3200,pcs,32,0,"Cream 9, Black 4, Gray 11, Brown 4",,,,,,,
+118,,GI ANTS T Shirt,single,9662412635,VCBTS0065,T Shirt,GI ANTS,3190,2800,pcs,3,0,"Red. Pink, Brown, Green",,,,,,,
+120,,Ribbed Lace Tee,single,0867953782,VCBCT0067,Crop Top,Vyla,3290,4200,pcs,1,0,,,,,,,,
+122,,Lace Trim Teddy Tee,single,5508930554,VCBCT0068,Crop Top,Vyla,3990,3100,pcs,12,0,,,,,,,,
+124,,Ribbed Crop Top,single,2426183795,VCBCT0071,Crop Top,Vyla,2890,2500,pcs,3,0,,,,,,,,
+125,,Sweet Ribbon Tee,single,4001801932,VCBCT0072,Crop Top,JR Fashion,3790,2400,pcs,12,0,,,,,,,,
+126,,Little Bear Crop Top *,single,8045904413,VCBCT0073,Crop Top,Vyla,3690,2500,pcs,9,0,"Brown 3, Pink 3, Black 3
+
+1 pec damage *",,,,,,,
+127,,Heart Button Tee,single,1199297119,VCBTS066,T Shirt,CHOM,3190,2500,pcs,6,0,,,,,,,,
+128,,Puppy Love Tee,single,9713298927,VCBTS0076,T Shirt,CHOM,3890,2500,pcs,14,0,1pcs Damage,,,,,,,
+131,,Sweetheart Blouse #,single,1756788651,VCBBL0077,white blouse,Chompoo,4990,3500,pcs,7,0,White,,,,,,,
+132,,Royal Lace Blouse #,single,3128394307,VLBBL0078,laxary,Cotton Store,5490,4500,pcs,5,0,"Pink, Brown, Cream",,,,,,,
+133,,Ivory Blouse #,single,0824919832,VLBBL0079,laxary,Cotton Store,4990,3500,pcs,3,0,"Pink, White, Brown",,,,,,,
+134,,Sweet Mila Blouse #,single,0080296583,VCBBL0080,laxary,Cotton Store,4190,3500,pcs,2,0,"White, Pink",,,,,,,
+135,,Lace Front Blouse,single,7518402917,VLBBL0081,Blouse,Ploy Lada,5890,4500,pcs,3,0,"Cream, Brown, Pink",,,,,,,
+136,,Sweet Daisy Blouse,single,2684017206,VCBBL0082,Blouse,Cotton Store,4790,3500,pcs,2,0,,,,,,,,
+137,,Wild Rose Blouse,single,6923449924,VCBBL0083,Blouse,Ploy Lada,4990,4500,pcs,7,0,"Green, White, Purple, Pink",,,,,,,
+138,,Rustic Cotton Blouse,single,2639791914,VLBBL0084,laxary,Vyla,5790,4500,pcs,7,0,,,,,,,,
+139,,Garden Bloom Blouse,single,0490315273,VCBBL0085,Blouse,The Grand,3190,3200,pcs,1,0,,,,,,,,
+141,,Butterfly Blouse,single,3233408745,VLBBL0087,laxary,PHA THAI,5190,3200,pcs,7,0,"Red, Blue, Pink",,,,,,,
+142,,Sweethart Lace Blouse,single,5850522366,VLBBL0088,laxary,I Love Lucky,4890,3200,pcs,7,0,"Black, Peach, White",,,,,,,
+143,,Tiger Lily Blouse,single,6636320817,VCBBL0089,laxary,PHA THAI,4990,3200,pcs,10,0,,,,,,,,
+144,,Summer Blouse,single,9657110458,VCBBL0090,Blouse,Paradise,3290,2800,pcs,6,0,,,,,,,,
+148,,Long Sleeve Bow Blouse $,single,4392826860,VLBBL0094,Blouse,Mirabel,5190,4500,pcs,8,0,"Light Green, Red, Light Blue, Black, Pink, White
+
+...........
+Stors
+Blouse box 01 
+No - 148
+8 pec ",,,,,,,
+149,,Short Sleeve Bow Blouse,single,5790165062,VLBBL0095,Blouse,Mirabel,4390,3500,pcs,8,0,"Stors 
+Blouse box 01
+No - 149
+4 pec",,,,,,,
+150,,Chic Lace Blouse,single,2212669584,VCBBL0096,Blouse,PP Nook,4990,3500,pcs,10,0,"Green, Cream, Blue, Pink, White",,,,,,,
+151,,Candy Button Tee,single,4194794479,VCBBL0097,Blouse,CHOM,3490,3200,pcs,7,0,"Black, White, Blue, Yellow, Pink",,,,,,,
+156,,Pearl Ruffle Blouse,single,2878999534,VLBBL0102,Blouse,Ploy Lada,5190,3200,pcs,5,0,,,,,,,,
+160,,Petal Collar Top,single,2690083717,VCBBL0106,Blouse,Ming Ming,4290,3400,pcs,5,0,,,,,,,,
+161,,Daisy Collar Top,single,4413765890,VLBBL0107,Blouse,Classic,5290,3200,pcs,19,0,"Pink 4, Blue 4, Gray 4, White 4, Cream 4",,,,,,,
+162,,Blush Top,single,9414405275,VCBBL0108,laxary,Classic,4890,3500,pcs,10,0,,,,,,,,
+163,,Lace Mist Blouse,single,1681161060,VLBBL0109,laxary,PP Nook,4990,3500,pcs,9,0,,,,,,,,
+164,,Sweet Peony Blouse,single,3835295798,VLBBL0110,laxary,PP Nook,4990,3500,pcs,6,0,,,,,,,,
+166,,Puff Sleeve Petal Blouse,single,8533123053,VLBBL0112,laxary,Luxury Fashion,4990,3500,pcs,12,0,"Cream, Blue, Yellow, Green, Pink",,,,,,,
+170,,Check Lace Blouse,single,8240688449,VCBBL0116,Blouse,MEOW DAM,4190,2500,pcs,11,0,"Red, Blue, Yellow, Pink",,,,,,,
+171,,Ruffle Blouse @,single,5257237729,VLBBL0117,Blouse,CHOEGO,4890,3200,pcs,6,0,,,,,,,,
+172,,Embroidered Bloom Top,single,1406276569,VLBBL0118,laxary,PP Nook,5190,3200,pcs,13,0,,,,,,,,
+181,,Wide Leg Linen Set,single,9902556468,VLBFK0127,laxary,Vyla,8790,4000,pcs,11,0,"Long Trouser & Top - Off White, Black, Blue, Green, Brown",,,,,,,
+183,,Wild Sage Set,single,7449604311,VLBFK0129,laxary,Vyla,9490,3600,pcs,5,0,"Pink, Gray, Brown, White, Light Blue, Light Green, Yellow, Orange, Blue",,,,,,,
+186,,Crinkle Cotton Set *,single,8275047251,VLBFK0132,laxary,Vyla,7690,3500,pcs,4,0,"Blue, Off White, Black, Orange, White, Brown
+
+* DAMAGE 1 PECS
+EXPIATE COTTEN",,,,,,,
+187,,Blush Bloom Set,single,0156513310,VLBFK0133,laxary,Vyla,7690,5500,pcs,10,0,"Pink 2, Cream 2, Dark Blue2, Blue 2, Green 2",,,,,,,
+188,,Embroidered Crop Top & Maxi Set,single,1753314135,VLBFK0134,laxary,Vyla,8790,5500,pcs,4,0,,,,,,,,
+189,,Mint Tassel Set,single,7318837624,VLBFK0135,laxary,Vyla,8990,5500,pcs,5,0,"Pink, Cream, Green, Blue",,,,,,,
+190,,Noir Eyelent Set,single,2273177590,VLBFK0136,laxary,Vyla,9790,5500,pcs,11,0,White 7 & Black 4,,,,,,,
+191,,Eyelet Luxe Set,single,9380048209,VLBFK0137,Full Kit,Vyla,8790,5500,pcs,7,0,"Black, Off White, Yellow, Blue",,,,,,,
+192,,Sleeveless Button Up Set,single,4219008289,VLBFK0138,laxary,Vyla,9490,5500,pcs,10,0,"Pink 2, Yellow 2, Blue 2, White 2, Off White 2",,,,,,,
+193,,Periwinkle Floral Embroidery Set,single,4364689107,VLBFK0139,laxary,Vyla,8990,5500,pcs,5,0,"Pink, Blue, Off white, Brown, Black, White, Yellow",,,,,,,
+194,,Rust Linen Mini Set,single,0311731843,VLBFK0140,laxary,Vyla,6790,4500,pcs,17,0,"Green, Dark Green, Blue, White, Pink, Off White, Cream, Brown, Dark Blue",,,,,,,
+195,,Desert Sand Wrap Set #,single,1721636167,VLBFK0141,Full Kit,Vyla,9590,8500,pcs,12,0,"Off White, Dark Green, Dark Brown, Light Brown, Pink, Navy Blue",,,,,,,
+196,,Scalloped Edge Eyelet Set,single,3964718439,VLBFK0142,Full Kit,Vyla,8690,5500,pcs,5,0,"Off White, Black, Blue, White, Pink",,,,,,,
+197,,Rust Tassel Skirt Set,single,4329517332,VLBFK0143,laxary,Vyla,8490,6500,pcs,0,0,"Brown, Gray",,,,,,,
+199,,Bella Bloom Tee #,single,7981584344,VCBTS0045,T Shirt,Vyla,3890,2800,pcs,8,0,,,,,,,,
+201,,Paris Club Tee@,single,8309713284,VCBCT0069,Crop Top,SEED ZAG,3490,2500,pcs,3,0,"Red 2, White 3, Black 2, Brown 1, Green 1",,,,,,,
+206,752,Flower Embroider Blouse - XXL,variable,2686500494,VLBBL0070-XXL,Blouse,Vyla,5490,4390,pcs,11,0,,XXL,VLBBL0070-XXL,8605559714,4390,5490,0,1
+206,753,Flower Embroider Blouse - XL,variable,2686500494,VLBBL0070-XL,Blouse,Vyla,5490,4390,pcs,11,0,,XL,VLBBL0070-XL,0864011260,4390,5490,9,1
+207,,Flower Embroider Blouse 2XL,single,3157473218,VLBBL0071,Blouse,Vyla,4990,3500,pcs,4,0,,,,,,,,
+209,1,Urban Linen Blouse - L,variable,5115573618,VLBBL0072-L,Blouse,Vyla,4790,3200,pcs,30,0,"L 5, M 5, XL 5",L,VLBBL0072-L,6051037966,3200,4790,10,1
+209,2,Urban Linen Blouse - M,variable,5115573618,VLBBL0072-M,Blouse,Vyla,4790,3200,pcs,30,0,"L 5, M 5, XL 5",M,VLBBL0072-M,0348742953,3200,4790,10,1
+209,3,Urban Linen Blouse - S,variable,5115573618,VLBBL0072-S,Blouse,Vyla,4790,3200,pcs,30,0,"L 5, M 5, XL 5",S,VLBBL0072-S,8005807345,3200,4790,10,1
+212,,Denim Shorts M,single,1057322344,VCBST0021,Short,Vyla,2890,3000,pcs,5,0,,,,,,,,
+213,,Denim Shorts S,single,5870218462,VCBST0022,Short,Vyla,2890,3000,pcs,2,0,,,,,,,,
+215,,Denim Mini Skirt *,single,6539036139,VCBSK0030,Skirt,DU dideal,4790,3000,pcs,9,0,Shiper damage 1pec *,,,,,,,
+216,,Denim Skort #,single,3635057274,VCBSK0036,laxary,STRADIVARIUS,3990,3200,pcs,9,0,,,,,,,,
+218,,Patch Denim Skirt L,single,0296489233,VCBSK0039,Skirt,Vyla,3590,3000,pcs,1,0,,,,,,,,
+219,,Short Denim Jump Suit,single,3163912617,VCBJS0042,Jump Suit,Vyla,4890,3000,pcs,1,0,,,,,,,,
+220,,Blue Embroidered Dress,single,3804885458,VLBFR0055,Frock,Vyla,4690,3000,pcs,3,0,,,,,,,,
+221,,Casual Denim Look Frock,single,1165233563,VLBFR0056,Frock,Vyla,3690,3000,pcs,5,0,,,,,,,,
+222,,Long Denim Halter Frock *,single,1125716498,VLBFR0057,Frock,Vyla,6790,4500,pcs,1,0,1 pec damage *,,,,,,,
+223,,Classic Wide Leg Jeans,single,8242293894,VCBPT0060,Pants,Vyla,5990,4500,pcs,1,0,"S 1, M 2",,,,,,,
+224,,Fold Over Cuff Jeans,single,8951934899,VCBPN0061,Pants,Vyla,5290,3800,pcs,3,0,"S 2, L1",,,,,,,
+225,,Vienne Lace T Shirt,single,5572367975,VCBTS0061,T Shirt,MEOW DAM,3490,2600,pcs,5,0,,,,,,,,
+226,,Lumi Signature T Shirt,single,5074262797,VCBTS0062,T Shirt,MEOW DAM,3690,2500,pcs,12,0,,,,,,,,
+227,,Petite Pocket Lable T Shirt,single,4310732277,VCBTS0063,T Shirt,MEOW DAM,3490,2200,unit,33,0,,,,,,,,
+228,,Lumi Petit T Shirt,single,0668462713,VCBTS0064,T Shirt,MEOW DAM,3490,2100,pcs,12,0,,,,,,,,
+229,,Maison Cat T Shirt,single,3149457259,VCBTS0066,T Shirt,MEOW DAM,3490,2500,pcs,2,0,,,,,,,,
+230,,Olive Tide T Shirt,single,8066987397,VCBTS0067,T Shirt,MEOW DAM,3390,2500,pcs,12,0,,,,,,,,
+231,,Home Edit T Shirt,single,4044645587,VCBTS0068,T Shirt,MEOW DAM,2990,2500,pcs,6,0,,,,,,,,
+232,,Black Kitty T Shirt,single,1979722291,VCBTS0069,T Shirt,MEOW DAM,3290,2400,pcs,2,0,,,,,,,,
+233,,Four Cats T Shirt,single,0027935480,VCBTS0070,T Shirt,MEOW DAM,3090,2400,pcs,1,0,,,,,,,,
+234,,White Button T Shirt,single,9584469387,VCBTS0071,T Shirt,MEOW DAM,3290,2300,pcs,0,0,,,,,,,,
+235,,Leaf Pocket T Shirt,single,8968554570,VCBTS0073,T Shirt,MEOW DAM,3290,2600,pcs,1,0,,,,,,,,
+236,,Pastel Picnic T Shirt,single,0736311308,VCBTS0074,T Shirt,CHOM,3490,2300,pcs,9,0,,,,,,,,
+237,,Honey & Bow Eyelet T Shirt,single,8559235681,VCBTS0075,T Shirt,CHOM,3590,2500,pcs,7,0,,,,,,,,
+238,,Bruce Paw-cket T Shirt,single,9637660115,VCBTS0077,T Shirt,CHOM,3290,2200,pcs,1,0,,,,,,,,
+239,,Starlight & Whiskers T Shirt,single,6980212428,VCBTS0078,T Shirt,CHOM,3190,2200,pcs,2,0,,,,,,,,
+240,,Mini Flower Check Blouse,single,6087448750,VCBBL0145,Blouse,The Grand,3290,2800,pcs,2,0,,,,,,,,
+241,,Lili Blouse,single,5753683041,VLBBL00146,Blouse,LILI,5490,4200,pcs,1,0,,,,,,,,
+242,,Meadow Mist Blouse,single,7444783495,VLBBL0147,laxary,Amata,5290,3500,pcs,3,0,,,,,,,,
+243,,Aura Floral Border Blouse,single,1399986481,VLBBL0148,laxary,Amata,5290,2500,pcs,1,0,2 Damage,,,,,,,
+244,,Lace Path Floral Blouse,single,7917583698,VLBBL0149,laxary,Amata,5290,3200,pcs,4,0,,,,,,,,
+245,,Coral Dream Garland Blouse,single,2357996634,VLBBL0150,Blouse,Amata,5290,3500,pcs,1,0,,,,,,,,
+246,,Topical Petal Arch Blouse,single,6776059230,VLBBL0151,laxary,Amata,5290,3500,pcs,3,0,,,,,,,,
+247,,Vertical Harmony Border Blouse,single,2586961720,VLBBL0152,Blouse,Amata,5290,3500,pcs,1,0,1 Damage,,,,,,,
+248,,Flora Horizon Blouse,single,4463928526,VLBBL0153,Blouse,Amata,5290,3599,pcs,1,0,,,,,,,,
+249,,Mist Ruffle Crop Top,single,3449382304,VCBBL0154,Crop Top,Infinity,4490,3000,pcs,12,0,,,,,,,,
+250,,Daisy Puff Border Blouse ##,single,2508019759,VCBBL0155,white blouse,Infinity,4490,3800,pcs,8,0,,,,,,,,
+251,,Pure White Crop Top ##,single,3905047762,VCBBL0156,white blouse,Infinity,4690,3100,pcs,11,0,,,,,,,,
+252,,Ruffled Neck Line Crop Top ##@,single,4195422340,VCBBL0157,white blouse,Infinity,3690,2600,pcs,7,0,,,,,,,,
+253,,Onyx Set,single,9489616083,VLBFK0155,laxary,Vyla,6990,4000,pcs,5,0,,,,,,,,
+254,,Maple Skort Set,single,2279607339,VLBFK0156,laxary,Vyla,6990,4200,pcs,3,0,,,,,,,,
+255,,V Neck Short Set,single,7840318517,VLBFK0157,laxary,Vyla,6890,4000,pcs,5,0,,,,,,,,
+256,,Nova Square Neck Frock,single,7509428278,VLBFR0157,laxary,Vyla,7490,3900,pcs,17,0,1pcs Damage,,,,,,,
+259,,Flora Stitch Blouse,single,9473913799,VLBBL0160,laxary,Vyla,5790,3600,pcs,18,0,"Blue, Black, White",,,,,,,
+260,,Daisy Denim Blouse,single,0918033564,VLBBL0161,Blouse,Vyla,4990,3400,pcs,7,0,"Size 40 - 3pcs , Size 42 - 3pcs, Size 44 - 1pcs",,,,,,,
+261,,Peacock Fringe Blouse,single,7109815422,VLBBL0162,laxary,PHA THAI,5490,3500,pcs,13,0,"Brown 3, White 4, Black 3, Dark Brown 3",,,,,,,
+262,,Bow Boxy Blouse,single,6619734216,VCBBL0158,Blouse,Mirabel,4690,3200,pcs,6,0,"Stors
+Blouse box 01 
+No - 262
+4pec",,,,,,,
+263,,Back Bow Blouse,single,3529461371,VCBBL0159,Blouse,Mirabel,4390,3200,pcs,7,0,,,,,,,,
+264,,Heirloom Lace Blouse $,single,4005638719,VCBBL0160,Blouse,Cotton Store,4190,3000,pcs,10,0,"Stors
+Blouse box 01
+No-264
+10 pec ",,,,,,,
+265,,Orchard Embroidered Blouse,single,3259040484,VLBBL0163,laxary,PP Nook,5890,3500,pcs,2,0,,,,,,,,
+266,,Daisy Chain Drawstring Blouse $,single,5165782013,VLBBL0164,Blouse,Vyla,5690,3500,pcs,9,0,"Brown 2, Cream 2, Blue 2, Green 1, Light Brown 2
+
+Stors 
+Blouse box 01
+No- 266
+09 pec",,,,,,,
+267,,Sun bleached Sprig Blouse,single,0905409640,VLBBL0165,Blouse,Vyla,5690,3500,pcs,12,0,"Brown 2, Cream 2, Dark Brown 2, Blue 2, Green 4",,,,,,,
+268,,Fern & Flora Crop Blouse,single,7902091751,VLBBL0166,laxary,Vyla,5690,3500,pcs,10,0,"Green 2, Brown 2, Dark Brown 2, Cream 2, Blue 2",,,,,,,
+269,,Deep Sea Sketch Blouse,single,0357519354,VLBBL0167,laxary,Vyla,5790,3500,pcs,10,0,"Brown 2, Dark Brown 3, Cream 2, Green 2",,,,,,,
+270,,Celestial Garden Pocket Blouse,single,2134679419,VLBBL0168,laxary,Vyla,5290,3500,pcs,13,0,"White 2, Cream 2, Green 2, Blue 2 old qn 8 08/19",,,,,,,
+272,,Posh Pup Set,single,2613357878,VCBFK0167,Full Kit,Banana Basic,6790,5300,pcs,7,0,,,,,,,,
+273,,Arctic Twilight Set,single,9569603088,VCBFK0168,Full Kit,Banana Basic,6990,5200,unit,6,0,,,,,,,,
+274,,Honey Bear Star Set #@ *,single,2754061314,VCBFK0169,Full Kit,Banana Basic,6990,4000,pcs,3,0,1 pec damage wash *,,,,,,,
+275,,Lace Pocket Blouse #,single,1977076053,VCBBL0170,Blouse,Mirabel,5090,3300,pcs,79,0,"Stors 
+Blouse box 01
+No - 275
+00",,,,,,,
+276,,Ribbon Stripe Blouse,single,0671156949,VCBBL00171,Blouse,Mirabel,4290,3500,pcs,3,0,"Stors 
+Blouse box 01 
+No-276
+5pec ",,,,,,,
+277,32,Double Bow Stripe Blouse - Red / Red,variable,2381270368,VCBBL0172-RED,Blouse,Pamaruay,4290,3500,pcs,10,0,1 Brown Blouse Damage,Red / Red,VCBBL0172-RED,5703949286,3500,4290,2,1
+277,33,Double Bow Stripe Blouse - Red / White,variable,2381270368,VCBBL0172-PIN,Blouse,Pamaruay,4290,3500,pcs,10,0,1 Brown Blouse Damage,Red / White,VCBBL0172-PIN,7055680677,3500,4290,4,1
+277,34,Double Bow Stripe Blouse - Red / Black,variable,2381270368,VCBBL0172-BLU,Blouse,Pamaruay,4290,3500,pcs,10,0,1 Brown Blouse Damage,Red / Black,VCBBL0172-BLU,0393945816,3500,4290,1,1
+277,35,Double Bow Stripe Blouse - White / Red,variable,2381270368,VCBBL0172-BRW,Blouse,Pamaruay,4290,3500,pcs,10,0,1 Brown Blouse Damage,White / Red,VCBBL0172-BRW,7236287229,3500,4290,3,1
+278,,Stitched Memories Blouse,single,5461929833,VLBBL0173,Blouse,MEOW DAM,5190,4500,pcs,7,0,,,,,,,,
+279,,Doodle Day Denim Blouse,single,5264997866,VCBBL0174,laxary,MEOW DAM,4990,3500,pcs,7,0,,,,,,,,
+280,,Bear Print Shortie Set,single,6041363074,VCBNW001,Night Wear,Vyla,4590,3500,pcs,12,0,,,,,,,,
+281,,Sweet Dreams Short Set,single,7397008810,VCBNW002,Night Wear,Vyla,4190,3500,pcs,5,0,,,,,,,,
+282,,Classic Frill Trim Nightie,single,1805384709,VCBNW003,Night Wear,Vyla,4290,4290,pcs,12,0,,,,,,,,
+283,,Classic Print Nightie,single,4336200832,VCBNW004,Night Wear,Vyla,3890,2500,pcs,6,0,,,,,,,,
+284,,Ruffle Hem Bear Sleep Wear,single,4851513648,VCBNW005,Night Wear,Vyla,4790,3500,pcs,12,0,,,,,,,,
+285,,Cute Character PJ Set,single,4877145431,VCBNW006,Night Wear,Vyla,4690,3500,pcs,12,0,,,,,,,,
+286,,Elegant Floral Nightwear,single,9801504053,VCBNW007,Night Wear,Vyla,4990,4000,pcs,5,0,,,,,,,,
+287,,Pink Bloom Long Sleeve Set,single,2800264904,VCBNW008,Night Wear,Vyla,4690,3500,pcs,2,0,,,,,,,,
+288,,Sunny Frill Lounge Set,single,3316086131,VCBNW009,Night Wear,Vyla,4290,3500,pcs,12,0,,,,,,,,
+289,,Dolphin Short,single,8406690908,VCBST0173,Short,Vyla,1190,800,pcs,41,0,,,,,,,,
+290,,Long Sleeve Bear Print Set,single,3809986818,VCBNW010,Night Wear,Vyla,4590,3500,pcs,5,0,,,,,,,,
+291,,Floral Ruffle Nightshirt,single,3273057450,VCBNW011,Night Wear,Vyla,4790,4000,pcs,12,0,,,,,,,,
+292,,Good Luck Bear PJ Set,single,7445340214,VCBNW012,Night Wear,Vyla,4290,3500,pcs,5,0,,,,,,,,
+293,,Mickey Heart Cami Set,single,7012491925,VCBNW013,Night Wear,Vyla,3490,2500,pcs,9,0,,,,,,,,
+294,,Teddy Patch Sleep Dress,single,2600790516,VCBNW014,Night Wear,Vyla,3690,3000,pcs,12,0,,,,,,,,
+295,73,Puppy Patch Sleep Wear - Red,variable,8392296145,VCBNW015-RED,Night Wear,Vyla,4190,2800,pcs,12,0,,Red,VCBNW015-RED,3260891075,4500,4190,3,1
+295,74,Puppy Patch Sleep Wear - White,variable,8392296145,VCBNW015-BLU,Night Wear,Vyla,4190,2800,pcs,12,0,,White,VCBNW015-BLU,9028643648,4500,4190,3,1
+295,75,Puppy Patch Sleep Wear - Black,variable,8392296145,VCBNW015-BLA,Night Wear,Vyla,4190,2800,pcs,12,0,,Black,VCBNW015-BLA,6174328239,4500,4190,6,1
+296,,Sweet Love Sleep Dress,single,6147717864,VCBNW016,Night Wear,Vyla,2990,2000,pcs,3,0,,,,,,,,
+297,,Rose Mini Flower Night Dress,single,6103121816,VCBNW017,Night Wear,SK,2890,2000,pcs,12,0,,,,,,,,
+298,,Striped Night Shirt,single,6566741915,VCBNW018,Night Wear,Vyla,3590,2500,pcs,23,0,,,,,,,,
+299,,Playful Print Set,single,2310994890,VCBNW019,Night Wear,Vyla,4590,3800,pcs,6,0,,,,,,,,
+300,,Checkered Teddy Night Dress,single,4096327471,VCBNW020,Night Wear,Vyla,3490,3000,pcs,12,0,,,,,,,,
+302,,Teddy Bear PJ Set,single,9963564696,VCBNW022,Night Wear,Vyla,4890,4000,pcs,2,0,,,,,,,,
+303,,Pink Floral Night Wear,single,6459001707,VCBNW023,Night Wear,SK,2890,2000,pcs,5,0,,,,,,,,
+304,,Sunny Pup Night Wear,single,9561138593,VCBNW024,Night Wear,Vyla,3590,2500,pcs,12,0,,,,,,,,
+305,,Wildflower Meadow Blouse,single,0815970609,VCBBL0173,Blouse,Paradise,3190,2500,pcs,9,0,,,,,,,,
+306,,Muse Crop Top,single,5830995137,VCBCT0174,Crop Top,OVERSIZE,2690,2000,pcs,5,0,,,,,,,,
+307,,NY Varsity Crop Top,single,5453262727,VCBCT0170,Crop Top,OVERSIZE,3490,2500,pcs,5,0,,,,,,,,
+308,,Victory Lane Jersey Crop Top,single,0128258006,VCBCT0171,Crop Top,OVERSIZE,3490,2500,pcs,10,0,,,,,,,,
+309,,Coastal Lounge Set #,single,9503962059,VLBFK0171,laxary,Vyla,6990,5500,pcs,7,0,,,,,,,,
+310,,Oxford Street Blouse,single,1993945578,VLBBL0174,laxary,Vyla,4690,3500,pcs,13,0,,,,,,,,
+311,,Honey Kitten Tee,single,2239336589,VCBTS0174,T Shirt,Vyla,2690,2000,pcs,8,0,,,,,,,,
+312,,Pistachio Pixie Tee,single,7725624999,VCBTS0175,T Shirt,Vyla,2690,2000,pcs,7,0,,,,,,,,
+313,,Floral Ruffle Skirt *,single,5179102368,VCSSK004,Skirt,Vyla,4190,3200,pcs,61,0,Size check 04,,,,,,,
+315,,Rose Patterned Midi Dress #*,single,1846833102,VLSFR0173,Viola Frock,Vyla,5890,4200,pcs,49,0,Size check 04,,,,,,,
+316,,Rose Print Sleeveless Midi Dress #*,single,3103998509,VLSFR0174,Viola Frock,Vyla,5890,5200,pcs,33,0,Size check 04,,,,,,,
+317,,Rebel Ruffle Crop Top,single,6724825370,VLBCT010,Crop Top,Vyla,3890,3000,pcs,17,0,,,,,,,,
+318,,One Shoulder Ruffle Blouse,single,5330223904,VCBBL0171,Blouse,Vyla,4290,3200,pcs,1,0,,,,,,,,
+319,,Chloe Blouse #,single,1394301031,VCBBL0175,white blouse,Chompoo,4890,3500,pcs,7,0,1Pcs Damage,,,,,,,
+320,,Lily Blouse #,single,9700958643,VCBBL0176,white blouse,Chompoo,4690,3200,pcs,4,0,,,,,,,,
+321,,Daisy Daydream Blouse,single,2319554748,VLBBL0177,Blouse,Vyla,5190,4500,pcs,0,0,,,,,,,,
+322,130,Crimson Chevron Blouse - Red,variable,9431752432,VCBBL0178-PIN,laxary,Vyla,5490,3500,pcs,6,0,,Red,VCBBL0178-PIN,6372081375,3500,5190,1,1
+322,131,Crimson Chevron Blouse - White,variable,9431752432,VCBBL0178-WHI,laxary,Vyla,5490,3500,pcs,6,0,,White,VCBBL0178-WHI,1980200842,3500,5190,2,1
+322,132,Crimson Chevron Blouse - Black,variable,9431752432,VCBBL0178-BLA,laxary,Vyla,5490,3500,pcs,6,0,,Black,VCBBL0178-BLA,0631611537,3500,5190,2,1
+322,133,Crimson Chevron Blouse - Red / Red,variable,9431752432,VCBBL0178-CRM,laxary,Vyla,5490,3500,pcs,6,0,,Red / Red,VCBBL0178-CRM,1322296578,3500,5190,2,1
+323,,Autumn Spice Maxi,single,8223331737,VCBNW025,Night Wear,Vyla,2290,1500,pcs,12,0,,,,,,,,
+324,,Double Strap Printed Maxi,single,6441442684,VCBNW026,Night Wear,Vyla,2190,1500,pcs,20,0,,,,,,,,
+325,134,Mustard Open Back Top - Red / Red,variable,5250822968,VLBCR0176-RED,Crop Top,Vyla,4290,3200,pcs,17,0,,Red / Red,VLBCR0176-RED,5648201818,3200,4290,2,1
+325,135,Mustard Open Back Top - Red / White,variable,5250822968,VLBCR0176-BRW,Crop Top,Vyla,4290,3200,pcs,17,0,,Red / White,VLBCR0176-BRW,6846639552,3200,4290,3,1
+325,136,Mustard Open Back Top - Red / Black,variable,5250822968,VLBCR0176-ORG,Crop Top,Vyla,4290,3200,pcs,17,0,,Red / Black,VLBCR0176-ORG,8112040148,3200,4290,1,1
+325,137,Mustard Open Back Top - White / Red,variable,5250822968,VLBCR0176-YEL,Crop Top,Vyla,4290,3200,pcs,17,0,,White / Red,VLBCR0176-YEL,8288263773,3200,4290,3,1
+325,138,Mustard Open Back Top - White / White,variable,5250822968,VLBCR0176-BLU,Crop Top,Vyla,4290,3200,pcs,17,0,,White / White,VLBCR0176-BLU,5222195090,3200,4290,3,1
+325,139,Mustard Open Back Top - White / Black,variable,5250822968,VLBCR0176-GRE,Crop Top,Vyla,4290,3200,pcs,17,0,,White / Black,VLBCR0176-GRE,9025926881,3200,4290,2,1
+325,140,Mustard Open Back Top - Black / Red,variable,5250822968,VLBCR0176-GRY,Crop Top,Vyla,4290,3200,pcs,17,0,,Black / Red,VLBCR0176-GRY,9224858372,3200,4290,3,1
+326,141,Teal Drawstring Dress @ - Red,variable,1994959658,VLBFR0176-RED,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",Red,VLBFR0176-RED,4440723409,6500,7890,4,1
+326,142,Teal Drawstring Dress @ - White,variable,1994959658,VLBFR0176-GRY,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",White,VLBFR0176-GRY,8106559237,6500,7890,1,1
+326,143,Teal Drawstring Dress @ - Black,variable,1994959658,VLBFR0176-ORG,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",Black,VLBFR0176-ORG,9902516431,6500,7890,3,1
+326,144,Teal Drawstring Dress @ - Red / Red,variable,1994959658,VLBFR0176-BRW,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",Red / Red,VLBFR0176-BRW,8199479401,6500,7890,2,1
+326,145,Teal Drawstring Dress @ - Red / White,variable,1994959658,VLBFR0176-PUR,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",Red / White,VLBFR0176-PUR,7248526171,6500,7890,3,1
+326,146,Teal Drawstring Dress @ - Red / Black,variable,1994959658,VLBFR0176-LIG BLU,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",Red / Black,VLBFR0176-LIG BLU,7591560670,6500,7890,2,1
+326,147,Teal Drawstring Dress @ - White / Red,variable,1994959658,VLBFR0176-DAR BLU,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",White / Red,VLBFR0176-DAR BLU,3133086685,6500,7890,2,1
+326,148,Teal Drawstring Dress @ - White / White,variable,1994959658,VLBFR0176-GRE,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",White / White,VLBFR0176-GRE,0774374458,6500,7890,4,1
+326,149,Teal Drawstring Dress @ - White / Black,variable,1994959658,VLBFR0176-HIG GRE,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",White / Black,VLBFR0176-HIG GRE,5678988944,6500,7890,1,1
+326,150,Teal Drawstring Dress @ - Black / Red,variable,1994959658,VLBFR0176-LIG GRE,laxary,Vyla,9890,6500,pcs,27,0,"
+Quntity 26.. Re make",Black / Red,VLBFR0176-LIG GRE,1961749215,6500,7890,4,1
+327,,Minimalist Stitch Frock,single,0915132052,VLBFR0177,laxary,Vyla,9490,6200,pcs,11,0,,,,,,,,
+328,,Daisy Lace Skirt,single,6676179962,VLBSK0175,laxary,JR Fashion,6290,4200,pcs,8,0,,,,,,,,
+329,,Denim Drift Skirt,single,1211377364,VLBSK0176,Skirt,JR Fashion,6590,4200,pcs,0,0,,,,,,,,
+330,,Linen Ease Set,single,7752916797,VLBFK0177,laxary,Preeya Closet,7890,6500,pcs,15,0,,,,,,,,
+331,,Classic Midi Skirt,single,0439152222,VLBSK0177,Skirt,TAT,5990,4200,pcs,13,0,,,,,,,,
+332,,Heritage Belted Skirt,single,6837214314,VLBSK0178,Skirt,TAT,5990,4300,pcs,2,0,,,,,,,,
+333,,Utility Belted Trouser,single,9678837148,VLBPT001,Pants,TAT,6290,4300,pcs,0,0,,,,,,,,
+334,,Oasis Cami Set,single,8997414113,VCBFK0170,laxary,Vyla,5490,4500,pcs,14,0,,,,,,,,
+335,,Mono Swirl Set,single,5835884909,VCBFK0175,laxary,Vyla,5290,4000,pcs,2,0,,,,,,,,
+336,,Optical Oasis Frock,single,7913966243,VCBFR0171,Frock,Vyla,5890,4200,pcs,6,0,,,,,,,,
+337,,Botanical Breeze Frock,single,6923691684,VCBFR0172,Frock,Vyla,5990,4100,pcs,8,0,,,,,,,,
+338,,Midi Skirt With Chain Belt,single,9212994767,VCBSK0171,Skirt,YG Fashion,4790,3200,pcs,2,0,,,,,,,,
+339,,Onyx Overlay Skirt,single,2772731793,VLBSK0179,Skirt,TAT,4290,3200,pcs,5,0,,,,,,,,
+340,,Classic Beige Mini Skirt,single,6757729511,VLBSK0180,Skirt,TAT,4190,3200,pcs,4,0,,,,,,,,
+341,,Casual Pleated Skirt,single,8719286115,VLBSK0181,Skirt,TAT,4290,2500,pcs,6,0,,,,,,,,
+342,,Casual Yellow Patterned Pants,single,4653658119,VCBPN001,Pants,Fashion Shopping,5190,3200,pcs,4,0,,,,,,,,
+343,,Casual Floral Long Pants,single,7363353978,VCBPN0170,Pants,Fashion Shopping,5190,4200,pcs,3,0,,,,,,,,
+344,,Casual Striped Button Down Set #,single,9937385943,VLBFK0172,laxary,Vyla,9890,6500,pcs,6,0,,,,,,,,
+345,,Renita Shorts,single,8409347898,VCBST001,Short,Renita,2790,2000,pcs,16,0,,,,,,,,
+346,,Scarf *,single,6252635618,VCBSF001,Scarf,THAILAND,1890,1200,pcs,10,0,1 pec damage *,,,,,,,
+347,,Bathik Jump Suit,single,6276657432,VCBJS001,Jump Suit,Vyla,4190,3400,pcs,0,0,,,,,,,,
+348,,Check Mini Skirt,single,0291788761,VCBSK001,Skirt,Vyla,2190,1500,pcs,0,0,,,,,,,,
+349,,Indigo Moonrise Frock,single,6871253201,VCBFR001,Frock,Vyla,4190,3200,pcs,0,0,,,,,,,,
+351,,Baby Pink Set,single,2625397582,VCIST001,Short,Vyla,5290,4200,pcs,1,0,,,,,,,,
+352,,Bloom Net Frock,single,8223181206,VCIFR002,Frock,Vyla,6990,5200,pcs,1,0,,,,,,,,
+353,,White Kurta,single,9518950664,VCBKT001,Kurtha Top,Vyla,3990,2500,pcs,1,0,,,,,,,,
+354,,Denim Skirt,single,3538068143,VCISK001,Skirt,Vyla,4790,3500,pcs,1,0,,,,,,,,
+355,,Stitch Bags,single,1706195220,VCUBA001,Bags,Vyla,2490,1800,pcs,17,0,,,,,,,,
+356,,Sleeveless White Frock,single,9566951522,VCIFR001,laxary,Vyla,8790,4500,pcs,1,0,,,,,,,,
+358,,Embroider Pink Saree,single,4528592843,VSIS002,Saree,Vyla,6790,5000,unit,1,0,,,,,,,,
+365,,Max T Shirt,single,8127907715,VCITS001,T Shirt,MAX,2490,1500,pcs,2,0,,,,,,,,
+366,,Kurta & Bottom,single,2326018222,VSIKT001,Kurtha Top,Vyla,7990,6500,pcs,2,0,,,,,,,,
+367,,Smorking Long Jacket,single,3578906629,VCIJA001,Jacket,Vyla,4690,3500,pcs,0,0,,,,,,,,
+368,,Tunic Blouse,single,9122134532,VCIBL001,laxary,Vyla,5690,3200,pcs,1,0,,,,,,,,
+370,,Leather Bag,single,7490379665,VCBBA001,Bags,Vyla,4300,4300,pcs,1,0,,,,,,,,
+371,170,Pastel Butterfly T shirt - XXL,variable,6284651953,VCITS002-XXL,T Shirt,KHOKO,2290,1500,pcs,10,0,ARUN,XXL,VCITS002-XXL,1287362984,1500,2290,2,1
+371,171,Pastel Butterfly T shirt - XL,variable,6284651953,VCITS002-XL,T Shirt,KHOKO,2290,1500,pcs,10,0,ARUN,XL,VCITS002-XL,2567884194,1500,2290,1,1
+371,172,Pastel Butterfly T shirt - L,variable,6284651953,VCITS002-L,T Shirt,KHOKO,2290,1500,pcs,10,0,ARUN,L,VCITS002-L,8695757446,1500,2290,2,1
+371,173,Pastel Butterfly T shirt - M,variable,6284651953,VCITS002-M,T Shirt,KHOKO,2290,1500,pcs,10,0,ARUN,M,VCITS002-M,2899404203,1500,2290,2,1
+371,174,Pastel Butterfly T shirt - S,variable,6284651953,VCITS002-S,T Shirt,KHOKO,2290,1500,pcs,10,0,ARUN,S,VCITS002-S,4111111333,1500,2290,2,1
+371,175,Pastel Butterfly T shirt - XXL / XXL,variable,6284651953,VCITS002-XXL-XXL,T Shirt,KHOKO,2290,1500,pcs,10,0,ARUN,XXL / XXL,VCITS002-XXL-XXL,5097381485,1500,2290,1,1
+372,176,Nautical Anchor T Shirt - XXL,variable,5951338181,VCITS003-XXL,T Shirt,KHOKO,2490,1500,pcs,10,0,ARUN,XXL,VCITS003-XXL,1371939843,1500,2490,1,1
+372,177,Nautical Anchor T Shirt - XL,variable,5951338181,VCITS003-XL,T Shirt,KHOKO,2490,1500,pcs,10,0,ARUN,XL,VCITS003-XL,5334468946,1500,2490,2,1
+372,178,Nautical Anchor T Shirt - L,variable,5951338181,VCITS003-L,T Shirt,KHOKO,2490,1500,pcs,10,0,ARUN,L,VCITS003-L,7613494065,1500,2490,2,1
+372,179,Nautical Anchor T Shirt - M,variable,5951338181,VCITS003-M,T Shirt,KHOKO,2490,1500,pcs,10,0,ARUN,M,VCITS003-M,2909176348,1500,2490,1,1
+372,180,Nautical Anchor T Shirt - S,variable,5951338181,VCITS003-S,T Shirt,KHOKO,2490,1500,pcs,10,0,ARUN,S,VCITS003-S,1987518632,1500,2490,2,1
+372,181,Nautical Anchor T Shirt - XXL / XXL,variable,5951338181,VCITS003-XXL-XXL,T Shirt,KHOKO,2490,1500,pcs,10,0,ARUN,XXL / XXL,VCITS003-XXL-XXL,8980621622,1500,2490,1,1
+373,,Snow White Cartoon T Shirt *,single,0316480131,VCITS004,T Shirt,Disney,3290,2200,pcs,9,0,"ARUN
+1 pec damage *",,,,,,,
+374,187,Blue Graphic T Shirt - XXL,variable,0086896221,VCITS005-XXL,T Shirt,KHOKO,1990,1000,pcs,10,0,ARUN,XXL,VCITS005-XXL,9458950218,1000,1990,1,1
+374,188,Blue Graphic T Shirt - XL,variable,0086896221,VCITS005-XL,T Shirt,KHOKO,1990,1000,pcs,10,0,ARUN,XL,VCITS005-XL,5256681837,1000,1990,1,1
+374,189,Blue Graphic T Shirt - L,variable,0086896221,VCITS005-L,T Shirt,KHOKO,1990,1000,pcs,10,0,ARUN,L,VCITS005-L,8664341123,1000,1990,1,1
+374,190,Blue Graphic T Shirt - M,variable,0086896221,VCITS005-M,T Shirt,KHOKO,1990,1000,pcs,10,0,ARUN,M,VCITS005-M,0545625458,1000,1990,3,1
+374,191,Blue Graphic T Shirt - S,variable,0086896221,VCITS005-S,T Shirt,KHOKO,1990,1000,pcs,10,0,ARUN,S,VCITS005-S,8405873508,1000,1990,3,1
+374,192,Blue Graphic T Shirt - XXL / XXL,variable,0086896221,VCITS005-3XL,T Shirt,KHOKO,1990,1000,pcs,10,0,ARUN,XXL / XXL,VCITS005-3XL,2416281734,1000,1990,1,1
+375,,Timon Less Trio T Shirt,single,0881132710,VCITS006,T Shirt,Disney,2890,2000,pcs,10,0,ARUN,,,,,,,
+376,198,Costal Pinstripe Shorts - XXL,variable,9016917974,VCIST002-XXL,Short,ZIVAME,2490,1800,pcs,11,0,ARUN,XXL,VCIST002-XXL,5699709814,1800,2490,2,1
+376,199,Costal Pinstripe Shorts - XL,variable,9016917974,VCIST002-XL,Short,ZIVAME,2490,1800,pcs,11,0,ARUN,XL,VCIST002-XL,3649259438,1800,2490,2,1
+376,200,Costal Pinstripe Shorts - M,variable,9016917974,VCIST002-M,Short,ZIVAME,2490,1800,pcs,11,0,ARUN,M,VCIST002-M,3098680824,1800,2490,4,1
+376,201,Costal Pinstripe Shorts - S,variable,9016917974,VCIST002-S,Short,ZIVAME,2490,1800,pcs,11,0,ARUN,S,VCIST002-S,2462505486,1800,2490,3,1
+376,754,Costal Pinstripe Shorts - L,variable,9016917974,VCIST002-L,Short,ZIVAME,2490,1800,pcs,11,0,ARUN,L,VCIST002-L,5786599211,1800,2490,1,1
+377,,Serene Sage Pleated T Shirt,single,1766869335,VCITS007,T Shirt,BELOVED,2190,1500,pcs,9,0,ARUN,,,,,,,
+378,,Coral Bloom Lounge Dress,single,9968782683,VCIFR003,Frock,ZIVAME,5690,4500,pcs,8,0,ARUN,,,,,,,
+379,209,Petal Crewneck T Shirt - XXL,variable,0847102430,VCITS008-XXL,T Shirt,WOMEN,2290,1500,pcs,9,0,ARUN damage 1 pec colour fade xxl,XXL,VCITS008-XXL,3887865303,1500,2290,3,1
+379,210,Petal Crewneck T Shirt - XL,variable,0847102430,VCITS008-XL,T Shirt,WOMEN,2290,1500,pcs,9,0,ARUN damage 1 pec colour fade xxl,XL,VCITS008-XL,8562047346,1500,2290,2,1
+379,211,Petal Crewneck T Shirt - L,variable,0847102430,VCITS008-L,T Shirt,WOMEN,2290,1500,pcs,9,0,ARUN damage 1 pec colour fade xxl,L,VCITS008-L,3410006035,1500,2290,2,1
+379,212,Petal Crewneck T Shirt - S,variable,0847102430,VCITS008-S,T Shirt,WOMEN,2290,1500,pcs,9,0,ARUN damage 1 pec colour fade xxl,S,VCITS008-S,6716391499,1500,2290,2,1
+380,,Cottage Dream Lace T Shirt,single,1102744987,VCITS009,T Shirt,WOMEN,2690,1800,pcs,10,0,ARUN,,,,,,,
+381,,Casual Wear Light Pink T Shirt **,single,1579427336,VCITS010,T Shirt,KHOKO,2790,1500,pcs,8,0,"ARUN
+2 PEC DAMAGE",,,,,,,
+382,,Strap Floral Maxi #,single,0436159485,VCIFR004,Frock,NAFNAF,3790,2800,pcs,10,0,ARUN,,,,,,,
+383,,Sage Lace Neck Ruffle Blouse,single,1298900345,VCIBL002,Blouse,BELOVED,3490,2500,pcs,9,0,ARUN,,,,,,,
+384,231,NYC Olive T Shirt - XXL,variable,5060681946,VCITS011-XXL,T Shirt,KHOKO,2790,2000,pcs,10,0,ARUN,XXL,VCITS011-XXL,3733344288,2000,2790,2,1
+384,232,NYC Olive T Shirt - XL,variable,5060681946,VCITS011-XL,T Shirt,KHOKO,2790,2000,pcs,10,0,ARUN,XL,VCITS011-XL,8885298821,2000,2790,1,1
+384,233,NYC Olive T Shirt - L,variable,5060681946,VCITS011-L,T Shirt,KHOKO,2790,2000,pcs,10,0,ARUN,L,VCITS011-L,8803236542,2000,2790,2,1
+384,234,NYC Olive T Shirt - M,variable,5060681946,VCITS011-M,T Shirt,KHOKO,2790,2000,pcs,10,0,ARUN,M,VCITS011-M,7083195566,2000,2790,2,1
+384,235,NYC Olive T Shirt - S,variable,5060681946,VCITS011-S,T Shirt,KHOKO,2790,2000,pcs,10,0,ARUN,S,VCITS011-S,7899297470,2000,2790,1,1
+384,236,NYC Olive T Shirt - XXL / XXL,variable,5060681946,VCITS011-3XL,T Shirt,KHOKO,2790,2000,pcs,10,0,ARUN,XXL / XXL,VCITS011-3XL,9980373695,2000,2790,1,1
+385,237,Sassy Red Lace Crop Top - XL,variable,3977784808,VCICT002-XL,Crop Top,denek heaht,2590,2000,pcs,10,0,ARUN,XL,VCICT002-XL,2199142092,2000,2590,2,1
+385,238,Sassy Red Lace Crop Top - L,variable,3977784808,VCICT002-L,Crop Top,denek heaht,2590,2000,pcs,10,0,ARUN,L,VCICT002-L,7536021467,2000,2590,2,1
+385,239,Sassy Red Lace Crop Top - M,variable,3977784808,VCICT002-M,Crop Top,denek heaht,2590,2000,pcs,10,0,ARUN,M,VCICT002-M,1916553830,2000,2590,4,1
+385,240,Sassy Red Lace Crop Top - S,variable,3977784808,VCICT002-S,Crop Top,denek heaht,2590,2000,pcs,10,0,ARUN,S,VCICT002-S,3917443506,2000,2590,2,1
+386,,Sunny Slogan Nightwear,single,6151351782,VCINW001,Night Wear,Karelpiu,2990,2000,pcs,10,0,ARUN,,,,,,,
+387,245,Check Shorts - XXL,variable,4086107717,VCIST003-XXL,Short,ZIVAME,2990,2000,pcs,10,0,ARUN,XXL,VCIST003-XXL,8283164444,2000,2990,4,1
+387,246,Check Shorts - XL,variable,4086107717,VCIST003-XL,Short,ZIVAME,2990,2000,pcs,10,0,ARUN,XL,VCIST003-XL,0342620911,2000,2990,5,1
+387,247,Check Shorts - S,variable,4086107717,VCIST003-S,Short,ZIVAME,2990,2000,pcs,10,0,ARUN,S,VCIST003-S,7040587664,2000,2900,1,1
+388,248,White Eyelet Blouse - XXL,variable,7942182926,VCIBL003-XXL,Blouse,BELOVED,3590,2500,pcs,10,0,"ARUN add s 1 pec
+Stors
+Blouse box 01
+No-388
+07 pec",XXL,VCIBL003-XXL,8735981645,2500,3590,1,1
+388,249,White Eyelet Blouse - XL,variable,7942182926,VCIBL003-XL,Blouse,BELOVED,3590,2500,pcs,10,0,"ARUN add s 1 pec
+Stors
+Blouse box 01
+No-388
+07 pec",XL,VCIBL003-XL,4133290935,2500,3590,2,1
+388,250,White Eyelet Blouse - L,variable,7942182926,VCIBL003-L,Blouse,BELOVED,3590,2500,pcs,10,0,"ARUN add s 1 pec
+Stors
+Blouse box 01
+No-388
+07 pec",L,VCIBL003-L,9506921617,2500,3590,4,1
+388,251,White Eyelet Blouse - M,variable,7942182926,VCIBL003-M,Blouse,BELOVED,3590,2500,pcs,10,0,"ARUN add s 1 pec
+Stors
+Blouse box 01
+No-388
+07 pec",M,VCIBL003-M,0345006273,2500,3590,2,1
+388,759,White Eyelet Blouse - S,variable,7942182926,VCIBL003-S,Blouse,BELOVED,3590,2500,pcs,10,0,"ARUN add s 1 pec
+Stors
+Blouse box 01
+No-388
+07 pec",S,VCIBL003-S,7522828606,2500,3590,1,1
+389,,Crochet Sleeve Blouse,single,3028785395,VCIBL004,Blouse,BELOVED,3490,2500,pcs,10,0,ARUN,,,,,,,
+390,,White Ruffle Blouse,single,9825984325,VCIBL005,white blouse,BELOVED,3590,2200,pcs,10,0,ARUN,,,,,,,
+391,,Smocked Waist Frock,single,6252332169,VCIFR005,Frock,Studio,2290,1500,pcs,10,0,ARUN,,,,,,,
+392,,Sleeveless Cotton Nightie,single,2273739113,VCINW002,Night Wear,Vyla,2490,1800,pcs,19,0,Arun,,,,,,,
+393,,Mariner Stripe Blouse #,single,9611324915,VCIBL006,Blouse,harbour 9,4790,4200,pcs,8,0,"ARUN
+Stors 
+Blouse box 01
+No-393
+5pec",,,,,,,
+394,264,Casual Magenta Blouse - XL,variable,3063514131,VCIBL007-XL,Blouse,Weekend,2890,2000,pcs,10,0,,XL,VCIBL007-XL,5118427256,2000,2890,2,1
+394,265,Casual Magenta Blouse - L,variable,3063514131,VCIBL007-L,Blouse,Weekend,2890,2000,pcs,10,0,,L,VCIBL007-L,8011599368,2000,2890,3,1
+394,266,Casual Magenta Blouse - M,variable,3063514131,VCIBL007-M,Blouse,Weekend,2890,2000,pcs,10,0,,M,VCIBL007-M,2592582657,2000,2890,2,1
+394,267,Casual Magenta Blouse - S,variable,3063514131,VCIBL007-S,Blouse,Weekend,2890,2000,pcs,10,0,,S,VCIBL007-S,3700885545,2000,2890,3,1
+395,268,Red Cap Sleeve Blouse - XL,variable,1546977503,VCIBL008-XL,Blouse,George,3890,2500,pcs,10,0,,XL,VCIBL008-XL,9264243615,2500,3890,1,1
+395,269,Red Cap Sleeve Blouse - L,variable,1546977503,VCIBL008-L,Blouse,George,3890,2500,pcs,10,0,,L,VCIBL008-L,6535758102,2500,3890,2,1
+395,270,Red Cap Sleeve Blouse - M,variable,1546977503,VCIBL008-M,Blouse,George,3890,2500,pcs,10,0,,M,VCIBL008-M,2010301285,2500,3890,5,1
+395,271,Red Cap Sleeve Blouse - S,variable,1546977503,VCIBL008-S,Blouse,George,3890,2500,pcs,10,0,,S,VCIBL008-S,9724050910,2500,3890,2,1
+396,272,Floral Bliss V neck Tee - XL,variable,7805546515,VCITS012-XS,T Shirt,MEDICINE,4690,3200,pcs,10,0,ARUN,XL,VCITS012-XS,6547877765,3200,4690,6,1
+396,273,Floral Bliss V neck Tee - L,variable,7805546515,VCITS012-L,T Shirt,MEDICINE,4690,3200,pcs,10,0,ARUN,L,VCITS012-L,9399453420,3200,4690,1,1
+396,274,Floral Bliss V neck Tee - M,variable,7805546515,VCITS012-M,T Shirt,MEDICINE,4690,3200,pcs,10,0,ARUN,M,VCITS012-M,1783573904,3200,4690,1,1
+396,275,Floral Bliss V neck Tee - S,variable,7805546515,VCITS012-S,T Shirt,MEDICINE,4690,3200,pcs,10,0,ARUN,S,VCITS012-S,9985196831,3200,4690,2,1
+397,,Ocean Breeze V Neck Tee *,single,0599796649,VCITS013,T Shirt,Weekend,3190,2200,pcs,8,0,"ARUN
+
+1 pec damage **",,,,,,,
+398,,Daisy Trim Blouse #,single,6044541296,VCIBL009,white blouse,harbour 9,4790,3200,pcs,5,0,ARUN,,,,,,,
+399,,Rainbow Heats Tee,single,6706489905,VCITS014,T Shirt,Weekend,3190,2200,pcs,10,0,,,,,,,,
+400,285,Nova Blouse - White / L,variable,1879275811,VCIBL011-WHI-L,Blouse,doll up,3690,2500,pcs,10,0,,White / L,VCIBL011-WHI-L,3526746905,2500,3690,1,1
+400,286,Nova Blouse - White / M,variable,1879275811,VCIBL011-WHI-M,Blouse,doll up,3690,2500,pcs,10,0,,White / M,VCIBL011-WHI-M,1794395155,2500,3690,1,1
+400,287,Nova Blouse - Black / XXL,variable,1879275811,VCIBL011-BLA-XXL,Blouse,doll up,3690,2500,pcs,10,0,,Black / XXL,VCIBL011-BLA-XXL,9549213128,2500,3690,2,1
+400,288,Nova Blouse - Black / XL,variable,1879275811,VCIBL011-BLA-XL,Blouse,doll up,3690,2500,pcs,10,0,,Black / XL,VCIBL011-BLA-XL,7336677086,2500,3690,3,1
+400,289,Nova Blouse - Black / L,variable,1879275811,VCIBL011-BLA-L,Blouse,doll up,3690,2500,pcs,10,0,,Black / L,VCIBL011-BLA-L,4479717772,2500,3690,1,1
+400,290,Nova Blouse - Black / M,variable,1879275811,VCIBL011-BLA-M,Blouse,doll up,3690,2500,pcs,10,0,,Black / M,VCIBL011-BLA-M,8192644652,2500,3690,1,1
+401,,Anchor & Waves Casual Tee,single,6742297698,VCITS015,T Shirt,Weekend,3190,2200,pcs,10,0,ARUN,,,,,,,
+402,,Blue Dot Shorts,single,7841611682,VCISH001,Short,VANHEUSEN,1790,1000,pcs,10,0,ARUN,,,,,,,
+403,,Leopard Shorts,single,2245898493,VCISH002,Short,Vyla,2190,1500,pcs,10,0,,,,,,,,
+404,298,Striped Split Neck Blouse - M,variable,5093983888,VCIBL012-M,Blouse,Blue Seven,3890,2500,pcs,5,0,,M,VCIBL012-M,6159539835,2700,3890,4,1
+405,299,Minty Dot Top - XL / Black,variable,2371550028,VCIBL013-XL-BLA,Blouse,George,2990,2000,pcs,20,0,Black - m and white - L 2 pec damage .,XL / Black,VCIBL013-XL-BLA,9192144312,2000,2990,2,1
+405,300,Minty Dot Top - L / White,variable,2371550028,VCIBL013-L-GRE,Blouse,George,2990,2000,pcs,20,0,Black - m and white - L 2 pec damage .,L / White,VCIBL013-L-GRE,6842677775,2000,2990,3,1
+405,301,Minty Dot Top - L / Black,variable,2371550028,VCIBL013-L-BLA,Blouse,George,2990,2000,pcs,20,0,Black - m and white - L 2 pec damage .,L / Black,VCIBL013-L-BLA,1088558970,2000,2990,4,1
+405,302,Minty Dot Top - M / White,variable,2371550028,VCIBL013-M-GRE,Blouse,George,2990,2000,pcs,20,0,Black - m and white - L 2 pec damage .,M / White,VCIBL013-M-GRE,5089435651,2000,2990,4,1
+405,303,Minty Dot Top - M / Black,variable,2371550028,VCIBL013-M-BLA,Blouse,George,2990,2000,pcs,20,0,Black - m and white - L 2 pec damage .,M / Black,VCIBL013-M-BLA,9012288425,2000,2990,2,1
+405,304,Minty Dot Top - S / White,variable,2371550028,VCIBL013-S-GRE,Blouse,George,2990,2000,pcs,20,0,Black - m and white - L 2 pec damage .,S / White,VCIBL013-S-GRE,7599255112,2000,2990,3,1
+405,305,Minty Dot Top - S / Black,variable,2371550028,VCIBL013-S-BLA,Blouse,George,2990,2000,pcs,20,0,Black - m and white - L 2 pec damage .,S / Black,VCIBL013-S-BLA,8972533711,2000,2990,2,1
+406,,Mystic Habitat T Shirt,single,8451876906,VCITS016,T Shirt,MEDICINE,3290,2200,pcs,7,0,,,,,,,,
+407,,Flora & Butterfly Nymph Tee,single,3185012879,VCITS017,T Shirt,MEDICINE,3790,2500,pcs,10,0,ARUN,,,,,,,
+408,,Vintage Codex Oversized Tee,single,0964403189,VCITS018,T Shirt,MEDICINE,3290,2200,pcs,0,0,ARUN,,,,,,,
+409,,Reb Graphic Tee,single,0395605077,VCITS019,T Shirt,HOUSE,3790,2500,pcs,-1,0,ARUN,,,,,,,
+410,315,Print Nyra Cut Ghera Kurthi - XL,variable,3917832404,VSIK01-XL,Indian Kurthi,Mangalam Fashion,4300,4300,pcs,12,0,Mangalam Fashion,XL,VSIK01-XL,3786214887,4300,4300,12,1
+411,,Two Tone Print Chipti  Ghera Kurthi,single,6925730578,VSIK02,Indian Kurthi,Vyla,3990,3200,pcs,4,0,CHANDRU BANIAN,,,,,,,
+412,,Heavy Slef Work Kurthi,single,4096367559,VSIK03,Indian Kurthi,Vyla,5990,5100,pcs,7,0,CHANDRU BANIAN,,,,,,,
+413,,Print Kurthi,single,4478074458,VSIK04,Indian Kurthi,Vyla,4990,4300,pcs,4,0,CHANDRU BANIAN,,,,,,,
+414,,A Line Princess Cut With Side Pocket Kurthi,single,3927924648,VSIK05,Indian Kurthi,Vyla,5990,5200,pcs,7,0,,,,,,,,
+415,321,Leaf Print Button Down Kurthi - XL,variable,8018988223,VSIK06-XL,Indian Kurthi,Mangalam Fashion,3200,3200,pcs,0,0,CHANDRU BANIAN,XL,VSIK06-XL,7297923588,3200,3200,4,1
+416,,Pastel Garden Tunic Kurthi,single,1029895399,VSIK07,Indian Kurthi,Mangalam Fashion,4990,3200,pcs,13,0,CHANDRU BANIAN,,,,,,,
+417,,Classic Comfort Pants,single,4961491449,VCIP01,Pants,Vyla,2190,1500,pcs,40,0,,,,,,,,
+418,,Flower Straight Kurthi,single,6352412642,VSIK008,Indian Kurthi,Mangalam Fashion,4890,4100,pcs,9,0,CHANDRU BANIAN,,,,,,,
+419,,Foil Print Kurthi,single,0707636203,VSIK009,Indian Kurthi,Mangalam Fashion,5990,4400,pcs,16,0,CHANDRU BANIAN,,,,,,,
+420,,Floral Elegance Kurthi,single,8840957512,VSIK10,Indian Kurthi,Mangalam Fashion,4290,3500,pcs,7,0,,,,,,,,
+421,,Allover Ethnic Print Kurthi,single,5695704957,VSIK011,Indian Kurthi,Mangalam Fashion,7290,6900,pcs,6,0,,,,,,,,
+423,,Classic Pajama Set,single,4005944553,VCINW02,Night Wear,Princess,3890,3200,pcs,12,0,CHANDRU BANIAN,,,,,,,
+424,,Nighty Slips 90CM,single,5560044938,VCINW03,Night Wear,Deepika,2290,2000,pcs,10,0,CHANDRU BANIAN,,,,,,,
+425,,Nighty Slips 95CM,single,9872599580,VCINW04,Night Wear,Deepika,2290,2000,pcs,10,0,CHANDRU BANIAN,,,,,,,
+426,,Nighty Slips 100CM,single,4862642722,VCINW05,Night Wear,Deepika,2290,1800,pcs,10,0,CHANDRU BANIAN,,,,,,,
+427,,Velune White Blouse #,single,2783050658,VCIBL01,Blouse,BELOVED,3990,3500,pcs,10,0,,,,,,,,
+428,,Elite Charm Blouse,single,6263462591,VLIBL02,white blouse,Vyla,4290,3500,pcs,9,0,,,,,,,,
+429,,Classic Titty Blouse,single,6697864040,VCIBL02,Blouse,WOMEN,3190,2200,pcs,9,0,,,,,,,,
+430,,White Velvet Blouse #,single,6467225682,VCIBL03,white blouse,BELOVED,3990,2500,pcs,10,0,,,,,,,,
+431,,Sleeping Beauty Night Wear,single,9248990988,VCINW06,Night Wear,Disney,3890,2500,pcs,13,0,,,,,,,,
+432,,Sweet Dream NightWear,single,4713748477,VCINW07,Night Wear,Infiore,3890,2500,pcs,34,0,,,,,,,,
+433,,Buttercup Teddy Set,single,4110976623,VCINW007,Night Wear,Infiore,4890,3500,pcs,8,0,,,,,,,,
+434,,Black V Neck T Shirt,single,1195777892,VCITS01,T Shirt,KHOKO,3690,2000,pcs,8,0,ARUN,,,,,,,
+435,,Green Floral Crop Top *,single,6904773520,VCICT01,Crop Top,Livesmart,2690,2000,pcs,10,0,"ARUN
+damage 1 pec *
+",,,,,,,
+436,,Flower Paris Crop Top,single,8535402454,VCICR02,Crop Top,Divided,2790,1800,pcs,10,0,ARUN,,,,,,,
+437,,Arm Cut Top #,single,1283298895,VCIT01,Top,BELOVED,4890,3500,pcs,20,0,ARUN,,,,,,,
+438,,Box Neck Print Blouse,single,6863447020,VCIBL04,Blouse,Blush,4190,3200,pcs,10,0,,,,,,,,
+439,,Soft Elan T Shirt,single,8772056285,VCITS02,T Shirt,BELOVED,4190,3200,pcs,10,0,ARUN,,,,,,,
+440,,Sleeveless Lace Top ##,single,6559113024,VCIBL010,white blouse,BELOVED,4990,3900,pcs,10,0,,,,,,,,
+441,,Casual Striped Midi Skirt,single,9331284387,VCISK002,Skirt,Weekend,4590,3900,pcs,16,0,ARUN,,,,,,,
+442,,"Mama""s Love Tee Dress",single,1286673116,VCIFR008,Frock,Vyla,4390,3200,pcs,19,0,,,,,,,,
+443,,Bloom Shirt Kurthi,single,4685865106,VSIK001,Indian Kurthi,Bhavika Life Style,7990,6600,pcs,6,0,,,,,,,,
+444,,Love Struck Smock Dress,single,2703473639,VCIFR009,Pregnant Frock,Vyla,4590,3200,pcs,21,0,,,,,,,,
+445,,White Floral Embroidary,single,6232787147,VCICR001,Crop Top,Yawen For Her,3890,2200,pcs,5,0,,,,,,,,
+446,,Embroider Top,single,4349874810,VCIT001,Top,Yawen For Her,3890,2200,pcs,2,0,,,,,,,,
+447,,Long Sleeve Top,single,6714306943,VCIT002,Top,Yawen For Her,3590,2800,pcs,3,0,,,,,,,,
+448,,Yellow Velvet Floral V neck,single,0690600282,VSIK012,Indian Kurthi,P-640,3200,3200,pcs,5,0,,,,,,,,
+449,437,Noir Dot Blouse - XL,variable,8355200817,VCIBL0010-XL,Blouse,KHOKO,3290,2000,pcs,10,0,,XL,VCIBL0010-XL,5717929899,2000,3290,2,1
+449,438,Noir Dot Blouse - L,variable,8355200817,VCIBL0010-L,Blouse,KHOKO,3290,2000,pcs,10,0,,L,VCIBL0010-L,8007669670,2000,3290,2,1
+449,439,Noir Dot Blouse - M,variable,8355200817,VCIBL0010-M,Blouse,KHOKO,3290,2000,pcs,10,0,,M,VCIBL0010-M,9099315140,2000,3290,3,1
+449,440,Noir Dot Blouse - S,variable,8355200817,VCIBL0010-S,Blouse,KHOKO,3290,2000,pcs,10,0,,S,VCIBL0010-S,3462718344,2000,3290,3,1
+450,441,Ethereal Mauve - XXL,variable,5288892247,VCIBL014-XXL,Blouse,Yawen For Her,3200,3200,pcs,5,0,,XXL,VCIBL014-XXL,6857031834,3200,3200,0,1
+450,442,Ethereal Mauve - XL,variable,5288892247,VCIBL014-XL,Blouse,Yawen For Her,3200,3200,pcs,5,0,,XL,VCIBL014-XL,3158996756,3200,3200,0,1
+450,443,Ethereal Mauve - L,variable,5288892247,VCIBL014-L,Blouse,Yawen For Her,3200,3200,pcs,5,0,,L,VCIBL014-L,9379453279,3200,3200,5,1
+450,444,Ethereal Mauve - M,variable,5288892247,VCIBL014-M,Blouse,Yawen For Her,3200,3200,pcs,5,0,,M,VCIBL014-M,9329525881,3200,3200,0,1
+450,445,Ethereal Mauve - S,variable,5288892247,VCIBL014-S,Blouse,Yawen For Her,3200,3200,pcs,5,0,,S,VCIBL014-S,4005475887,3200,3200,0,1
+451,,Willow Patchwork Top,single,9235328858,VCIT003,Top,You See,3690,2200,pcs,4,0,,,,,,,,
+452,,Sienna Meadow Blouse,single,4570716082,VCIBL015,Blouse,Yawen For Her,3200,3200,pcs,1,0,,,,,,,,
+453,,Long Summer Pants,single,7754398101,VCIP001,Pants,Vyla,2590,2000,pcs,7,0,,,,,,,,
+454,,Lavender Tile Blouse #,single,2821410097,VCIBL016,Blouse,Yawen For Her,3490,3200,pcs,4,5,,,,,,,,
+455,,Cute Kitty Shorts,single,9623669420,VCIST004,Short,Vyla,1890,1400,pcs,8,0,,,,,,,,
+456,,Amber Striped Tee,single,4071132953,VCITS020,T Shirt,Yawen For Her,3200,3200,pcs,6,0,"Green, Blue, Purple",,,,,,,
+457,,Deep Violet Blouse,single,8582603195,VCIBL017,Blouse,Yawen For Her,3790,2200,pcs,3,0,,,,,,,,
+458,,Olive Blossom Tunic,single,0022937499,VSIK08,Indian Kurthi,Bhavika Life Style,8790,7200,pcs,2,0,,,,,,,,
+459,453,Juniper Paisley Dress - XXL,variable,6948925709,VCIFR006-XXL,Frock,Bhavika Life Style,3200,3200,pcs,4,0,,XXL,VCIFR006-XXL,7247004355,3200,3200,0,1
+459,454,Juniper Paisley Dress - XL,variable,6948925709,VCIFR006-XL,Frock,Bhavika Life Style,3200,3200,pcs,4,0,,XL,VCIFR006-XL,4396332355,3200,3200,3,1
+459,455,Juniper Paisley Dress - L,variable,6948925709,VCIFR006-L,Frock,Bhavika Life Style,3200,3200,pcs,4,0,,L,VCIFR006-L,4926803787,3200,3200,1,1
+459,456,Juniper Paisley Dress - M,variable,6948925709,VCIFR006-M,Frock,Bhavika Life Style,3200,3200,pcs,4,0,,M,VCIFR006-M,0863698629,3200,3200,0,1
+459,457,Juniper Paisley Dress - S,variable,6948925709,VCIFR006-S,Frock,Bhavika Life Style,3200,3200,pcs,4,0,,S,VCIFR006-S,8760055136,3200,3200,0,1
+460,,Magenta Motif Flore Dress,single,7497455418,VCIFR010,Frock,Bhavika Life Style,6990,6200,pcs,9,0,,,,,,,,
+461,,Slips - 85 cm,single,8384151816,VCIUG001,Under Garments,RIKHAZ,1190,800,pcs,20,0,,,,,,,,
+462,,Slips - 90 cm,single,7649429037,VCIUG002,Under Garments,RIKHAZ,1190,800,pcs,19,0,,,,,,,,
+463,,Slips  - 100 cm,single,7986969714,VCIUG003,Under Garments,RIKHAZ,1190,800,pcs,20,0,,,,,,,,
+464,,Soft Slips - 85 Size,single,3727466857,VCIUG004,Under Garments,Dark Fantacy,1500,1500,pcs,20,0,,,,,,,,
+465,,Soft Slips - 80 size,single,5877642712,VCIUG005,Under Garments,Dark Fantacy,1290,800,pcs,20,0,,,,,,,,
+466,,Soft Slips - 100 size,single,1016413555,VCIUG006,Under Garments,Dark Fantacy,1290,800,pcs,20,0,,,,,,,,
+467,,Soft Slips - 95 size,single,8268636469,VCIUG007,Under Garments,Dark Fantacy,1290,800,pcs,20,0,,,,,,,,
+468,,Soft Slips  - 90 size,single,8447228346,VCIUG008,Under Garments,Dark Fantacy,1290,800,pcs,19,0,,,,,,,,
+469,463,Graphic T Shirt - XXL,variable,2464176437,VCITS022-XXL,T Shirt,RIKHAZ,1200,1200,pcs,30,0,,XXL,VCITS022-XXL,3058308006,1200,1200,0,1
+469,464,Graphic T Shirt - XL,variable,2464176437,VCITS022-XL,T Shirt,RIKHAZ,1200,1200,pcs,30,0,,XL,VCITS022-XL,1402582906,1200,1200,10,1
+469,465,Graphic T Shirt - L,variable,2464176437,VCITS022-L,T Shirt,RIKHAZ,1200,1200,pcs,30,0,,L,VCITS022-L,6622813137,1200,1200,10,1
+469,466,Graphic T Shirt - M,variable,2464176437,VCITS022-M,T Shirt,RIKHAZ,1200,1200,pcs,30,0,,M,VCITS022-M,9059824809,1200,1200,10,1
+469,467,Graphic T Shirt - S,variable,2464176437,VCITS022-S,T Shirt,RIKHAZ,1200,1200,pcs,30,0,,S,VCITS022-S,9802117559,1200,1200,0,1
+470,,Premium Panties,single,7969890349,VCIUG009,Under Garments,Fashion Girl,590,1500,pcs,131,0,,,,,,,,
+471,,Inner Wears,single,8433781716,VCIUG010,Under Garments,Play Girl,1190,1000,pcs,38,0,,,,,,,,
+472,,Roxie Knit Crop Top,single,0456310593,VCICR002,Crop Top,RIO,3290,2200,pcs,2,0,,,,,,,,
+473,,Great Love Tee,single,8694167427,VCITS021,T Shirt,B & B,3190,2500,pcs,6,0,"Purple, green, Brown, Gray, Butter Color",,,,,,,
+474,,Bra Slips,single,2150752876,VCIUG011,Under Garments,Sadhana,2690,1500,pcs,60,0,"Purple, Brown, Black, Dark Brown, Dark Green, Blue, Pink, Orange",,,,,,,
+475,,Ladies Pyjama Set,single,1701468060,VCINW003,Night Wear,Look Me,3990,3500,pcs,18,0,"Pink, Purple, Maroon, Green, Orange",,,,,,,
+476,,Mandarind Coller Blouse,single,4003731620,VLIBL018,laxary,RIO,4290,3200,pcs,6,0,"Orange, Green, Blue, Light Green, Pink",,,,,,,
+477,,Rib Printed Pyjama Set,single,9823059499,VCINW004,Night Wear,Creation,2890,1900,pcs,18,0,"Pink, Orange, Brown, White, Blue, Green, Gray, Peach",,,,,,,
+478,,Moss Haven Crop Top,single,4309093851,VCICT003,Crop Top,Pink Jasmine,2490,1900,pcs,2,0,"Brown, Gray, Butter Color, Green",,,,,,,
+479,,Pajam Bottom Long Pant,single,4305423182,VCINW005,Night Wear,Angel,1890,1200,pcs,15,0,,,,,,,,
+480,,Thirupathi H.T.Allower Jacket PC,single,0723701481,VSIJP001,Saree Jacket PC,H.T.ALLOVER,1490,980,pcs,11,0,"Green, Orange, Purple, Blue, Pink, Cream, Light Green, Black",,,,,,,
+481,,Thirupathi Mono Work,single,4817128260,VSIJP002,Saree Jacket PC,Mono Work,1390,1000,pcs,11,0,"Light Green, Brown, Green, Purple, Pink, Cream",,,,,,,
+482,,Nethra Silk Mils Jacket Pies,single,6671004445,VSIJP003,Saree Jacket PC,Vyla,890,500,pcs,200,0,,,,,,,,
+483,,Gogad Katreena Jacket PC,single,3587926294,VSIJP004,Saree Jacket PC,Katreena,1190,800,pcs,10,0,,,,,,,,
+484,,Gogad Jamun Jacket PC,single,9261057159,VSIJP005,Saree Jacket PC,Jamuna,2000,2000,pcs,10,0,,,,,,,,
+485,,Gogad Neha Jacket PC,single,0273273686,VSIJP006,Saree Jacket PC,NEHA,1090,1200,pcs,10,0,,,,,,,,
+486,,Skin Soft Cotton Under Slips,single,6058411838,VCIUG012,Under Garments,Diya Slips,1490,800,pcs,99,0,Chandru,,,,,,,
+487,,Shreejee Waxbotiq Jacket PC,single,8410689653,VSIJP007,Saree Jacket PC,Shreejee Prints,1090,800,pcs,15,0,,,,,,,,
+488,,Thirupathi Soft Look Jacket PC,single,5112819479,VSIJP008,Saree Jacket PC,Soft Look,990,500,pcs,11,0,,,,,,,,
+489,,Angela Bra,single,7205687554,VCIUG013,Under Garments,Simply Beautiful,1990,800,pcs,149,0,,,,,,,,
+490,,Swinecase Jacket PC,single,7865964824,VSIJP009,Saree Jacket PC,Bavan,1290,800,pcs,20,0,,,,,,,,
+491,,Butter Cotton Jacket PC,single,6934858692,VSIJP010,Saree Jacket PC,Shreejee Prints,1190,800,pcs,59,0,,,,,,,,
+492,,Exclusive Fancy Blouse Jacket PC,single,7276184049,VSIJP011,Saree Jacket PC,Vyla,1490,900,pcs,9,0,,,,,,,,
+493,,Fiona Cotton Jacket Pies,single,1324582520,VSIJP012,Saree Jacket PC,Adhithya,1090,800,pcs,25,0,"Pink, Black, Green, Merune, Blue, Red",,,,,,,
+494,,MM Mayuri Jacket PC,single,9199417733,VSIJP013,Saree Jacket PC,Mayuri,500,500,pcs,25,0,,,,,,,,
+495,,Havana Jacket PC,single,5000162891,VSIJP014,Saree Jacket PC,Vyla,500,500,pcs,10,0,Cream Colour,,,,,,,
+496,,Satin Cotton Jacket Pies,single,2096558892,VSIJP015,Saree Jacket PC,Adhithya,1090,800,pcs,24,0,Black,,,,,,,
+497,,Bhavna Far,single,9744364912,VSIJP016,Saree Jacket PC,Far Net,1390,900,pcs,10,0,"Black, Purple, Green, Red, Pink",,,,,,,
+498,,Banjara Dark Jacket Pies,single,8451625711,VSIJP017,Saree Jacket PC,Vyla,1290,800,pcs,10,0,"Pink, Green, Yellow, Black, Red, Cream, Purple, Orange, Blue ",,,,,,,
+500,536,Wide Leg 6 Pocket Ladies Jean LIG BLU - XXL,variable,4863435218,VCILJ001-36,Ladies Jeans,24Carat,500,500,pcs,30,0,,XXL,VCILJ001-36,3570750033,500,500,5,1
+500,537,Wide Leg 6 Pocket Ladies Jean LIG BLU - XL,variable,4863435218,VCILJ001-34,Ladies Jeans,24Carat,500,500,pcs,30,0,,XL,VCILJ001-34,8185943492,500,500,7,1
+500,538,Wide Leg 6 Pocket Ladies Jean LIG BLU - L,variable,4863435218,VCILJ001-32,Ladies Jeans,24Carat,500,500,pcs,30,0,,L,VCILJ001-32,3051715413,500,500,6,1
+500,539,Wide Leg 6 Pocket Ladies Jean LIG BLU - M,variable,4863435218,VCILJ001-30,Ladies Jeans,24Carat,500,500,pcs,30,0,,M,VCILJ001-30,6200550014,500,500,6,1
+500,540,Wide Leg 6 Pocket Ladies Jean LIG BLU - S,variable,4863435218,VCILJ001-28,Ladies Jeans,24Carat,500,500,pcs,30,0,,S,VCILJ001-28,0975309752,500,500,6,1
+501,,Haven Cotton Jacket Pies,single,9752089144,VSIJP018,Saree Jacket PC,Vyla,1090,800,pcs,8,0,,,,,,,,
+502,541,Wide Leg Blue 6 Pockets Ladies Jean - XXL,variable,6857346262,VCILJ002-36,Ladies Jeans,24Carat,500,500,pcs,31,0,,XXL,VCILJ002-36,9645554590,500,500,6,1
+502,542,Wide Leg Blue 6 Pockets Ladies Jean - XL,variable,6857346262,VCILJ002-34,Ladies Jeans,24Carat,500,500,pcs,31,0,,XL,VCILJ002-34,7049150689,500,500,7,1
+502,543,Wide Leg Blue 6 Pockets Ladies Jean - L,variable,6857346262,VCILJ002-32,Ladies Jeans,24Carat,500,500,pcs,31,0,,L,VCILJ002-32,2792922870,500,500,6,1
+502,544,Wide Leg Blue 6 Pockets Ladies Jean - M,variable,6857346262,VCILJ002-30,Ladies Jeans,24Carat,500,500,pcs,31,0,,M,VCILJ002-30,0214915339,500,500,6,1
+502,545,Wide Leg Blue 6 Pockets Ladies Jean - S,variable,6857346262,VCILJ002-28,Ladies Jeans,24Carat,500,500,pcs,31,0,,S,VCILJ002-28,7870626743,500,500,6,1
+503,,Lapet Print Jacket Pies,single,7107785248,VSIJP019,Saree Jacket PC,Vyla,500,500,pcs,10,0,,,,,,,,
+505,,Bhavna Swasticprt Jacket Pies,single,2222393308,VSIJP020,Saree Jacket PC,Vyla,500,500,pcs,10,0,"Green, Purple, Pink",,,,,,,
+508,,Gassed Yarn Wash & Wear Jacket PC,single,6316155900,VSIJP021,Saree Jacket PC,Vyla,1090,700,pcs,197,0,"Chandru
+Red, Purple, Pink, Green, Light Green, Gray, Brown, Yellow, Light Blue, Peach",,,,,,,
+510,,Exclusive Fancy Blouse Pies,single,4773193755,VSIJP022,Saree Jacket PC,EKKAT,990,800,pcs,11,0,,,,,,,,
+511,,Light Blue Box Leg Pant,single,2742082294,VCBBP001,Box Pants,24Carat,4690,3690,pcs,21,0,,,,,,,,
+512,,Dark Blue Box Leg Pant,single,8737061265,VCBBP002,Box Pants,24Carat,5890,3890,pcs,27,0,,,,,,,,
+513,,Dark Gray Box Leg Pant,single,1536978246,VCBBP003,Box Pants,24Carat,5890,3890,pcs,25,0,,,,,,,,
+516,,Light Gray Box Leg Pant *,single,2356997560,VCBBP005,Box Pants,24Carat,4690,3690,pcs,10,0,1 pec damage **,,,,,,,
+517,,Box Long Pants OFF WHI *,single,5600901769,VCBLJ002,Ladies Jeans,24Carat,4190,3190,pcs,9,0,1 pec damage ** color path,,,,,,,
+518,,Blue Box Leg Pant,single,4251203569,VCBBP006,Box Pants,24Carat,5890,3890,pcs,13,0,,,,,,,,
+521,,Light Green Box Leg Pant *,single,8079514814,VCBBP008,Box Pants,24Carat,4690,3690,pcs,15,0,"1 pec damage **
+",,,,,,,
+526,,Wide Leg Pant Black #,single,3191824829,VCBLJ010,Ladies Jeans,24Carat,5890,4990,pcs,23,0,,,,,,,,
+527,645,Wide Leg Pant Grey - XXL,variable,3056890629,VCBLJ011-36,Ladies Jeans,24Carat,6990,4990,pcs,19,0,,XXL,VCBLJ011-36,5267815804,4990,6990,3,1
+527,646,Wide Leg Pant Grey - XL,variable,3056890629,VCBLJ011-34,Ladies Jeans,24Carat,6990,4990,pcs,19,0,,XL,VCBLJ011-34,0599646375,4990,6990,3,1
+527,647,Wide Leg Pant Grey - L,variable,3056890629,VCBLJ011-32,Ladies Jeans,24Carat,6990,4990,pcs,19,0,,L,VCBLJ011-32,6020980349,4990,6990,4,1
+527,648,Wide Leg Pant Grey - M,variable,3056890629,VCBLJ011-30,Ladies Jeans,24Carat,6990,4990,pcs,19,0,,M,VCBLJ011-30,3574768197,4990,6990,5,1
+527,649,Wide Leg Pant Grey - S,variable,3056890629,VCBLJ011-28,Ladies Jeans,24Carat,6990,4990,pcs,19,0,,S,VCBLJ011-28,8850002245,4990,6990,4,1
+528,,Blue Wide Leg 6 Pocket,single,7700259930,VCBLJ012,Ladies Jeans,24Carat,6890,4890,pcs,31,0,,,,,,,,
+529,655,Dark Blue Wide Leg 6 Pocket ** - XXL,variable,3289325705,VCBLJ013-36,Ladies Jeans,24Carat,6890,4890,pcs,30,0,"Colour pach 2 pec *
+27 damage ..",XXL,VCBLJ013-36,1585841433,4890,6890,6,1
+529,656,Dark Blue Wide Leg 6 Pocket ** - XL,variable,3289325705,VCBLJ013-34,Ladies Jeans,24Carat,6890,4890,pcs,30,0,"Colour pach 2 pec *
+27 damage ..",XL,VCBLJ013-34,0906217804,4890,6890,6,1
+529,657,Dark Blue Wide Leg 6 Pocket ** - L,variable,3289325705,VCBLJ013-32,Ladies Jeans,24Carat,6890,4890,pcs,30,0,"Colour pach 2 pec *
+27 damage ..",L,VCBLJ013-32,0401871976,4890,6890,6,1
+529,658,Dark Blue Wide Leg 6 Pocket ** - M,variable,3289325705,VCBLJ013-30,Ladies Jeans,24Carat,6890,4890,pcs,30,0,"Colour pach 2 pec *
+27 damage ..",M,VCBLJ013-30,7218863417,4890,6890,6,1
+529,659,Dark Blue Wide Leg 6 Pocket ** - S,variable,3289325705,VCBLJ013-28,Ladies Jeans,24Carat,6890,4890,pcs,30,0,"Colour pach 2 pec *
+27 damage ..",S,VCBLJ013-28,4181953867,4890,6890,6,1
+530,,Black Wide Leg 6 Pocket,single,2312502275,VCBLJ014,Ladies Jeans,24Carat,6890,4890,pcs,30,0,,,,,,,,
+531,,Grey Wide Leg 6 Pocket,single,0857837704,VCBLJ015,Ladies Jeans,24Carat,6890,4890,pcs,30,0,,,,,,,,
+532,,Embroider Denim Jacket M,single,3212325331,VLBJ001,Jacket,Vyla,4890,3500,pcs,6,0,,,,,,,,
+533,,Embroider Denim Jacket L,single,9235167939,VLBJ002,laxary,Vyla,5490,4000,pcs,7,0,,,,,,,,
+534,672,Floral Long Sleeve Denim Jacket - XL,variable,8378020382,VLBJ003-XL,Jacket,Vyla,5890,4200,pcs,5,0,S - 1 pcs Damage,XL,VLBJ003-XL,6664901565,4200,5890,4,1
+534,673,Floral Long Sleeve Denim Jacket - S,variable,8378020382,VLBJ003-S,Jacket,Vyla,5890,4200,pcs,5,0,S - 1 pcs Damage,S,VLBJ003-S,6392108349,4200,5890,1,1
+535,674,Embroidered Western Shirt - L,variable,0440434685,VLBJ004-L,Jacket,Vyla,5990,4500,pcs,10,0,,L,VLBJ004-L,7848426821,4500,5990,6,1
+535,675,Embroidered Western Shirt - M,variable,0440434685,VLBJ004-M,Jacket,Vyla,5990,4500,pcs,10,0,,M,VLBJ004-M,1068043139,4500,5990,2,1
+535,676,Embroidered Western Shirt - S,variable,0440434685,VLBJ004-S,Jacket,Vyla,5990,4500,pcs,10,0,,S,VLBJ004-S,0802249983,4500,5990,2,1
+536,677,Bleach Splash Top - XXL,variable,6256627430,VLBJ005-XXL,Jacket,Vyla,5590,3500,pcs,7,0,,XXL,VLBJ005-XXL,2091704252,3500,5590,0,1
+536,678,Bleach Splash Top - XL,variable,6256627430,VLBJ005-XL,Jacket,Vyla,5590,3500,pcs,7,0,,XL,VLBJ005-XL,1211007061,3500,5590,2,1
+536,679,Bleach Splash Top - L,variable,6256627430,VLBJ005-L,Jacket,Vyla,5590,3500,pcs,7,0,,L,VLBJ005-L,1232383480,3500,5590,2,1
+536,680,Bleach Splash Top - M,variable,6256627430,VLBJ005-M,Jacket,Vyla,5590,3500,pcs,7,0,,M,VLBJ005-M,2968421023,3500,5590,2,1
+536,681,Bleach Splash Top - S,variable,6256627430,VLBJ005-S,Jacket,Vyla,5590,3500,pcs,7,0,,S,VLBJ005-S,0403393418,3500,5590,1,1
+537,,Petal Drift Vest,single,1155398128,VLBJ006,laxary,Vyla,4790,3500,pcs,-1,0,,,,,,,,
+540,,Autumn Harvest Blouse,single,8235418512,VLBBL070,laxary,Vyla,5890,3500,pcs,8,0,,,,,,,,
+541,,Folk Garden Blouse,single,4691079418,VLBBL0074,laxary,Vyla,5790,4200,pcs,11,0,,,,,,,,
+542,,Floral Denim Jacket,single,5581277864,VLBJ007,laxary,Vyla,5490,3500,pcs,9,0,,,,,,,,
+543,,rual crop top #,single,9263224988,VLBJ008,laxary,Vyla,4890,3500,pcs,3,0,,,,,,,,
+544,,Long Sleeve Denim Jacket,single,2749102815,VLBJ009,laxary,Vyla,5690,4000,pcs,6,0,,,,,,,,
+545,,Short Sleeve Denim Jacket,single,6157083838,VLBJ010,laxary,Vyla,5290,3500,pcs,5,0,,,,,,,,
+546,,White Alfred Dunner Crop Top,single,2114737387,VLBCT001,Crop Top,Vyla,4990,3000,pcs,2,0,,,,,,,,
+547,,Silk pink Flower Crop Top,single,3103625255,VLBCR002,Crop Top,Vyla,4890,3000,pcs,1,0,,,,,,,,
+548,,Collar Embroider Crop Top,single,5452007592,VLBCR010,Crop Top,Vyla,4790,3200,pcs,1,0,,,,,,,,
+549,,Vintage Stitch top,single,7486459781,VLBCT011,Crop Top,Vyla,5690,4500,pcs,1,0,,,,,,,,
+550,,Sprinkles Crop Top,single,2677305770,VLBCR012,Crop Top,Vyla,4990,3500,pcs,1,0,,,,,,,,
+551,,Mini Flower Crop Top,single,5551640045,VLBCR013,Crop Top,Vyla,3990,3000,pcs,1,0,,,,,,,,
+552,,Pink Color Flower Embroider Top,single,8870440242,VLBCR014,Crop Top,Vyla,4990,3500,pcs,1,0,,,,,,,,
+553,,Butterfly Embroider Crop Top,single,3698454863,VLBCR015,Crop Top,Vyla,4190,3000,pcs,1,0,,,,,,,,
+554,,Flower Line Crop Top,single,3360798988,VLBCR016,Crop Top,Vyla,4590,3500,pcs,1,0,,,,,,,,
+555,,Heart white Crop Top,single,5254095119,VLBCR017,Crop Top,Vyla,5190,4500,pcs,1,0,,,,,,,,
+556,,Vintage Rose Crop top,single,4279448990,VLBCR018,Crop Top,Vyla,4990,3500,pcs,1,0,,,,,,,,
+557,,Tigger Crop Top,single,1273547594,VLBCR019,laxary,Vyla,7990,6800,pcs,1,0,,,,,,,,
+558,,Meera Block Print Saree,single,9584404951,VSISA001,Saree,Vyla,8990,6990,pcs,8,0,,,,,,,,
+559,,Muse Cotton Saree,single,9156536430,VSISA002,Saree,Vyla,13990,11990,pcs,2,0,,,,,,,,
+560,,Mudra Classic Saree,single,0868711238,VSISA003,Saree,Vyla,13790,11790,pcs,2,0,,,,,,,,
+562,,Urban Ethnic Cotton Saree,single,6761856870,VSISA005,Saree,Vyla,13590,11590,pcs,3,0,,,,,,,,
+563,,Midnight Rose Saree,single,8423617389,VSISA006,Saree,Vyla,13490,11490,pcs,1,0,,,,,,,,
+564,,Mustard Shimmer Saree,single,1970662671,VSISA007,Saree,Vyla,14990,12990,pcs,1,0,,,,,,,,
+566,,Monochrome Bloom Saree,single,6366882882,VSISA009,Saree,Vyla,11490,9490,pcs,2,0,,,,,,,,
+567,,Tribal Edge Saree,single,1202501246,VSISA010,Saree,Vyla,11890,9890,pcs,2,0,,,,,,,,
+568,,Ocean Vine Saree,single,3574693371,VSISA011,Saree,Vyla,10990,8990,pcs,3,0,Old 4,,,,,,,
+569,,Pastel Meadow Saree,single,8498802719,VSISA012,Saree,Vyla,10690,8690,pcs,2,0,,,,,,,,
+570,,Dual Nature Blue Saree,single,1066649821,VSISA013,Saree,Vyla,9690,7690,pcs,1,0,,,,,,,,
+571,,Ochre Heritage Saree,single,1520146455,VSISA014,Saree,Vyla,9490,7490,pcs,4,0,,,,,,,,
+572,,Earthy Crimson Saree,single,1900225520,VSISA015,Saree,Vyla,6990,4990,pcs,2,0,,,,,,,,
+573,,Rhythm of Red Saree #,single,2079547436,VSISA016,Saree,Vyla,10990,8890,pcs,1,0,,,,,,,,
+575,,Earthy Sunflower Saree,single,6558027940,VSISA018,Saree,Vyla,12190,10190,pcs,1,0,,,,,,,,
+578,,Pastel Shibori Saree,single,8259082611,VSISA021,Saree,Vyla,12590,10590,pcs,3,0,Old 2,,,,,,,
+581,,Indigo Rust Artisan Saree,single,3884413685,VSISA024,Saree,Vyla,12990,10990,pcs,11,0,,,,,,,,
+582,,Batik & Blooms Saree,single,7471063686,VSISA025,Saree,Vyla,13690,12000,pcs,3,0,Old 1,,,,,,,
+583,,Rudrani Sitham Saree,single,3124646523,VSISA026,Saree,Vyla,15690,13690,pcs,1,0,,,,,,,,
+584,,Ebony & Lace saree,single,5368973522,VSISA027,Saree,Vyla,14590,12590,pcs,2,0,Old qu 3,,,,,,,
+585,,Monochrome Aztec Saree,single,3292288087,VSISA028,Saree,Vyla,14690,12690,pcs,3,0,Old 5,,,,,,,
+586,,Tribal Motif Saree,single,5664072897,VSISA029,Saree,Vyla,16890,14890,pcs,1,0,,,,,,,,
+588,,Ruby Line Saree,single,4949245673,VSISA031,Saree,Vyla,16890,14890,pcs,1,0,Old 2,,,,,,,
+589,,Avian Grace Saree,single,3060264556,VSISA032,Saree,Vyla,16990,14990,pcs,1,0,,,,,,,,
+590,,Vintage Amber Saree,single,2091984425,VSISA033,Saree,Vyla,12490,10490,pcs,1,0,,,,,,,,
+592,,Gothic Geometry Saree,single,6909376598,VSISA035,Saree,Vyla,12690,10690,pcs,2,0,Old 1,,,,,,,
+594,,Ebony Botanica Saree,single,2119600008,VSISA037,Saree,Vyla,12890,10890,pcs,1,0,,,,,,,,
+596,,Fiesta Drop Saree,single,4360130960,VSISA039,Saree,Vyla,13790,11790,unit,5,0,Old 1,,,,,,,
+597,,Elegant Floral Lace Saree,single,0314996675,VSISA040,Saree,Vyla,21290,19290,pcs,2,0,,,,,,,,
+598,,Classic Striped Bloom Saree,single,8217349604,VSISA041,Saree,Vyla,22990,20990,pcs,1,0,,,,,,,,
+599,,Vibrant Batik Floral Saree,single,8264019933,VSISA042,Saree,Vyla,10490,8490,pcs,2,0,,,,,,,,
+600,,Artistic Bloom Batik Saree,single,2937802292,VSISA043,Saree,Vyla,13690,11690,pcs,2,0,,,,,,,,
+601,,Ocean Breeze Batik Saree,single,3900750187,VSISA044,Saree,Vyla,14990,12990,pcs,1,0,,,,,,,,
+602,,Scarlet Pride Saree,single,0015333379,VSISA045,Saree,Vyla,14290,12290,pcs,1,0,,,,,,,,
+603,,Aqua Shell Saree,single,4232991755,VSISA046,Saree,Vyla,7290,5290,pcs,5,0,,,,,,,,
+604,,Pastel Paradise Saree,single,1553722234,VSISA047,Saree,Vyla,9990,7990,pcs,12,0,,,,,,,,
+605,,Wildlife & Floral Fusion Saree @,single,8016235858,VSISA048,Saree,Vyla,9790,7790,pcs,7,0,"4 pec old 
+now 7 pec ...8.05",,,,,,,
+606,,Sunset Orange Grace Saree,single,3183481428,VSISA049,Saree,Vyla,6490,4490,pcs,1,0,,,,,,,,
+607,,Verdant Garden Silk Saree,single,8426024459,VSISA050,Saree,Vyla,7590,5590,pcs,5,0,,,,,,,,
+608,,Geometric Bloom Batk Saree,single,6590644771,VSISA051,Saree,Vyla,9690,7690,pcs,6,0,,,,,,,,
+609,,Ornate Silk Edges Saree,single,0420352289,VSISA052,Saree,Vyla,13490,11490,pcs,2,0,,,,,,,,
+610,,Regal Monotone Saree,single,7371388763,VSISA053,Saree,Vyla,8990,6990,pcs,7,0,,,,,,,,
+611,,Whispering Flora Saree,single,9890603680,VSISA054,Saree,Vyla,13590,11590,pcs,2,0,,,,,,,,
+612,,Lime Blossom Delight Saree,single,4803995819,VSISA055,Saree,Vyla,14590,12590,pcs,1,0,,,,,,,,
+613,,Floral Bloom Saree,single,1131794321,VSISA056,Saree,Vyla,12990,10990,pcs,2,0,,,,,,,,
+614,,Elegant Soft Silk Floral Saree,single,9391388498,VSISA057,Saree,Vyla,9790,7790,pcs,6,0,,,,,,,,
+615,,Traditional Motif Soft Slik Saree,single,9316427759,VSISA058,Saree,Vyla,8990,6990,pcs,4,0,,,,,,,,
+616,,Dual Tone Woven Border Saree,single,2896557396,VSISA059,Saree,Vyla,8690,6690,pcs,4,0,,,,,,,,
+617,,Elegant Minimalist Saree,single,9185928369,VSISA060,Saree,Vyla,10990,8990,pcs,5,0,,,,,,,,
+618,,Blue Floral Lace Border Saree,single,8388153583,VSISA061,Saree,Vyla,7600,5600,pcs,1,0,,,,,,,,
+619,,Classic Bordered Ethnic Saree,single,3008232715,VSISA062,Saree,Vyla,7490,5490,pcs,3,0,,,,,,,,
+620,,Abstract Patterned Elegant Saree,single,1753092229,VSISA063,Saree,Vyla,6990,4990,pcs,4,0,,,,,,,,
+621,,Vibrant Multi Color Tie Dye Saree @#,single,6901700757,VSISA064,Saree,Vyla,3990,2990,pcs,11,0,,,,,,,,
+622,,Blue & White Botanical Saree,single,8602733792,VSISA065,Saree,Vyla,7890,5890,pcs,1,0,,,,,,,,
+623,,Monochrome Floral Block Print Saree,single,0893848250,VSISA066,Saree,Vyla,8990,6990,pcs,1,0,,,,,,,,
+624,,Elegant Tasselled Texture Saree,single,3740399873,VSISA067,Saree,Vyla,8990,6990,pcs,5,0,,,,,,,,
+625,,Floral Embroidery Saree,single,8456843844,VSISA068,Saree,Vyla,13890,11890,pcs,4,0,,,,,,,,
+626,,Paisley Print Floral Saree,single,0512809296,VSISA069,Saree,Vyla,9990,7990,pcs,19,0,,,,,,,,
+627,,Traditional Two Tone Silk Saree,single,7653597720,VSISA070,Saree,Vyla,7990,5990,pcs,16,0,,,,,,,,
+628,,Elegant Embroidered Pastel Saree,single,3892154550,VSISA071,Saree,Vyla,4690,2690,pcs,6,0,,,,,,,,
+629,,Silver Line Azure Saree,single,2105493665,VSISA072,Saree,Vyla,7690,5690,pcs,3,0,,,,,,,,
+630,,Flora Swirl Saree,single,4632310866,VSISA073,Saree,Vyla,16590,14590,pcs,4,0,,,,,,,,
+631,,Blossom Vine Saree,single,5269440464,VSISA074,Saree,Vyla,7290,5290,pcs,4,0,,,,,,,,
+632,,Cotton Breeze Saree,single,7356909965,VSISA075,Saree,Vyla,7990,5990,pcs,4,0,,,,,,,,
+633,,Velvet Night Saree #,single,1446477403,VSISA076,Party Saree,Vyla,9990,8000,unit,7,0,,,,,,,,
+634,,Pastel Diamond Saree,single,3394508407,VSISA077,Party Saree,Vyla,14690,12690,pcs,3,0,,,,,,,,
+635,,Velvet Droplets Saree,single,1266961928,VSISA078,Party Saree,Vyla,16290,14290,pcs,5,0,,,,,,,,
+636,,Blush Sequin Luxe Saree,single,4711256117,VSISA079,Party Saree,Vyla,13690,11690,pcs,7,0,,,,,,,,
+637,,Alestron Cutwork Lace Saree,single,3966190981,VSISA080,Party Saree,Vyla,13690,11690,pcs,7,0,,,,,,,,
+638,,Scalloped Lace & Motif Theme Saree,single,0437294804,VSISA081,Party Saree,Vyla,21790,19790,pcs,3,0,,,,,,,,
+639,,Sliver Flora Slate Saree,single,0988822783,VSISA082,Party Saree,Vyla,16690,14690,pcs,6,0,,,,,,,,
+640,,Royal Mint Brocade Saree,single,8701341986,VSISA083,Party Saree,Vyla,17890,15890,pcs,2,0,,,,,,,,
+642,,Blossom Net Mint Saree,single,6808180667,VSISA085,Party Saree,Vyla,16790,14790,pcs,4,0,,,,,,,,
+643,,Bronze Flora Golden Saree,single,2191488034,VSISA086,Party Saree,Vyla,12990,10990,pcs,3,0,,,,,,,,
+644,,Textured Checkered Saree,single,8640488684,VSISA087,Party Saree,Vyla,17990,15990,pcs,3,0,,,,,,,,
+645,,Embroidered Tissue Silk Saree,single,9625399466,VSISA088,Party Saree,Vyla,10990,8990,pcs,3,0,,,,,,,,
+646,,Sage Stone Glamour Saree,single,3920881179,VSISA089,Party Saree,Vyla,15690,13690,pcs,7,0,,,,,,,,
+647,,Azure Flora Bunch Saree,single,7516117509,VSISA090,Party Saree,Vyla,12790,10790,pcs,2,0,,,,,,,,
+648,,Indigo Breeze Gold Saree,single,5072559720,VSISA091,Party Saree,Vyla,19590,17590,pcs,1,0,,,,,,,,
+649,,Blush Rose Grid Saree #,single,2123900865,VSISA092,Party Saree,Vyla,14690,13800,pcs,6,0,,,,,,,,
+650,,Pastel Shimmer Series Saree,single,0803903116,VSISA093,Party Saree,Vyla,16790,14790,pcs,4,0,,,,,,,,
+651,,Angel Golden Leaf Saree,single,1793643578,VSISA094,Party Saree,Vyla,14290,12290,pcs,3,0,,,,,,,,
+652,,Ivory Wave Golden Saree,single,5261868097,VSISA095,Party Saree,Vyla,10490,8490,pcs,2,0,,,,,,,,
+653,,Imperial Kanchipuram Glow Saree,single,1321633532,VSISA096,Party Saree,Vyla,16590,14590,pcs,1,0,,,,,,,,
+654,,Platinum Gold Glamour Saree,single,5381036625,VSISA097,Party Saree,Vyla,14790,12790,pcs,1,0,,,,,,,,
+655,,Honeyed Lustre Luxe Saree,single,5429493633,VSISA098,Party Saree,Vyla,13890,11890,pcs,4,0,,,,,,,,
+656,,Antique Zari Slate Saree,single,3694588803,VSISA099,Party Saree,Vyla,8990,6990,pcs,3,0,,,,,,,,
+657,,Designer Salmon Bouquet Saree #,single,4932512928,VSISA100,Party Saree,Vyla,14690,13800,pcs,7,0,,,,,,,,
+658,,Copper Pleat Designer Silk Saree,single,9987520461,VSISA101,Party Saree,Vyla,18490,16790,pcs,5,0,,,,,,,,
+659,,Exclusive Party Shimmer Saree,single,1339821674,VSISA102,Party Saree,Vyla,9790,7790,pcs,5,0,,,,,,,,
+660,,Pastel Violet Loom Saree,single,3434723368,VSISA103,Saree,Vyla,22290,20290,pcs,1,0,,,,,,,,
+661,,Geometric Prism Line Saree,single,0931858828,VSISA104,Party Saree,Vyla,19990,17990,pcs,6,0,,,,,,,,
+662,,Sage Crystal Luxe Saree,single,5115622866,VSISA105,Party Saree,Vyla,24790,22790,pcs,5,0,,,,,,,,
+675,,Multicolor Silk Tassel Saree,single,5490067351,VSISA106,Saree,Vyla,10490,8490,pcs,2,0,,,,,,,,
+676,,Color Block Tassel Saree #,single,5506915418,VSISA107,Saree,Vyla,7990,7000,pcs,7,0,,,,,,,,
+678,,Jasmine Bloom Tassel Saree,single,2412434210,VSISA109,Saree,Vyla,7990,5990,pcs,5,0,,,,,,,,
+679,,Metallic Leaf Saree,single,9742275998,VSISA110,Saree,Vyla,14690,12690,pcs,7,0,,,,,,,,
+680,,Beach Tote Bag,single,7054612100,VCBB003,Woven Bag Big,Vyla,4990,3500,pcs,2,0,,,,,,,,
+681,,Daisy Woven Shoulder Bag,single,6605060435,VCBB004,Woven Bag Small,Vyla,3990,3000,pcs,1,0,,,,,,,,
+682,,Summer Stripe Woven Bag,single,2065212366,VCBB005,Woven Bag Small,Vyla,4690,3000,pcs,0,0,,,,,,,,
+683,,Classic Urban Tote Bag,single,6973034817,VCBBA002,Bags,Vyla,4390,3000,pcs,2,0,"Red, Brown, Off White, Black,  Dark Green",,,,,,,
+687,,Grey Cargo Pant,single,5479212631,VCBLJ016,Cargo,24Carat,3590,2490,pcs,24,0,,,,,,,,
+688,,Dark Blue Cargo Pants,single,5807411030,VCBLJ017,Cargo,24Carat,3590,2490,pcs,50,0,,,,,,,,
+689,,Black Cargo Pant,single,3644696230,VCBLJ018,Cargo,24Carat,3490,2490,pcs,24,0,,,,,,,,
+690,,Light Blue Wide Leg 6 Pocket,single,7003787950,VCBLJ019,Ladies Jeans,24Carat,6890,4890,pcs,30,0,,,,,,,,
+691,,zip t shirt @#,single,4991872642,VCITS0001,T Shirt,Weekend,3990,2900,unit,2,0,,,,,,,,
+693,,hard rock t shirt,single,8261898209,VCITS00002,T Shirt,guitar,3190,2600,service,3,0,,,,,,,,
+694,,noil blue arm cut @,single,5393969633,VCITS00001,arm cut,KHOKO,3290,1800,service,1,0,,,,,,,,
+695,,white sleeve band t shirt @,single,4386035359,VCITS00003,T Shirt,dillnger,2690,2000,unit,17,0,,,,,,,,
+696,,Tassel Romance Saree,single,1171561139,VSISA112,Saree,Vyla,9290,7290,pcs,4,0,,,,,,,,
+697,,Nyra Bloom Tassel Saree,single,7378072068,VSISA113,Saree,Vyla,12590,10590,pcs,4,0,,,,,,,,
+698,,Serene Border Saree #,single,4099085834,VSISA114,Saree,Vyla,5790,4790,unit,1,0,,,,,,,,
+699,,Rustic Luxe Tassel Saree,single,5811185968,VSISA115,Saree,Vyla,9990,7990,pcs,11,0,,,,,,,,
+701,,Veya Lines Cotton Saree #,single,5737443744,VSISA117,SAREE S2,Vyla,8290,7590,pcs,2,0,,,,,,,,
+702,,Petalmark Tassel Saree #,single,9264171565,VSISA118,Saree,Vyla,8990,6990,pcs,8,0,,,,,,,,
+703,,Daisy Drift Cotton Saree,single,7964370948,VSISA119,Saree,Vyla,9490,7490,pcs,10,0,,,,,,,,
+706,,Roselle Bloom Embroider Saree,single,6245510251,VSISA122,Saree,Vyla,6490,5490,pcs,4,0,,,,,,,,
+707,,Paisley Charm Embroidered Saree,single,1417614913,VSISA123,Saree,Vyla,9290,7290,pcs,3,0,,,,,,,,
+708,,Drizzle Motif Embroidered Saree,single,9340850706,VSISA124,Saree,Vyla,9290,7290,pcs,3,0,,,,,,,,
+709,,Aviara Embroidered Saree,single,4060428102,VSISA125,Saree,Vyla,8990,6990,pcs,6,0,,,,,,,,
+710,,box long pant dark green *,single,9030292008,VCBBP0008,Box Pants,24Carat,4190,3800,unit,10,0,"10 pec damage ..* all quantity
+",,,,,,,
+711,,Sky Flutter Embroidered Saree,single,8305960057,VSISA127,Saree,Vyla,9990,8990,pcs,7,0,,,,,,,,
+712,,Autumn Leaf Embroidered Saree *,single,0324567864,VSISA128,Saree,Vyla,9990,7990,pcs,11,0,1 Saree damage,,,,,,,
+713,,denim skirt crush,single,3529420985,VCBSK00039,Skirt,denim,4190,3800,unit,6,0,,,,,,,,
+714,,Sweetheart Block Saree,single,3706506265,VSISA129,Saree,Vyla,7890,6890,pcs,5,0,,,,,,,,
+715,,denim dobble poket,single,3222118892,VCBSK000039,Skirt,denim,3990,2800,unit,1,0,,,,,,,,
+716,,denim dobble butten,single,8453500982,VCBSK0000031,Skirt,denim,3990,2600,unit,1,0,,,,,,,,
+717,,Mod Blocks Saree,single,9734068113,VSISA130,Saree,Vyla,7690,6690,pcs,2,0,,,,,,,,
+718,,denim noe 1,single,8406670379,VCBSK00000030,Skirt,denim,3890,3100,unit,1,0,,,,,,,,
+719,,Gala Dot Tassel Saree,single,4701534376,VSISA131,Saree,Vyla,7890,6890,pcs,3,0,,,,,,,,
+720,,Hibiscus Breeze Saree,single,0592166725,VSISA132,Saree,Vyla,7990,6990,pcs,7,0,,,,,,,,
+721,,pink and white t shirt,single,5428667739,VCBSK00030,T Shirt,influencer,2690,2000,unit,10,0,,,,,,,,
+722,,Sunflower  Noir Saree,single,3700670955,VSISA133,Saree,Vyla,9790,7790,pcs,11,0,,,,,,,,
+724,,Tassel Royale Saree,single,6602833539,VSISA134,Saree,Vyla,8790,7790,pcs,11,0,,,,,,,,
+725,,Royal Drape Tassel Saree,single,3226480683,VSISA135,Saree,Vyla,10290,8290,pcs,2,0,,,,,,,,
+726,,Imperial Loom Saree,single,8002073406,VSISA136,Saree,Vyla,7490,6490,pcs,4,0,,,,,,,,
+727,,The Gilded Edge Saree,single,5355896217,VSISA137,Saree,Vyla,9990,7990,pcs,3,0,,,,,,,,
+728,,Royal Nouveau Saree,single,7442574964,VSISA138,Saree,Vyla,12990,10990,pcs,3,0,,,,,,,,
+729,,Velour Majesty Saree,single,5235135544,VSISA139,Saree,Vyla,7990,6990,pcs,6,0,,,,,,,,
+730,,Loom Luxe Saree,single,4740578096,VSISA140,Saree,Vyla,9490,7490,pcs,10,0,,,,,,,,
+731,,Urban Ember Saree,single,9201211458,VSISA141,Saree,Vyla,8690,7690,pcs,0,0,,,,,,,,
+732,,Kashi Dusk Saree *,single,1480262306,VSISA142,Saree,Vyla,8590,7590,pcs,7,0,1 Saree damage..* ,,,,,,,
+733,,Aurora Luxe Saree #,single,2187275375,VSISA143,Saree,Vyla,7290,6890,pcs,8,0,,,,,,,,
+750,,Opal Vogue Saree,single,6280985498,VSINS013,Normal Saree,Vyla,3490,2490,pcs,7,0,,,,,,,,
+751,,Ivory Luxe Saree,single,6449531234,VSINS014,Normal Saree,Vyla,3290,2290,pcs,4,0,,,,,,,,
+752,,Celestial Bloom Saree,single,5340155158,VSINS015,Normal Saree,Vyla,3690,2690,pcs,5,0,,,,,,,,
+753,,Ivory Swirl Saree #,single,4904683071,VSINS016,Normal Saree,Vyla,4890,3890,pcs,2,0,,,,,,,,
+754,,Zari & Zinc Saree,single,7007551882,VSINS017,Normal Saree,Vyla,3890,2890,pcs,1,0,,,,,,,,
+755,,Vanya Atelier Saree,single,1390521550,VSINS018,Normal Saree,Vyla,3890,2890,pcs,4,0,,,,,,,,
+756,,Sage & Petal Saree,single,9117686199,VSINS019,Normal Saree,Vyla,3990,2990,pcs,3,0,,,,,,,,
+757,,Symmetry Silk Saree,single,1830216679,VSINS020,Normal Saree,Vyla,3490,2490,pcs,4,0,,,,,,,,
+758,,Gilded Petal Saree,single,6443036035,VISNS021,Normal Saree,Vyla,3990,2990,pcs,5,0,,,,,,,,
+759,,Summer Haze Saree,single,9259334267,VSINS021,Normal Saree,Vyla,3490,2490,pcs,5,0,,,,,,,,
+760,,Shadow Blossom Saree *,single,0190742634,VSINS022,Normal Saree,Vyla,3890,2890,pcs,5,0,1 pec damage *,,,,,,,
+761,,Mural Motif Saree,single,5459328349,VSINS023,Normal Saree,Vyla,3490,2490,pcs,3,0,,,,,,,,
+762,,Modern Mosaic Saree,single,5321774542,VSINS024,Normal Saree,Vyla,3990,2990,pcs,1,0,,,,,,,,
+763,,The Violet Line Saree,single,1189600381,VSINS025,Normal Saree,Vyla,3490,2490,pcs,10,0,,,,,,,,
+764,,Obsidian Fern Saree,single,8013899360,VSINS026,Normal Saree,Vyla,3490,2490,pcs,2,0,,,,,,,,
+765,,Amber Batik Saree #,single,5991795262,VSINS027,Normal Saree,Vyla,3490,2990,pcs,4,0,,,,,,,,
+766,,Peach Blossom Saree,single,1283246818,VSINS028,Normal Saree,Vyla,2890,1890,pcs,4,0,,,,,,,,
+767,,Monaco Mist Saree,single,4110329907,VSINS029,Normal Saree,Vyla,2990,1990,pcs,4,0,,,,,,,,
+768,,Heritage Heirloom Saree,single,8414061535,VSINS030,Normal Saree,Vyla,4690,3690,pcs,8,0,,,,,,,,
+769,,Monolith Motif Saree,single,0443863698,VSINS031,Normal Saree,Vyla,4790,3790,pcs,7,0,,,,,,,,
+770,,Blush Botanica Saree,single,1390983731,VSINS032,Normal Saree,Vyla,4190,3190,pcs,7,0,,,,,,,,
+771,,Lilac Mist Saree,single,1337053317,VSINS033,Normal Saree,Vyla,5990,4590,pcs,2,0,,,,,,,,
+772,,sleeves embraided denim frock,single,0809975751,VCBBL00085,Frock,denim,3990,3200,unit,1,0,,,,,,,,
+773,,Sapphire Ripple Saree *****,single,7417736180,VSINS034,Normal Saree,Vyla,5990,4990,pcs,16,0,13 pec wash damage *****,,,,,,,
+774,,Shadow Wave Saree *,single,1207355504,VSINS035,Normal Saree,Vyla,5990,4990,pcs,3,0,"2 Saree damage ..*
+",,,,,,,
+775,,short poket denim frock,single,1353386066,VCBBL00022,laxary,denim,4190,4190,unit,1,0,,,,,,,,
+776,,Filigree Flora Saree,single,0993256188,VSINS036,Normal Saree,Vyla,5690,4690,pcs,4,0,,,,,,,,
+777,,Monolith Diamond Saree,single,0993154605,VSINS037,Normal Saree,Vyla,5890,4890,pcs,10,0,,,,,,,,
+778,,coller short frock,single,1079156704,VCBBL022,Frock,denim,3190,2600,unit,0,0,,,,,,,,
+779,,Misty Marigold Saree,single,7283520677,VSINS038,Normal Saree,Vyla,5890,4890,pcs,2,0,,,,,,,,
+780,,mini flower short frock,single,5520699709,VCBBL021,Frock,denim,3290,1900,unit,1,0,,,,,,,,
+781,,Shadow Bloom Saree,single,3688490312,VSINS039,Normal Saree,Vyla,5890,4890,pcs,5,0,,,,,,,,
+782,,ship short frock,single,7362453742,VCBBL028,Frock,denim,3990,3400,unit,1,0,,,,,,,,
+783,,Burgundy Bouquet Saree,single,5386252034,VSINS040,Normal Saree,Vyla,5790,4790,pcs,8,0,,,,,,,,
+784,,Magenta Moss Saree,single,6602398761,VSINS041,Normal Saree,Vyla,5990,4990,pcs,1,0,,,,,,,,
+785,,Solid Slate Saree,single,3944947858,VSINS042,Normal Saree,Vyla,5990,4990,pcs,4,0,,,,,,,,
+786,,Saffron Stripe Saree #,single,9953055361,VSINS043,Normal Saree,Vyla,6490,5490,pcs,5,0,,,,,,,,
+787,,Amber Bloom Saree,single,0664419445,VSINS044,Normal Saree,Vyla,5890,4890,pcs,4,0,,,,,,,,
+788,,Teal & Tribe Saree #,single,5194398976,VSINS045,Normal Saree,Vyla,7890,6000,pcs,4,0,,,,,,,,
+789,,Medallion Mist Saree,single,1399022894,VSINS046,Normal Saree,Vyla,6890,5890,pcs,4,0,,,,,,,,
+790,,Stardust Noir Saree,single,9097914209,VSINS047,Normal Saree,Vyla,6890,5890,pcs,4,0,,,,,,,,
+791,,women bag @,single,8242360097,VCBBA6,Bags,Vyla,4990,4200,unit,4,0,,,,,,,,
+793,,saree embroidered cheak,single,8871482503,VSISA150,Saree,Viola,7490,7000,unit,10,0,,,,,,,,
+794,,printed short @,single,3016092757,VCIST020,Short,Vyla,990,990,unit,20,0,,,,,,,,
+795,,The Amber Grid Saree,single,8197981776,VSINS049,Normal Saree,Vyla,6990,5990,pcs,1,0,,,,,,,,
+796,,The Aurora Wave Saree,single,9703602444,VSINS050,Normal Saree,Vyla,6990,5990,pcs,5,0,,,,,,,,
+797,,Embroidered skirt #,single,1246572713,VLBSK0066,laxary skirt,Vyla,5890,4200,unit,2,0,,,,,,,,
+798,,Gilded Willow Saree,single,4708910252,VSINS051,Normal Saree,Vyla,5690,4690,pcs,2,0,,,,,,,,
+799,,Neel Moorti Saree,single,8741384860,VSINS052,Normal Saree,Vyla,3490,2490,pcs,1,0,,,,,,,,
+800,,Blush Paisley Saree *,single,3139411024,VSINS053,Normal Saree,Vyla,6990,5990,pcs,1,0,1 pec damage colour patch ,,,,,,,
+801,,Coral Reef Shibori Saree,single,6475660167,VSINS054,Normal Saree,Vyla,6990,5990,pcs,1,0,,,,,,,,
+802,,Charcoal Blossom Saree,single,8928729565,VSINS055,Normal Saree,Vyla,6990,5990,pcs,4,0,,,,,,,,
+803,,Amethyst Zigzag Saree,single,1691640863,VSINS056,Normal Saree,Vyla,3690,2690,pcs,4,0,,,,,,,,
+804,,Metallic Moss Saree,single,8138795117,VSINS057,Normal Saree,Vyla,3990,2990,pcs,4,0,,,,,,,,
+805,,Crimson Kalka Saree,single,6224425670,VSINS058,Normal Saree,Vyla,5990,4990,pcs,4,0,,,,,,,,
+806,,Autumn Maze Saree,single,9927676159,VSINS059,Normal Saree,Vyla,5490,4490,pcs,3,0,,,,,,,,
+807,,Teal Warli Saree,single,7138098507,VSINS060,Normal Saree,Vyla,5890,4890,pcs,1,0,,,,,,,,
+808,,Pastel Rosette Saree,single,6438632179,VSINS061,Normal Saree,Vyla,5990,4990,pcs,12,0,,,,,,,,
+809,,Dark Ivy Saree,single,1893624500,VSINS062,Normal Saree,Vyla,5990,4990,pcs,6,0,,,,,,,,
+810,,Earthy Collage Saree,single,0489825174,VSINS063,Normal Saree,Vyla,5690,4690,pcs,12,0,,,,,,,,
+811,,Royal Fern Saree,single,2568152419,VSINS064,Normal Saree,Vyla,5690,4690,pcs,6,0,,,,,,,,
+812,,Shahi Crackle Saree,single,8004528310,VSINS065,Normal Saree,Vyla,5990,4890,pcs,2,0,,,,,,,,
+813,,Saffron Skies Saree,single,5483891877,VSINS066,Normal Saree,Vyla,4790,3790,pcs,2,0,,,,,,,,
+814,,Teal Shimmer Floral Saree,single,9670660276,VSINS067,Normal Saree,Vyla,4890,3890,pcs,10,0,,,,,,,,
+815,,Volcanic Rose Saree,single,0910749762,VSINS068,Normal Saree,Vyla,4490,3490,pcs,1,0,,,,,,,,
+816,,Olive Frond Saree,single,5556818048,VSINS069,Normal Saree,Vyla,4890,3890,pcs,1,0,,,,,,,,
+817,,Peony Mist Saree,single,8971208709,VSINS070,Normal Saree,Vyla,4890,3890,pcs,1,0,,,,,,,,
+818,,Mint Lotus Saree,single,5621307235,VSINS071,Normal Saree,Vyla,4590,3590,pcs,5,0,,,,,,,,
+819,,Rustic Meadow Saree,single,0585348180,VSINS072,Normal Saree,Vyla,4590,3590,pcs,6,0,,,,,,,,
+820,,Lavender Mist Saree,single,4003951987,VSINS073,Normal Saree,Vyla,4990,3990,pcs,10,0,,,,,,,,
+821,,The Bengal Copper Saree,single,3857822484,VSINS074,Normal Saree,Vyla,4990,3990,pcs,1,0,,,,,,,,
+822,,Charcoal Madhubani Saree,single,7990277556,VSINS075,Normal Saree,Vyla,4490,3490,pcs,6,0,,,,,,,,
+823,,Kaira Ajrakh Saree #,single,9377716721,VSINS076,Normal Saree,Vyla,4990,2990,pcs,2,0,,,,,,,,
+825,,Lagoon Mosaic Saree #,single,6749373104,VSINS078,Normal Saree,Vyla,4890,2890,pcs,3,0,,,,,,,,
+826,,Lilac Orchard Saree @,single,3100818842,VSINS079,Normal Saree,Vyla,3490,2490,pcs,4,0,,,,,,,,
+827,,Madras Matrix Saree *#,single,0175813805,VSINS080,Normal Saree,Vyla,3990,2990,pcs,5,0,1 pec damage *,,,,,,,
+828,,Frozen Fronds Saree,single,6624347218,VSINS081,Normal Saree,Vyla,2390,1390,pcs,16,0,,,,,,,,
+829,,Cathedral Frond Saree,single,1813938392,VSINS082,Normal Saree,Vyla,3490,2490,pcs,5,0,,,,,,,,
+830,,The Tussar Grid Saree,single,9739168919,VSINS083,Normal Saree,Vyla,3990,2990,pcs,4,0,,,,,,,,
+831,,Shadowed Ikat Saree,single,4409233227,VSINS084,Normal Saree,Vyla,3690,2690,pcs,5,0,,,,,,,,
+832,,Blossom Cascade Saree,single,1670037941,VSINS085,Normal Saree,Vyla,3190,2190,pcs,7,0,,,,,,,,
+833,,Frosted Bloom Saree,single,6203859426,VSINS086,Normal Saree,Vyla,2890,1890,pcs,4,0,,,,,,,,
+834,,Royal Bandhani Grid Saree,single,2079539086,VSINS087,Normal Saree,Vyla,4990,3990,pcs,1,0,,,,,,,,
+835,,Monochrome Mosaic Saree,single,0115803048,VSINS088,Normal Saree,Vyla,4290,3290,pcs,1,0,,,,,,,,
+836,,Bhadini Crimson Saree,single,2344135109,VSINS089,Normal Saree,Vyla,3790,2790,pcs,10,0,,,,,,,,
+837,,The Graffiti Frond Saree #,single,5560924769,VSINS090,Normal Saree,Vyla,4990,3990,pcs,4,0,,,,,,,,
+838,,Ruby Heritage Saree #,single,1115684947,VSINS091,Normal Saree,Vyla,4490,3490,pcs,4,0,,,,,,,,
+839,,Blushing Rose Saree,single,9228752345,VSINS092,Normal Saree,Vyla,3690,2690,pcs,4,0,,,,,,,,
+840,,Tamizh Kattam Saree,single,4209358628,VSINS093,Normal Saree,Vyla,3790,2790,pcs,8,0,Old quntity 7,,,,,,,
+841,,Mandala Mist Saree *,single,7953825744,VSINS094,Normal Saree,Vyla,3190,2190,pcs,8,0,Colour patch 1 pec *,,,,,,,
+842,,Ditsy Dawn Saree,single,8131101105,VSINS095,Normal Saree,Vyla,3790,2790,pcs,4,0,,,,,,,,
+843,,Peacock Graffiti Saree,single,9946947835,VSINS096,Normal Saree,Vyla,6990,5990,pcs,12,0,,,,,,,,
+844,,Ancient Vines Saree,single,8980326741,VSINS097,Normal Saree,Vyla,2790,1790,pcs,5,0,,,,,,,,
+845,,Ahalya Block Print Saree *,single,2851181392,VSINS098,Normal Saree,Vyla,2690,1690,pcs,3,0,damage 1,,,,,,,
+846,,Teal Royale Saree #,single,0926694646,VSINS099,Normal Saree,Vyla,4990,1990,pcs,2,0,Old quntty 4  08/17,,,,,,,
+847,,Navy Tapestry Saree #,single,2091274891,VSINS100,Normal Saree,Vyla,4990,2590,pcs,6,0,,,,,,,,
+848,,The Autumnal Vortex Saree,single,5378967711,VSINS101,Normal Saree,Vyla,2390,1390,pcs,3,0,,,,,,,,
+849,,Lunar Meadow Saree,single,0264987643,VSINS102,Normal Saree,Vyla,3990,2990,pcs,5,0,,,,,,,,
+850,,Vintage Floral Saree,single,0452037025,VSINS103,Normal Saree,Vyla,3890,2890,pcs,1,0,,,,,,,,
+851,,The Nordic Batik Saree,single,4869924322,VSINS104,Normal Saree,Vyla,2990,1990,pcs,4,0,,,,,,,,
+852,,Ankara Illusion Saree,single,6162161481,VSINS105,Normal Saree,Vyla,3890,2890,pcs,4,0,,,,,,,,
+853,,Tussar Twine Saree,single,3061842333,VSINS106,Normal Saree,Vyla,3290,2290,pcs,5,0,,,,,,,,
+854,,Victorian Rosewood Saree,single,6916359873,VSINS107,Normal Saree,Vyla,3890,2890,pcs,11,0,,,,,,,,
+855,,Riviera Meadow Saree,single,4252937599,VSINS108,Normal Saree,Vyla,3990,2990,pcs,8,0,,,,,,,,
+857,,Lattice Luxury Saree,single,9915123351,VSISA146,wedding saree,Vyla,10890,8890,pcs,6,0,,,,,,,,
+859,,The Mosaic Verse Saree,single,0579662820,VSISA145,Party Saree,Vyla,15990,13990,pcs,6,0,,,,,,,,
+860,,Sage Whisper Saree,single,0694427284,VSISA147,Party Saree,Vyla,17490,15490,pcs,6,0,,,,,,,,
+861,,Ametrine Maze Saree,single,8051175080,VSINS109,Normal Saree,Vyla,4590,3590,pcs,1,0,,,,,,,,
+862,,Verdant Ivy Saree,single,2342859212,VSISA148,Party Saree,Vyla,12990,10990,pcs,4,0,,,,,,,,
+863,,Monaco Mist Saree,single,2171984094,VSISA149,Party Saree,Vyla,10990,9990,pcs,6,0,,,,,,,,
+864,,Royal Astral Saree,single,9008903744,VSISA151,Party Saree,Vyla,8790,6790,pcs,6,0,,,,,,,,
+865,,Royal Prism Saree,single,2602114752,VSISA152,Party Saree,Vyla,9990,7990,pcs,8,0,,,,,,,,
+866,,Stellar Bloom Saree #,single,6766347150,VSISA153,wedding saree,Vyla,12690,11600,pcs,6,0,,,,,,,,
+867,,bathik long skirt,single,1200641851,VLBFK0200,laxary skirt,Vyla,7890,7200,unit,0,0,,,,,,,,
+868,,bathik long skirt,single,9665079975,VLBFK0201,laxary skirt,Vyla,7990,7300,unit,1,0,,,,,,,,
+869,,bathik long skirt,single,5612864129,VLBFK0202,laxary skirt,Vyla,7990,7200,unit,1,0,,,,,,,,
+870,,bathik long skirt,single,2083809759,VLBFK0203,laxary skirt,Vyla,7290,6800,unit,1,0,,,,,,,,
+871,,bathik long skirt,single,3442754499,VLBFK0204,laxary skirt,Vyla,8290,8290,unit,1,0,,,,,,,,
+872,,bathik long skirt,single,5815880855,VLBFK0205,laxary skirt,Vyla,8990,8600,unit,0,0,,,,,,,,
+873,,bathik long skirt,single,0162059655,VLBFK0206,laxary skirt,Vyla,7690,7000,unit,1,0,,,,,,,,
+874,,bathik long skirt,single,7598574832,VLBFK0207,laxary skirt,Vyla,7290,6800,unit,1,0,,,,,,,,
+875,,bathik long skirt,single,5932412393,VLBFK0208,laxary skirt,Vyla,7490,6900,unit,1,0,,,,,,,,
+876,,raparound #,single,2260674098,VLBFK0209,laxary skirt,Vyla,4990,3200,unit,9,0,,,,,,,,
+877,,geometric saree,single,0548930911,VSISA200,Normal Saree,Vyla,7990,7200,unit,5,0,,,,,,,,
+878,,two colour line saree,single,4505221843,VSISA201,Normal Saree,Vyla,7690,7100,unit,7,0,,,,,,,,
+879,,three colour saree #,single,5928835650,VSISA202,SAREE S2,Vyla,8690,7000,unit,3,0,,,,,,,,
+880,,Embroidered jeket pics pn saree,single,7531463820,VSISA203,Normal Saree,Vyla,9990,9200,unit,11,0,,,,,,,,
+881,,Silk Embroidered saree,single,2846479689,VSISA204,Normal Saree,Vyla,5890,5200,unit,5,0,,,,,,,,
+882,,cotten long tassle,single,3008457604,VSISA205,Normal Saree,Vyla,6990,6000,unit,4,0,,,,,,,,
+883,,gold line saree,single,0101115804,VSISA206,Normal Saree,Vyla,10990,10000,unit,4,0,,,,,,,,
+884,,Sonam Silk Saree,single,4253224669,VSINS185,Normal Saree,Vyla,4190,3800,unit,8,0,,,,,,,,
+885,,copper gold border saree,single,7382520514,VSINS165,Normal Saree,Vyla,7490,5200,unit,6,0,,,,,,,,
+886,,pink tassle saree #,single,5539908858,VSINS173,Normal Saree,Vyla,7690,7000,unit,7,0,,,,,,,,
+887,,red tassle saree,single,5759904537,VSINS183,Normal Saree,Vyla,7890,7200,unit,6,0,,,,,,,,
+888,,chek saree,single,6313414414,VSINS193,Normal Saree,Vyla,3790,3200,unit,8,0,,,,,,,,
+889,,black line saree #,single,5486143961,VSINS199,Normal Saree,Vyla,8590,7000,unit,2,0,,,,,,,,
+890,,denim shirt,single,1944655961,VLBJ011,laxary,victoria jones,7990,7200,unit,4,0,,,,,,,,
+891,,denim shirt,single,3636114988,VLBJ111,laxary,fashon bug,7690,7100,unit,4,0,,,,,,,,
+892,,flower boder ful kit indian kurutha,single,8180461206,VSIK55,Indian Kurthi,Bhavika Life Style,8990,8100,unit,2,0,,,,,,,,
+893,,colar denim crop top,single,8601915164,VLBJ112,laxary,new direction,7190,6800,unit,4,0,,,,,,,,
+894,,kurutha frock,single,5596897337,VSIK60,Indian Kurthi,Bhavika Life Style,6990,9200,unit,3,0,,,,,,,,
+895,,Short Sleeve Denim Jacket,single,7434811546,VLBJ015,laxary,Vyla,7590,6800,unit,6,0,,,,,,,,
+896,,ful kit luxsary @,single,1481432518,VLBJ019,laxary,Vyla,9990,9200,unit,5,0,,,,,,,,
+897,,coler denim shirt,single,5822977304,VLBJ025,laxary,Vyla,7490,6900,unit,4,0,,,,,,,,
+898,,denim metirial crop top,single,7240183855,VLBJ028,laxary,Vyla,6590,6100,unit,7,0,,,,,,,,
+899,,sea blue skirt *,single,2506475410,VCISK010,Skirt,Weekend,7490,6800,unit,4,0,1 PEC DAMAGE *,,,,,,,
+900,,denim shirt,single,3213928790,VLBJ030,laxary,koret,6990,6100,unit,2,0,,,,,,,,
+901,,denim shirt,single,3730156843,VLBJ031,laxary,Vyla,6790,6200,unit,4,0,,,,,,,,
+902,,frock kurthi,single,0658003768,VSIK66,Indian Kurthi,Vyla,7290,6800,unit,6,0,,,,,,,,
+903,,white denim shirt #,single,3135008940,VLBJ035,laxary,riders,4990,3100,unit,0,0,,,,,,,,
+904,,white jakect,single,5690632797,VLBJ036,laxary,Vyla,5990,5200,unit,4,0,,,,,,,,
+905,,denim hart  shirt,single,0942570681,VLBJ037,laxary,kikomo,5990,5200,unit,1,0,,,,,,,,
+906,,black coler denim shirt,single,2179321508,VLBJ038,laxary,cabincreek,7890,7200,unit,1,0,,,,,,,,
+907,,flower denim shirt,single,5318394250,VLBJ039,laxary,dimples,6290,5800,unit,0,0,,,,,,,,
+908,,indian kurthi,single,0766815896,VSIK67,Indian Kurthi,Vyla,5490,4900,unit,12,0,,,,,,,,
+909,,indian kurthi flower,single,0203333447,VSIK68,Indian Kurthi,Vyla,7490,7200,unit,4,0,,,,,,,,
+910,,under skirt,single,5269236842,VSIK69,under skirt,Baba,2190,1800,unit,80,0,,,,,,,,
+911,,indian frock,single,0488617970,VSIK70,Indian Kurthi,Vyla,6990,6200,unit,3,0,,,,,,,,
+912,,butterfly rose t shirt,single,6180282861,VCITS00100,T Shirt,dillnger,2790,2100,unit,11,0,,,,,,,,
+913,,butten frock #,single,4426008291,VCBFR0175,Frock,Vyla,3990,3700,unit,2,0,,,,,,,,
+914,,flower top,single,6309888006,VCIT022,Top,Yawen For Her,3190,2800,unit,4,0,,,,,,,,
+915,,mini flower blouse,single,1554488158,VCBBL0189,Blouse,Yawen For Her,4790,4200,unit,5,0,,,,,,,,
+916,,denim pants 02,single,7893348527,VLBJ040,Pants,Vyla,6990,5200,unit,1,0,,,,,,,,
+917,,denim shirt,single,7759983094,VLBJ050,T Shirt,dotti,5990,4200,unit,1,0,,,,,,,,
+918,,denim frock 00,single,0131201938,VLBJ051,Frock,old navy,7990,6200,unit,0,0,,,,,,,,
+919,,denim poket frock 01,single,6548374538,VLBJ042,Frock,denim,8690,7200,unit,1,0,,,,,,,,
+920,,crop top 001 @,single,3276165522,VLBCR065,Crop Top,Vyla,5690,4200,unit,10,0,,,,,,,,
+921,,blue denim,single,6683609814,VCBLJ020,Pants,24Carat,6490,5200,unit,14,0,,,,,,,,
+922,,blue wosh box pant @,single,5913069499,VCBLJ021,Pants,24Carat,6590,5100,unit,19,0,,,,,,,,
+923,,box pant @,single,7544105134,VCBLJ023,Box Pants,denim,4190,3200,unit,20,0,,,,,,,,
+924,,pach denim *,single,1503328747,VCBLJ024,Pants,Vyla,5990,4300,unit,1,0,Damage 1 pec,,,,,,,
+925,,denim botten frock,single,7247351751,VCBJS0045,Frock,old navy,5190,4200,unit,1,0,,,,,,,,
+930,,#@night frock,single,3613252460,VCINW100,Night Wear,Vyla,3190,2400,unit,60,0,,,,,,,,
+931,,denim frok with poket,single,9460686548,VCBJS0048,Frock,charter clud,6890,5800,unit,1,0,,,,,,,,
+932,,just keep going #,single,5650805302,VLBJ150,T Shirt,BELOVED,3490,2200,unit,10,0,,,,,,,,
+933,,dobel poket blouse #@,single,9145952128,VCBBL0199,Blouse,Vyla,5790,4200,unit,6,0,,,,,,,,
+934,,vivel saree @,single,5546225366,VSINS200,Normal Saree,vivel,4990,3500,unit,7,0,,,,,,,,
+935,,denim  pants 00,single,6100537761,VCBLJ124,Pants,Vyla,6990,5300,unit,1,0,,,,,,,,
+936,,Belted Skirt @,single,1689237357,VLBSK0190,Skirt,TAT,6590,5500,unit,0,0,,,,,,,,
+937,,dobble line t shirt,single,7938607341,VLBJ155,T Shirt,Viola,3490,2500,unit,3,0,,,,,,,,
+938,,hand bag @1,single,8540575931,VCBBA010,Bags,Viola,6590,5700,unit,3,0,,,,,,,,
+939,,hand bag @2,single,1756796352,VCBBA011,Bags,Viola,6290,5600,unit,4,0,,,,,,,,
+940,,hand bag @3,single,6013775939,VCBBA012,Bags,Viola,7190,6200,unit,1,0,,,,,,,,
+941,,hand bag @4,single,4745070336,VCBBA013,Bags,Viola,6290,5500,unit,4,0,,,,,,,,
+942,,WHITE LINE SAREE @,single,9949643279,VSISA1025,Normal Saree,Vyla,9590,900000,unit,5,0,,,,,,,,
+943,,SAREE 0002 @,single,9772315484,VSINS198,Normal Saree,Vyla,5490,4800,unit,22,0,,,,,,,,
+944,,FIVE LINE SAREE @,single,5936463002,VSISA213,Normal Saree,Viola,7690,7000,unit,4,0,,,,,,,,
+945,,flower saree 001,single,7565301156,VSISA214,Normal Saree,Vyla,7990,7000,unit,5,0,,,,,,,,
+946,,flower saree 002@,single,7490970692,VSISA215,Normal Saree,Vyla,4290,3800,unit,3,0,Old available quantity _2,,,,,,,
+947,,flower saree 003,single,5853279930,VSISA216,Normal Saree,Vyla,3990,2800,unit,1,0,,,,,,,,
+948,,blue flower saree 001,single,0019629165,VSISA217,Normal Saree,Vyla,3790,3000,unit,1,0,"old contity 0---
+
+we have 1 pec 2026/07/25",,,,,,,
+949,,key tags,single,0428917385,KEY001,key tags,Viola,490,290,unit,6,0,,,,,,,,
+950,,saree 0001,single,4884349060,VSINS166,Normal Saree,Vyla,4990,3800,unit,3,0,,,,,,,,
+951,,anuraj jaipurcot saree @,single,6966215839,VSINS111,Normal Saree,Vyla,3490,2800,unit,1,0,,,,,,,,
+952,,Ethereal Cream Ensemble @,single,3423235351,VCBFK0200,Full Kit,Vyla,8990,8200,unit,1,0,,,,,,,,
+953,,Elegant Lace Detail Shorts @,single,1346406161,VCIST050,Short,Vyla,4890,4100,unit,1,0,,,,,,,,
+954,,party saree 001 @,single,8491675530,VSINS170,Normal Saree,Vyla,4990,4100,unit,1,0,,,,,,,,
+955,,chek saree 01 @,single,9704749130,VSINS250,Normal Saree,Vyla,7690,6800,unit,2,0,,,,,,,,
+956,,white line full kit @#,single,2232252923,VCBFK0150,Full Kit,Vyla,6890,7100,unit,3,0,,,,,,,,
+957,,white line full kit 01@#,single,5017035811,VCBFK0151,Full Kit,Vyla,6490,5900,unit,8,0,,,,,,,,
+958,,dobble poket full kit 02 @,single,2021532021,VCBFK0152,Full Kit,Vyla,6990,6000,unit,1,0,,,,,,,,
+959,,fit lining full kit @,single,1807835219,VCBFK0153,Full Kit,Vyla,7890,7200,unit,1,0,,,,,,,,
+960,,flower blouse #,single,5526158063,VCBBL0190,Blouse,Vyla,4790,4000,unit,3,0,,,,,,,,
+961,,zip over coat 01 @,single,7604785156,VCBBL000,Over Coat,Vyla,2490,1800,unit,0,0,,,,,,,,
+962,,denim short 01@,single,1271179386,VCBBL011,Short,MAX,3990,2800,unit,1,0,,,,,,,,
+963,,broun colour short denim 01@,single,4749759150,VCBBL012,Short,Vyla,4190,3200,unit,1,0,,,,,,,,
+964,,blu colour white flowers saree@,single,6355874441,VSINS251,Normal Saree,Vyla,5990,4500,unit,1,0,,,,,,,,
+966,,mm mayuri saree jacket,single,0850377007,VSIJP033,Saree Jacket PC,Mayuri,990,500,unit,25,0,,,,,,,,
+967,,gogad lapetyoprt @,single,4568308265,VSIJP032,Saree Jacket PC,Vyla,1190,800,unit,10,0,,,,,,,,
+968,,Varsha silk mills saree @ #,single,9125839303,VSINS230,Normal Saree,Vyla,5790,2800,unit,8,0,,,,,,,,
+969,,nsm erodeja saree @,single,8625444655,VSINS231,Normal Saree,Vyla,6790,5200,unit,1,0,,,,,,,,
+970,,flower patten saree @,single,2772367654,VSINS232,Normal Saree,Vyla,3990,2000,unit,1,0,,,,,,,,
+971,,cotton one colour desing saree @,single,9282248535,VSINS132,Normal Saree,Vyla,8290,7200,unit,10,0,,,,,,,,
+972,,red colour black patten saree @,single,9469991288,VSINS133,Normal Saree,Vyla,6990,5200,unit,1,0,,,,,,,,
+973,,shree krishna wedding saree,single,4100015645,VSINS300,wedding saree,shreekrishna,14690,15000,unit,6,0,,,,,,,,
+974,,shipkala wedding saree,single,1321804429,VSINS301,wedding saree,shipkala,10990,9500,unit,6,0,,,,,,,,
+975,,The Silver Petal Series  saree,single,2345648800,VSINS302,wedding saree,shreekrishna,14790,15300,unit,6,0,,,,,,,,
+976,,Golden Droplet Series saree,single,5185797049,VSINS303,wedding saree,shreekrishna,18990,17500,unit,6,0,,,,,,,,
+977,,Lime Shimmer saree,single,0238141841,VSINS304,wedding saree,shreekrishna,10990,9200,unit,5,0,,,,,,,,
+978,,modern floral striped chiffon saree,single,1465000823,VSINS305,wedding saree,saree,9990,8200,unit,6,0,,,,,,,,
+979,,Purple-Iris Sky Series saree *,single,4998406583,VSINS306,wedding saree,shreekrishna,8490,8100,unit,6,0,1 Saree damage..*,,,,,,,
+980,,​Nature's Elegance saree,single,1079437045,VSINS307,wedding saree,shreekrishna,16490,15200,unit,6,0,,,,,,,,
+981,,Metallic Petals Saree,single,9415758061,VSISA160,wedding saree,shreekrishna,15590,14200,unit,6,0,,,,,,,,
+982,,Lavender Bloom Collection saree,single,1965255996,VSISA161,wedding saree,shreekrishna,17490,1600,unit,6,0,,,,,,,,
+983,,Royal Avanti Silk Saree,single,3400169242,VSISA162,wedding saree,saree,26890,25000,unit,4,0,,,,,,,,
+984,,Jaipur Pearl Saree,single,4121673719,VSISA163,Normal Saree,saree,9990,8200,unit,8,0,,,,,,,,
+985,,Floral Maxi Dress,single,5525038235,VCBJS0100,Frock,Vyla,5690,4100,unit,1,0,new,,,,,,,
+986,,Midnight Breeze Set,single,9175994753,VCBJS0101,Full Kit,Vyla,7990,6000,unit,0,0,,,,,,,,
+987,,Floral Wrap Skirt,single,8794946645,VCBJS0102,Skirt,Vyla,4790,3200,unit,0,0,,,,,,,,
+988,,Ruched Crop Top,single,2198254355,VCBJS0103,Crop Top,Vyla,3290,2500,unit,1,0,,,,,,,,
+989,,​Pink Gingham Summer Set,single,2130474823,VCBJS0104,Full Kit,Vyla,5290,4200,unit,1,0,,,,,,,,
+990,,​Tropical Floral Slit Dress,single,4635525497,VCBJS0105,Frock,Vyla,5990,4300,unit,1,0,,,,,,,,
+991,,lounge short @,single,0572560111,VCIST100,Short,Vyla,1190,800,unit,10,0,,,,,,,,
+992,,Loungewear,single,2693346243,VCBNW200,Night Wear,Vyla,1090,800,unit,2,0,,,,,,,,
+993,,​Glow & Cozy Shorts,single,3333168843,VCBNW201,Night Wear,Vyla,590,400,unit,0,0,,,,,,,,
+994,,Diamond Line Shorts,single,3035281238,VCBNW202,Night Wear,Vyla,890,600,unit,2,0,,,,,,,,
+995,,Classic Paisley Trousers,single,2583986701,VCBNW203,Night Wear,Vyla,1690,1000,unit,2,0,,,,,,,,
+996,,Sweet Kitty Sleepwear,single,1160156553,VCBNW204,Night Wear,Vyla,1690,1200,unit,1,0,,,,,,,,
+997,,Blossom Breeze Shorts,single,8838838449,VCBNW205,Night Wear,Vyla,1090,800,unit,4,0,,,,,,,,
+998,,Flying Birds Pajamas,single,5343306673,VCBNW206,Night Wear,Vyla,1490,1000,unit,1,0,,,,,,,,
+999,,​Sleeveless Nightdress,single,1918075428,VCBNW207,Night Wear,Vyla,2690,2000,unit,20,0,,,,,,,,
+1000,,Sleepwear Set,single,5072016886,VCBNW208,Night Wear,Vyla,3290,2800,unit,3,0,,,,,,,,
+1001,,flower skini,single,2972541122,VCBJS0106,skini,Vyla,2190,1000,unit,1,0,,,,,,,,
+1002,,​Sleeveless zibra pattern,single,5489979596,VCBNW209,Night Wear,Vyla,1890,1200,unit,7,0,,,,,,,,
+1003,,​GUESS Striped Eyelet Dress,single,8997245690,VSIJP050,SAREE S1,saree,9990,8000,unit,3,0,,,,,,,,
+1009,,Serene Border flower Saree #,single,2790288442,VSISA1000,Normal Saree,Vyla,5790,4200,unit,3,0,,,,,,,,
+1010,,Border flower Saree  #,single,7865700381,VSISA1001,Normal Saree,Vyla,5790,4200,unit,0,0,,,,,,,,
+1011,,silver line saree #,single,9465865676,VSINS197,Normal Saree,Vyla,8990,7200,unit,3,0,,,,,,,,
+1012,,butterfly prited saree,single,3812539638,VSISA1002,Normal Saree,Vyla,7990,6000,unit,1,0,,,,,,,,
+1013,,embroider Saree,single,1544551734,VSISA1003,Normal Saree,Vyla,8790,8000,unit,1,0,,,,,,,,
+1014,,Inner Wears RIKHAZ,single,7512041079,VCIUG016,Under Garments,RIKHAZ,1990,800,unit,59,0,,,,,,,,
+1015,,colan print saree,single,6342512541,VCIUG200,SAREE S2,saree,7990,6000,unit,6,0,,,,,,,,
+1016,,traditional art print saree,single,2431634151,VCIUG201,SAREE S2,saree,6790,5000,unit,9,0,,,,,,,,
+1017,,Midnight Polka Dot Saree,single,2591992147,VCIUG202,SAREE S2,saree,6990,5000,unit,9,0,,,,,,,,
+1018,,Traditional Border Print saree,single,5502837256,VCIUG203,SAREE S2,saree,7990,6000,unit,9,0,,,,,,,,
+1019,,Organza Saree,single,9304325361,VCIUG204,SAREE S2,saree,6890,5000,unit,9,0,,,,,,,,
+1020,,Maroon print saree,single,0398644620,VCIUG205,SAREE S2,saree,5990,4000,unit,9,0,,,,,,,,
+1021,,Batiq Prints saree,single,8395412211,VCIUG206,SAREE S2,saree,7990,6000,unit,9,0,,,,,,,,
+1022,,Floral Digital Print saree,single,9956894883,VCIUG207,SAREE S2,saree,8990,7000,unit,9,0,,,,,,,,
+1023,,Semi Tussar Silk Saree,single,4068401161,VCIUG208,SAREE S2,saree,7690,7000,unit,9,0,,,,,,,,
+1024,,printed flower saree,single,6621378749,VCIUG209,SAREE S2,saree,7490,6800,unit,6,0,,,,,,,,
+1025,,Hand Block Printed saree,single,9308695020,VCIUG210,SAREE S2,saree,9690,8000,unit,8,0,,,,,,,,
+1026,,bathiq floral saree,single,2159985441,VCIUG211,SAREE S2,saree,5290,4700,unit,15,0,,,,,,,,
+1027,,Batik Printed saree,single,8446348792,VCIUG212,SAREE S2,saree,6490,5000,unit,5,0,,,,,,,,
+1028,,Block Printed saree,single,1423873433,VCIUG213,SAREE S2,saree,7990,7000,unit,3,0,,,,,,,,
+1029,,Batik Printed Fabric saree,single,8915230101,VCIUG214,SAREE S2,saree,6290,5800,unit,2,0,,,,,,,,
+1030,,bathiw rose flower  saree,single,8915761544,VCIUG215,SAREE S2,saree,8790,8000,unit,2,0,,,,,,,,
+1031,,Temple Border saree,single,6293828096,VCIUG216,SAREE S2,saree,8690,8100,unit,2,0,,,,,,,,
+1032,,Bagru Hand Block Printed saree,single,9145910843,VCIUG217,SAREE S2,saree,8990,8000,unit,4,0,,,,,,,,
+1033,,Batik Floral Buttas saree,single,8463371872,VCIUG218,SAREE S2,saree,7490,6800,unit,4,0,,,,,,,,
+1034,,Stripes saree,single,4362631558,VCIUG219,SAREE S2,saree,7990,7000,unit,6,0,,,,,,,,
+1035,,Printed one side saree,single,4644026920,VCIUG220,SAREE S2,saree,8990,8000,unit,3,0,,,,,,,,
+1036,,Silk Sunset saree,single,3752525109,VCIUG221,SAREE S2,saree,9890,9000,unit,9,0,,,,,,,,
+1037,,Amber Glow Saree,single,4002320676,VCIUG230,SAREE S2,saree,7990,7000,unit,9,0,,,,,,,,
+1038,,Soft Royal Azure saree,single,8018985071,VCIUG231,SAREE S2,saree,8990,8000,unit,9,0,,,,,,,,
+1039,,Batik Bloom Saree,single,4815103321,VCIUG233,SAREE S2,saree,7990,7000,unit,9,0,,,,,,,,
+1040,,indian kurthi flower boders @,single,7775907410,VSIK71,Indian Kurthi,Vyla,7890,7000,unit,1,0,,,,,,,,
+1041,,kurthi white flower patton @,single,3777447149,VSIK72,Indian Kurthi,Vyla,4990,4000,unit,1,0,,,,,,,,
+1042,,Indian Kurthi with sholl @,single,5049619674,VSIK73,Indian Kurthi,Vyla,7490,6500,unit,4,0,,,,,,,,
+1043,,embroided saree @,single,2412475707,VSINS0012,Normal Saree,Vyla,5790,5000,unit,2,0,,,,,,,,
+1044,,Petal Charm crop top,single,7193209726,VCBBL0010,Crop Top,Amata,3790,2900,unit,15,0,1 pec damage discount,,,,,,,
+1045,,Radiant White Crop top **,single,6036702638,VCBBL0011,Crop Top,Amata,3590,2900,unit,21,0,Damage pellam 15 pec***,,,,,,,
+1046,,Puffed sleeves crop top,single,5835724319,VCBBL0012,Crop Top,Amata,3690,3000,unit,5,0,,,,,,,,
+1047,,Coastal eyelet top,single,2716098482,VCBBL0015,Crop Top,Amata,4290,3000,unit,13,0,Damage 5 ***** clear damege.....,,,,,,,
+1048,728,Casual high short - XXL,variable,9124973710,VCIST010-XS,Short,Sash&rose,2490,1800,unit,8,0,Xs 1,XXL,VCIST010-XS,0501629685,1800,2490,1,1
+1048,729,Casual high short - XL,variable,9124973710,VCIST010-XL,Short,Sash&rose,2490,1800,unit,8,0,Xs 1,XL,VCIST010-XL,1972920748,1800,2490,2,1
+1048,730,Casual high short - L,variable,9124973710,VCIST010-L,Short,Sash&rose,2490,1800,unit,8,0,Xs 1,L,VCIST010-L,7151372818,1800,2490,1,1
+1048,731,Casual high short - M,variable,9124973710,VCIST010-M,Short,Sash&rose,2490,1800,unit,8,0,Xs 1,M,VCIST010-M,2779680346,1800,2490,1,1
+1048,732,Casual high short - S,variable,9124973710,VCIST010-S,Short,Sash&rose,2490,1800,unit,8,0,Xs 1,S,VCIST010-S,0506762815,1800,2490,3,1
+1049,,noil orange arm cut @,single,4338774159,VCITS0768,arm cut,KHOKO,0,0,unit,10,0,,,,,,,,
+1050,,Goodly poket t shirt,single,6312379255,VCITS0021,Goodly Cotton,Goodly,0,0,unit,10,0,,,,,,,,
+1051,733,Floral batik blouse - XL,variable,4262135235,VCSFR020-XL,Blouse,Vyla,3690,3000,unit,18,0,,XL,VCSFR020-XL,6559669764,3000,3690,4,1
+1051,734,Floral batik blouse - L,variable,4262135235,VCSFR020-L,Blouse,Vyla,3690,3000,unit,18,0,,L,VCSFR020-L,0554576193,3000,3690,3,1
+1051,735,Floral batik blouse - M,variable,4262135235,VCSFR020-M,Blouse,Vyla,3690,3000,unit,18,0,,M,VCSFR020-M,1367560351,3000,3690,6,1
+1051,736,Floral batik blouse - S,variable,4262135235,VCSFR020-S,Blouse,Vyla,3690,3000,unit,18,0,,S,VCSFR020-S,4314188804,3000,3690,4,1
+1052,737,Lace-trimmed Crop Top * - XL,variable,1069441415,VCSFR021-XL,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",XL,VCSFR021-XL,8141602530,2800,3490,5,1
+1052,738,Lace-trimmed Crop Top * - L,variable,1069441415,VCSFR021-L,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",L,VCSFR021-L,6931783492,2800,3490,5,1
+1052,739,Lace-trimmed Crop Top * - M,variable,1069441415,VCSFR021-M,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",M,VCSFR021-M,1315655857,2800,3490,6,1
+1052,740,Lace-trimmed Crop Top * - S,variable,1069441415,VCSFR021-S,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",S,VCSFR021-S,6594277445,2800,3490,6,1
+1052,741,Lace-trimmed Crop Top * - XL / Red,variable,1069441415,VCSFR021-XL-RED,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",XL / Red,VCSFR021-XL-RED,6195868854,2800,3490,0,1
+1052,742,Lace-trimmed Crop Top * - L / Red,variable,1069441415,VCSFR021-L-RED,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",L / Red,VCSFR021-L-RED,1625269002,2800,3490,0,1
+1052,743,Lace-trimmed Crop Top * - M / Red,variable,1069441415,VCSFR021-M-RED,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",M / Red,VCSFR021-M-RED,0713686335,2800,3490,0,1
+1052,744,Lace-trimmed Crop Top * - S / Red,variable,1069441415,VCSFR021-S-RED,Crop Top,Vyla,3490,2800,unit,22,0,"S (Red -4 blue -2)
+M(red -4*blue -2)
+L (red-3 blue -2)
+Xl (red -3 blue -2)
+1pec damage red colour...",S / Red,VCSFR021-S-RED,6722882933,2800,3490,0,1
+1053,745,Retro-style Blouse - XL,variable,6439297955,VCSFR022-XL,Blouse,Vyla,2790,1300,unit,10,0,,XL,VCSFR022-XL,4435014512,1300,2790,1,1
+1053,746,Retro-style Blouse - L,variable,6439297955,VCSFR022-L,Blouse,Vyla,2790,1300,unit,10,0,,L,VCSFR022-L,0959835569,1300,2790,2,1
+1053,747,Retro-style Blouse - M,variable,6439297955,VCSFR022-M,Blouse,Vyla,2790,1300,unit,10,0,,M,VCSFR022-M,9605319535,1300,2790,2,1
+1053,748,Retro-style Blouse - S,variable,6439297955,VCSFR022-S,Blouse,Vyla,2790,1300,unit,10,0,,S,VCSFR022-S,0435092656,1300,2790,1,1
+1054,,white saree,single,5819967556,VSISA0001,Normal Saree,saree,5490,4200,unit,6,0,,,,,,,,
+1055,749,White dobble poket shirt # - XL,variable,0465208480,VLBBL0090-XL,T Shirt,Vyla,5790,4590,unit,15,0,,XL,VLBBL0090-XL,4399100640,3800,5790,5,1
+1055,750,White dobble poket shirt # - L,variable,0465208480,VLBBL0090-L,T Shirt,Vyla,5790,4590,unit,15,0,,L,VLBBL0090-L,8990617392,3800,5790,5,1
+1055,751,White dobble poket shirt # - M,variable,0465208480,VLBBL0090-M,T Shirt,Vyla,5790,4590,unit,15,0,,M,VLBBL0090-M,9005323240,3800,5790,5,1
+1056,,Clasic pearl earrings,single,2545331867,VCE01,Earrings,Viola,690,400,unit,14,0,,,,,,,,
+1057,,Charm gold,single,4706524149,VCE02,Earrings,Viola,790,500,unit,40,0,,,,,,,,
+1058,,Elite gold Earring,single,2638383661,VCE03,Earrings,Viola,790,500,unit,20,0,,,,,,,,
+1059,,Gold tussle,single,1917615385,VCE04,Earrings,Viola,1090,800,unit,9,0,,,,,,,,
+1060,,Line tussle,single,6138293398,vce05,Earrings,Viola,990,750,unit,4,0,,,,,,,,
+1061,,Luna gold earrings,single,6192685417,VCE06,Earrings,Viola,890,500,unit,5,0,,,,,,,,
+1062,,Kurthi with sholl double layer,single,1021157271,VSIK77,Indian Kurthi,Viola,8990,7800,unit,5,0,,,,,,,,
+1063,,Blue Vintage Fringe Shorts denim,single,1915362496,VDBST01,Short,denim,3590,3000,unit,1,0,,,,,,,,
+1064,,casual Denim Shorts,single,4800009239,VDBST02,Short,denim,3590,2700,unit,2,0,,,,,,,,
+1065,,Classic Light Denim short,single,7362725056,VDBST03,Short,denim,3290,2600,unit,2,0,,,,,,,,
+1066,,Classic Indigo Denim Shorts,single,0621807418,VDBST04,Short,denim,3390,2800,unit,1,0,,,,,,,,
+1067,,Summer denim short,single,0625397530,VDBST05,Short,denim,3490,2800,unit,3,0,,,,,,,,
+1068,,Pleated Denim Shorts,single,6840685472,VDBST06,Short,denim,3590,2600,unit,1,0,,,,,,,,
+1069,755,Raffle frock - XL,variable,1462275306,VCSFR07-XL,Frock,Viola,5790,4900,unit,20,0,,XL,VCSFR07-XL,2261541992,4900,5790,5,1
+1069,756,Raffle frock - L,variable,1462275306,VCSFR07-L,Frock,Viola,5790,4900,unit,20,0,,L,VCSFR07-L,6601615155,4900,5790,5,1
+1069,757,Raffle frock - M,variable,1462275306,VCSFR07-M,Frock,Viola,5790,4900,unit,20,0,,M,VCSFR07-M,8788173470,4900,5790,5,1
+1069,758,Raffle frock - S,variable,1462275306,VCSFR07-S,Frock,Viola,5790,4900,unit,20,0,,S,VCSFR07-S,6678486589,4900,5790,5,1
+1070,,Classic Pants,single,3387852388,VCIP02,Pants,Viola,1890,1200,unit,50,0,,,,,,,,
+1071,760,Emerald Blouse * - XXL,variable,5251698603,VCIBL0001-XXL,Blouse,Viola,4390,3500,unit,16,0,"Store… 
+Blouse box 01
+1 pec damage 
+Return all.....size check ..",XXL,VCIBL0001-XXL,9816268156,3500,4390,0,1
+1071,761,Emerald Blouse * - XL,variable,5251698603,VCIBL0001-XL,Blouse,Viola,4390,3500,unit,16,0,"Store… 
+Blouse box 01
+1 pec damage 
+Return all.....size check ..",XL,VCIBL0001-XL,5878069750,3500,4390,3,1
+1071,762,Emerald Blouse * - L,variable,5251698603,VCIBL0001-L,Blouse,Viola,4390,3500,unit,16,0,"Store… 
+Blouse box 01
+1 pec damage 
+Return all.....size check ..",L,VCIBL0001-L,2862263089,3500,4390,3,1
+1071,763,Emerald Blouse * - M,variable,5251698603,VCIBL0001-M,Blouse,Viola,4390,3500,unit,16,0,"Store… 
+Blouse box 01
+1 pec damage 
+Return all.....size check ..",M,VCIBL0001-M,7612891164,3500,4390,5,1
+1071,764,Emerald Blouse * - S,variable,5251698603,VCIBL0001-S,Blouse,Viola,4390,3500,unit,16,0,"Store… 
+Blouse box 01
+1 pec damage 
+Return all.....size check ..",S,VCIBL0001-S,2841895469,3500,4390,5,1
+1072,,Woven Bag,single,9475580193,VCBBA5,Bags,Viola,4890,4000,unit,1,0,,,,,,,,
+1073,,Midnight Muse Saree,single,2004686995238,VSISA0030,SAREE S1,saree,12490,11500,unit,1,0,,,,,,,,
+1074,,Shadow Weaver Saree,single,2016807424749,VSISA00031,SAREE S1,saree,13890,12000,unit,1,0,,,,,,,,
+1075,,Silver Leaf Saree,single,2028834448797,VSISA00032,SAREE S1,saree,13490,12000,unit,1,0,,,,,,,,
+1076,,Olive ikat saree,single,2060572382247,VSISA023,SAREE S1,saree,12790,11000,oz,5,0,,,,,,,,
+1077,,rustic vine saree,single,2022143716936,VSISA019,SAREE S1,saree,12290,11000,unit,3,0,,,,,,,,
+1078,,mini leheriya saree,single,2035270921470,VSISA017,SAREE S1,saree,9990,8500,unit,2,0,,,,,,,,
+1079,,Blue Horizon Set @,single,2062614169045,VLBFK0047,laxary,Vyla,8490,7000,unit,2,0,,,,,,,,
+1080,,Geometric t shirt,single,2046850464027,VCITS078,T Shirt,dillnger,2790,1500,unit,1,0,,,,,,,,
+1081,765,Checkered Maxi frock - XL,variable,2011341259307,VCIBL0011-XL,Frock,Vyla,5290,4800,unit,20,0,,XL,VCIBL0011-XL,2058996214367,4800,5290,7,1
+1081,766,Checkered Maxi frock - L,variable,2011341259307,VCIBL0011-L,Frock,Vyla,5290,4800,unit,20,0,,L,VCIBL0011-L,2091003492150,4800,5290,7,1
+1081,767,Checkered Maxi frock - M,variable,2011341259307,VCIBL0011-M,Frock,Vyla,5290,4800,unit,20,0,,M,VCIBL0011-M,2071757594843,4800,5290,7,1
+1081,768,Checkered Maxi frock - S,variable,2011341259307,VCIBL0011-S,Frock,Vyla,5290,4800,unit,20,0,,S,VCIBL0011-S,2011056182136,4800,5290,7,1
+1082,769,Floral Paisley Maxi frock - XL,variable,2000305275668,VCIBL0012-XL,Frock,Vyla,5890,5200,unit,0,0,,XL,VCIBL0012-XL,2089871263132,5200,5890,5,1
+1082,770,Floral Paisley Maxi frock - L,variable,2000305275668,VCIBL0012-L,Frock,Vyla,5890,5200,unit,0,0,,L,VCIBL0012-L,2088580470312,5200,5890,5,1
+1082,771,Floral Paisley Maxi frock - M,variable,2000305275668,VCIBL0012-M,Frock,Vyla,5890,5200,unit,0,0,,M,VCIBL0012-M,2075825764442,5200,5890,4,1
+1082,772,Floral Paisley Maxi frock - S,variable,2000305275668,VCIBL0012-S,Frock,Vyla,5890,5200,unit,0,0,,S,VCIBL0012-S,2049270581725,5200,5890,5,1
+1083,,Pendant Necklace Set,single,2022827841954,VCJ02,Jewellery,Viola,1090,800,unit,0,0,,,,,,,,
+1084,,Traditional Chain,single,2080794988607,VCJ01,Jewellery,Viola,990,500,unit,1,0,,,,,,,,
+1085,,Anklet,single,2055448300067,VCJ03,Jewellery,Viola,590,250,unit,6,0,,,,,,,,
+1086,,Cuff Bracelet,single,2032054297011,VCJ04,Jewellery,Viola,1090,500,unit,6,0,,,,,,,,
+1087,,European Style Bead Bracelet,single,2090201549338,VCJ05,Jewellery,Viola,1390,850,unit,8,0,,,,,,,,
+1088,,Gold Plated Bangle,single,2090390105575,VCJ06,Jewellery,Viola,1190,850,unit,6,0,,,,,,,,
+1089,,Metal Bangles,single,2008244904809,VCJ07,Jewellery,Viola,1490,900,unit,8,0,,,,,,,,
