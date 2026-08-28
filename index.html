@@ -32,6 +32,7 @@
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         .container {
@@ -45,6 +46,7 @@
             position: relative;
             box-sizing: border-box;
             overflow: hidden;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .header-area {
@@ -71,8 +73,8 @@
 
         .top-btn {
             background: rgba(15, 23, 42, 0.85);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #f3f4f6;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             width: 42px;
             height: 42px;
             display: flex;
@@ -80,21 +82,51 @@
             justify-content: center;
             cursor: pointer;
             border-radius: 10px;
-            font-size: 18px;
             backdrop-filter: blur(8px);
             transition: all 0.25s ease;
         }
 
-        .top-btn:hover { transform: translateY(-2px); scale: 1.05; }
+        .top-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: transform 0.2s ease;
+        }
+
+        .top-btn:hover { 
+            transform: translateY(-2px); 
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .top-btn:hover svg { transform: scale(1.1); }
+
         .report-btn { background: linear-gradient(135deg, #0284c7, #38bdf8); }
         .print-btn { background: linear-gradient(135deg, #059669, #10b981); }
         .pdf-btn { background: linear-gradient(135deg, #e11d48, #f43f5e); }
         .settings-btn { background: linear-gradient(135deg, #475569, #64748b); }
-        .logout-btn { background: linear-gradient(135deg, #dc2626, #f87171); }
+        .logout-btn { background: linear-gradient(135deg, #dc2626, #ef4444); }
+
+        .brand-header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .brand-logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #ffffff;
+            padding: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            display: none;
+        }
 
         h2 {
-            text-align: center;
-            margin: 10px 0 0 0;
+            margin: 0;
             font-size: 42px;
             font-weight: 900;
             letter-spacing: 3px;
@@ -152,9 +184,10 @@
             width: 100%;
             font-size: 16px;
             font-weight: 800;
+            transition: opacity 0.2s;
         }
+        button.action-btn:hover { opacity: 0.9; }
 
-        /* Responsive Table Container */
         .table-responsive {
             width: 100%;
             overflow-x: auto;
@@ -177,12 +210,13 @@
             white-space: nowrap;
         }
 
-        th { background-color: #0d0f17; color: var(--accent-blue); }
+        th { background-color: var(--input-bg); color: var(--accent-blue); }
 
         .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); }
         .modal-content { background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin: 3% auto; padding: 25px; border-radius: 12px; width: 90%; max-width: 650px; max-height: 85vh; overflow-y: auto; }
         .modal-content.wide { max-width: 1050px; }
         .close { color: #64748b; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close:hover { color: #fff; }
 
         .settings-section {
             background: rgba(255,255,255,0.03);
@@ -190,6 +224,31 @@
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
+        }
+
+        .color-picker-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .color-picker-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0,0,0,0.2);
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .color-picker-item input[type="color"] {
+            border: none;
+            width: 35px;
+            height: 30px;
+            cursor: pointer;
+            background: none;
+            padding: 0;
         }
 
         .size-badge {
@@ -208,7 +267,7 @@
             font-size: 12px;
             cursor: pointer;
             text-decoration: underline;
-            margin-top: 12px;
+            margin-top: 6px;
             display: inline-block;
         }
 
@@ -224,33 +283,15 @@
 
 <!-- Login PIN Modal -->
 <div id="appPinModal" class="modal" style="display: block; z-index: 9999;">
-    <div class="modal-content" style="max-width: 400px; margin-top: 15vh; text-align: center;">
+    <div class="modal-content" style="max-width: 400px; margin-top: 12vh; text-align: center;">
         <h3 style="color: #38bdf8;">🔒 System Security Login</h3>
         <p style="font-size: 12px; color: #94a3b8;">Enter Admin PIN or Viewer PIN</p>
         <div class="form-group" style="text-align: left;">
             <input type="password" id="appPinInput" placeholder="Enter Security PIN" maxlength="6" style="text-align: center; font-size: 20px;" autocomplete="new-password">
         </div>
         <button class="action-btn" onclick="verifyAppPin()">Login</button>
-        <span class="forgot-link" onclick="openForgotPasswordModal()">Forgot Password / Reset via Email OTP</span>
-    </div>
-</div>
-
-<!-- Password Reset Modal -->
-<div id="forgotPasswordModal" class="modal" style="z-index: 10000;">
-    <div class="modal-content" style="max-width: 450px; text-align: center;">
-        <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
-        <h3 style="color: var(--accent-blue);">📧 Password Reset Verification</h3>
-        <p style="font-size: 13px; color: #94a3b8;">Forgotten your password? Click to send a 4-Digit Reset OTP to registered Email (<b>violapvt234@gmail.com</b>).</p>
-        
-        <button class="action-btn" style="background:var(--accent-blue);" onclick="sendWeb3FormsOTP()">Send Verification OTP Code</button>
-        
-        <div id="otpSection" style="display:none; margin-top:15px; text-align:left;">
-            <hr style="border-color:var(--border-color); margin:15px 0;">
-            <label>Enter 4-Digit OTP Code Sent to Email:</label>
-            <input type="text" id="otpCodeInput" placeholder="1234" maxlength="4" style="text-align:center;">
-            <label style="margin-top:10px;">Set New Admin Password (PIN):</label>
-            <input type="password" id="newAdminPinInput" placeholder="New Admin PIN">
-            <button class="action-btn" style="margin-top:12px; background:var(--accent-green);" onclick="confirmPasswordReset()">Verify & Save New PIN</button>
+        <div style="margin-top: 12px;">
+            <span class="forgot-link" onclick="openForgotPinModal()">Forgot PIN? Reset via Email OTP</span>
         </div>
     </div>
 </div>
@@ -258,13 +299,27 @@
 <div class="container">
     <div class="header-area">
         <div class="top-buttons">
-            <button class="top-btn report-btn" onclick="openReportModal()" title="View Stock Report">📊</button>
-            <button class="top-btn print-btn" onclick="printReport()" title="Print Stock Report">🖨️</button>
-            <button class="top-btn pdf-btn" onclick="saveAsPDF()" title="Save Report as Excel/PDF">📄</button>
-            <button class="top-btn settings-btn" id="adminSettingsBtn" onclick="requestAdminSettingsAccess()" title="Admin Settings">⚙️</button>
-            <button class="top-btn logout-btn" onclick="logoutSystem()" title="Logout / Lock System">🚪</button>
+            <button class="top-btn report-btn" onclick="openReportModal()" title="View Stock Report">
+                <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg>
+            </button>
+            <button class="top-btn print-btn" onclick="printReport()" title="Print Stock Report">
+                <svg viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+            </button>
+            <button class="top-btn pdf-btn" onclick="saveAsPDF()" title="Save Report as Excel/PDF">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            </button>
+            <button class="top-btn settings-btn" id="adminSettingsBtn" onclick="openSettingsPromptModal()" title="Admin Settings">
+                <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c-.5.38-1.03.7-1.62.94l-.36 2.54c.05.24.24.41.48.41h3.84c-.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+            </button>
+            <button class="top-btn logout-btn" onclick="logoutSystem()" title="Shutdown / Exit System">
+                <svg viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
+            </button>
         </div>
-        <h2 id="displayStoreName">VIOLA STOCK</h2>
+
+        <div class="brand-header-container">
+            <img id="displayStoreLogo" class="brand-logo-img" alt="Logo">
+            <h2 id="displayStoreName">VIOLA STOCK</h2>
+        </div>
         <span id="userRoleBadge" style="font-size:12px; color:#38bdf8; margin-top:5px; font-weight:bold;">Role: Guest</span>
     </div>
 
@@ -354,33 +409,89 @@
     </div>
 </div>
 
+<!-- Settings Password Prompt Modal (When clicking Settings Gear) -->
+<div id="settingsPromptModal" class="modal" style="z-index: 9998;">
+    <div class="modal-content" style="max-width: 400px; margin-top: 15vh; text-align: center;">
+        <span class="close" onclick="closeSettingsPromptModal()">&times;</span>
+        <h3 style="color: #38bdf8;">🔒 Enter Settings Password</h3>
+        <p style="font-size: 12px; color: #94a3b8;">Enter password to open settings panel</p>
+        <div class="form-group" style="text-align: left;">
+            <input type="password" id="settingsPromptInput" placeholder="Enter Settings Password" style="text-align: center; font-size: 18px;" autocomplete="new-password">
+        </div>
+        <button class="action-btn" onclick="verifySettingsPassword()">Open Settings</button>
+        <div style="margin-top: 12px;">
+            <span class="forgot-link" onclick="openForgotPasswordModal()">Forgot Settings Password? Reset via Email OTP</span>
+        </div>
+    </div>
+</div>
+
 <!-- Settings Modal -->
 <div id="settingsModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeSettings()">&times;</span>
-        <h3>⚙️ Admin System Settings</h3>
+        <h3>⚙️ Admin System Customization & Settings</h3>
 
-        <!-- Admin & Viewer Password Update (Old Password Required) -->
+        <!-- Branding & Customization Section -->
         <div class="settings-section">
-            <h4 style="color: var(--accent-blue);">🔐 Security Passwords Update</h4>
+            <h4 style="color: var(--accent-blue);">🎨 Branding, Logo & Colors Customization</h4>
             
-            <div class="form-group" style="border: 1px dashed var(--accent-red); padding: 10px; border-radius: 6px;">
-                <label style="color: var(--accent-red);">Current Admin Password (REQUIRED):</label>
-                <input type="password" id="currentAdminPin" placeholder="Enter Current Admin Password">
+            <div class="form-group">
+                <label>Store Name Title:</label>
+                <input type="text" id="customStoreName" placeholder="VIOLA STOCK">
             </div>
 
             <div class="form-group">
-                <label>New Admin PIN (Full Access):</label>
+                <label>Logo Image URL (Direct image link):</label>
+                <input type="text" id="customLogoUrl" placeholder="https://example.com/logo.png">
+            </div>
+
+            <label style="margin-top:10px; margin-bottom:6px;">🎨 System Theme Colors Customization:</label>
+            <div class="color-picker-grid">
+                <div class="color-picker-item">
+                    <span>Background:</span>
+                    <input type="color" id="pickerBgColor" value="#0d0f17">
+                </div>
+                <div class="color-picker-item">
+                    <span>Card Box:</span>
+                    <input type="color" id="pickerCardBg" value="#161b22">
+                </div>
+                <div class="color-picker-item">
+                    <span>Text Color:</span>
+                    <input type="color" id="pickerTextColor" value="#f3f4f6">
+                </div>
+                <div class="color-picker-item">
+                    <span>Primary Accent:</span>
+                    <input type="color" id="pickerPrimaryColor" value="#7c3aed">
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="action-btn" style="background:var(--accent-green); padding:10px; font-size:13px;" onclick="saveCustomizations()">Save Appearance</button>
+                <button class="action-btn" style="background:#475569; padding:10px; font-size:13px;" onclick="resetCustomizations()">Reset Defaults</button>
+            </div>
+        </div>
+
+        <!-- Security Passwords Update (Separate Settings Password & Login PINs) -->
+        <div class="settings-section">
+            <h4 style="color: var(--accent-blue);">🔐 Security Passwords & PINs Update</h4>
+            <div class="form-group" style="border: 1px dashed var(--accent-red); padding: 10px; border-radius: 6px;">
+                <label style="color: var(--accent-red);">Current Settings Password (REQUIRED):</label>
+                <input type="password" id="currentSettingsPass" placeholder="Enter Current Settings Password">
+            </div>
+            
+            <div class="form-group" style="margin-top:10px;">
+                <label>New Settings Access Password:</label>
+                <input type="password" id="setSettingsPassInput" placeholder="Enter New Settings Password">
+            </div>
+            <div class="form-group">
+                <label>New Admin System Login PIN:</label>
                 <input type="password" id="setAdminPin" placeholder="Enter New Admin PIN">
             </div>
             <div class="form-group">
-                <label>New Viewer PIN (Report Only Access):</label>
+                <label>New Viewer System Login PIN:</label>
                 <input type="password" id="setViewerPin" placeholder="Enter New Viewer PIN">
             </div>
-            <button class="action-btn" style="padding:10px; font-size:13px; background:var(--accent-green);" onclick="updateSecurityPinsWithOldCheck()">Update Passwords</button>
-            
-            <hr style="border-color:var(--border-color); margin:15px 0;">
-            <span class="forgot-link" onclick="openForgotPasswordModal()">Forgot Current Password? Reset via Email OTP</span>
+            <button class="action-btn" style="padding:10px; font-size:13px; background:var(--accent-green);" onclick="updateSecurityCredentials()">Update Passwords & PINs</button>
         </div>
 
         <!-- Manual CSV Import -->
@@ -398,6 +509,46 @@
                 <button class="action-btn" style="padding:8px; font-size:13px; background:var(--primary-color);" onclick="document.getElementById('restoreFileInput').click()">📤 Restore Backup</button>
             </div>
             <input type="file" id="restoreFileInput" accept=".json" style="display:none;" onchange="restoreBackupData(event)">
+        </div>
+    </div>
+</div>
+
+<!-- Password Reset Modal (For Settings Password) -->
+<div id="forgotPasswordModal" class="modal" style="z-index: 10000;">
+    <div class="modal-content" style="max-width: 450px; text-align: center;">
+        <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+        <h3 style="color: var(--accent-blue);">📧 Settings Password Reset Verification</h3>
+        <p style="font-size: 13px; color: #94a3b8;">Forgot your Settings password? Click to send a 4-Digit Reset OTP to registered Email (<b>violapvt234@gmail.com</b>).</p>
+        
+        <button class="action-btn" style="background:var(--accent-blue);" onclick="sendWeb3FormsOTP('settings')">Send Verification OTP Code</button>
+        
+        <div id="otpSection" style="display:none; margin-top:15px; text-align:left;">
+            <hr style="border-color:var(--border-color); margin:15px 0;">
+            <label>Enter 4-Digit OTP Code Sent to Email:</label>
+            <input type="text" id="otpCodeInput" placeholder="1234" maxlength="4" style="text-align:center;">
+            <label style="margin-top:10px;">Set New Settings Password:</label>
+            <input type="password" id="newSettingsPasswordInput" placeholder="New Settings Password">
+            <button class="action-btn" style="margin-top:12px; background:var(--accent-green);" onclick="confirmPasswordReset('settings')">Verify & Save New Password</button>
+        </div>
+    </div>
+</div>
+
+<!-- PIN Reset Modal (For System Login PIN) -->
+<div id="forgotPinModal" class="modal" style="z-index: 10000;">
+    <div class="modal-content" style="max-width: 450px; text-align: center;">
+        <span class="close" onclick="closeForgotPinModal()">&times;</span>
+        <h3 style="color: var(--accent-blue);">📧 System Login PIN Reset Verification</h3>
+        <p style="font-size: 13px; color: #94a3b8;">Forgot your Login PIN? Click to send a 4-Digit Reset OTP to registered Email (<b>violapvt234@gmail.com</b>).</p>
+        
+        <button class="action-btn" style="background:var(--accent-blue);" onclick="sendWeb3FormsOTP('pin')">Send Verification OTP Code</button>
+        
+        <div id="pinOtpSection" style="display:none; margin-top:15px; text-align:left;">
+            <hr style="border-color:var(--border-color); margin:15px 0;">
+            <label>Enter 4-Digit OTP Code Sent to Email:</label>
+            <input type="text" id="pinOtpCodeInput" placeholder="1234" maxlength="4" style="text-align:center;">
+            <label style="margin-top:10px;">Set New Admin Login PIN:</label>
+            <input type="password" id="newAdminPinInput" placeholder="New Admin PIN" maxlength="6">
+            <button class="action-btn" style="margin-top:12px; background:var(--accent-green);" onclick="confirmPasswordReset('pin')">Verify & Save New PIN</button>
         </div>
     </div>
 </div>
@@ -432,6 +583,8 @@
 
     let ADMIN_PIN = localStorage.getItem("admin_pin") || "1234";
     let VIEWER_PIN = localStorage.getItem("viewer_pin") || "5555";
+    let SETTINGS_PASSWORD = localStorage.getItem("settings_password") || "admin789";
+    
     let generatedResetCode = "";
     let currentUserRole = "guest";
 
@@ -441,8 +594,76 @@
     const GITHUB_CSV_URL = "https://raw.githubusercontent.com/violapvt234-byte/violaStock-/refs/heads/main/stock.csv";
 
     window.onload = function() {
+        loadCustomizations();
         fetchGitHubCSV();
     };
+
+    function loadCustomizations() {
+        const title = localStorage.getItem("store_name") || "VIOLA STOCK";
+        const logo = localStorage.getItem("store_logo") || "";
+        const bgColor = localStorage.getItem("bg_color") || "#0d0f17";
+        const cardBg = localStorage.getItem("card_bg") || "#161b22";
+        const textColor = localStorage.getItem("text_color") || "#f3f4f6";
+        const primaryColor = localStorage.getItem("primary_color") || "#7c3aed";
+
+        document.getElementById("displayStoreName").innerText = title;
+        document.getElementById("pageTitle").innerText = title;
+        
+        const logoImg = document.getElementById("displayStoreLogo");
+        if(logo.trim() !== "") {
+            logoImg.src = logo;
+            logoImg.style.display = "block";
+        } else {
+            logoImg.style.display = "none";
+        }
+
+        document.documentElement.style.setProperty('--bg-color', bgColor);
+        document.documentElement.style.setProperty('--card-bg', cardBg);
+        document.documentElement.style.setProperty('--text-color', textColor);
+        document.documentElement.style.setProperty('--primary-color', primaryColor);
+        document.documentElement.style.setProperty('--primary-hover', primaryColor);
+        document.documentElement.style.setProperty('--input-bg', cardBg);
+
+        document.getElementById("customStoreName").value = title;
+        document.getElementById("customLogoUrl").value = logo;
+        document.getElementById("pickerBgColor").value = bgColor;
+        document.getElementById("pickerCardBg").value = cardBg;
+        document.getElementById("pickerTextColor").value = textColor;
+        document.getElementById("pickerPrimaryColor").value = primaryColor;
+    }
+
+    function saveCustomizations() {
+        const title = document.getElementById("customStoreName").value.trim() || "VIOLA STOCK";
+        const logo = document.getElementById("customLogoUrl").value.trim();
+        const bgColor = document.getElementById("pickerBgColor").value;
+        const cardBg = document.getElementById("pickerCardBg").value;
+        const textColor = document.getElementById("pickerTextColor").value;
+        const primaryColor = document.getElementById("pickerPrimaryColor").value;
+
+        localStorage.setItem("store_name", title);
+        localStorage.setItem("store_logo", logo);
+        localStorage.setItem("bg_color", bgColor);
+        localStorage.setItem("card_bg", cardBg);
+        localStorage.setItem("text_color", textColor);
+        localStorage.setItem("primary_color", primaryColor);
+
+        loadCustomizations();
+        alert("✅ Appearance & Branding Updated Successfully!");
+        closeSettings();
+    }
+
+    function resetCustomizations() {
+        localStorage.removeItem("store_name");
+        localStorage.removeItem("store_logo");
+        localStorage.removeItem("bg_color");
+        localStorage.removeItem("card_bg");
+        localStorage.removeItem("text_color");
+        localStorage.removeItem("primary_color");
+        
+        loadCustomizations();
+        alert("🔄 Reset to Default Theme!");
+        closeSettings();
+    }
 
     function verifyAppPin() {
         const inputPin = document.getElementById("appPinInput").value;
@@ -477,50 +698,71 @@
         closeReportModal();
     }
 
-    function requestAdminSettingsAccess() {
+    function openSettingsPromptModal() {
         if (currentUserRole !== "admin") {
             alert("Restricted Access: Viewer cannot enter Settings!");
             return;
         }
-        const confirmPin = prompt("🔒 Re-enter Admin Password to Open Settings:");
-        if (confirmPin === ADMIN_PIN) {
-            document.getElementById("setAdminPin").value = ADMIN_PIN;
-            document.getElementById("setViewerPin").value = VIEWER_PIN;
-            document.getElementById("currentAdminPin").value = "";
-            document.getElementById("settingsModal").style.display = "block";
-        } else if(confirmPin !== null) {
-            alert("Incorrect Password!");
-        }
+        document.getElementById("settingsPromptInput").value = "";
+        document.getElementById("settingsPromptModal").style.display = "block";
     }
 
-    function updateSecurityPinsWithOldCheck() {
-        const currentEnteredPin = document.getElementById("currentAdminPin").value.trim();
+    function closeSettingsPromptModal() {
+        document.getElementById("settingsPromptModal").style.display = "none";
+    }
+
+    function verifySettingsPassword() {
+        const confirmPass = document.getElementById("settingsPromptInput").value;
+        if (confirmPass === SETTINGS_PASSWORD) {
+            closeSettingsPromptModal();
+            document.getElementById("setSettingsPassInput").value = SETTINGS_PASSWORD;
+            document.getElementById("setAdminPin").value = ADMIN_PIN;
+            document.getElementById("setViewerPin").value = VIEWER_PIN;
+            document.getElementById("currentSettingsPass").value = "";
+            document.getElementById("settingsModal").style.display = "block";
+        } else {
+            alert("Incorrect Settings Password!");
+        }
+        document.getElementById("settingsPromptInput").value = "";
+    }
+
+    function updateSecurityCredentials() {
+        const currentEnteredPass = document.getElementById("currentSettingsPass").value.trim();
+        const newSettingsPass = document.getElementById("setSettingsPassInput").value.trim();
         const newAdminPin = document.getElementById("setAdminPin").value.trim();
         const newViewerPin = document.getElementById("setViewerPin").value.trim();
 
-        if (currentEnteredPin !== ADMIN_PIN) {
-            alert("❌ Current Admin Password is Wrong! Enter correct old password or reset via Email.");
+        if (currentEnteredPass !== SETTINGS_PASSWORD) {
+            alert("❌ Current Settings Password is Wrong! Enter correct old password or reset via Email.");
             return;
         }
 
-        if (!newAdminPin || !newViewerPin) {
-            alert("Please enter valid new PIN codes!");
+        if (!newSettingsPass || !newAdminPin || !newViewerPin) {
+            alert("Please fill all security fields!");
             return;
         }
 
-        localStorage.setItem("admin_pin", newAdminPin);
-        localStorage.setItem("viewer_pin", newViewerPin);
+        SETTINGS_PASSWORD = newSettingsPass;
         ADMIN_PIN = newAdminPin;
         VIEWER_PIN = newViewerPin;
-        alert("✅ Security Passwords Updated Successfully!");
+
+        localStorage.setItem("settings_password", newSettingsPass);
+        localStorage.setItem("admin_pin", newAdminPin);
+        localStorage.setItem("viewer_pin", newViewerPin);
+
+        alert("✅ Security Credentials Updated Successfully!");
         closeSettings();
     }
 
     function openForgotPasswordModal() { document.getElementById("forgotPasswordModal").style.display = "block"; }
     function closeForgotPasswordModal() { document.getElementById("forgotPasswordModal").style.display = "none"; }
 
-    function sendWeb3FormsOTP() {
+    function openForgotPinModal() { document.getElementById("forgotPinModal").style.display = "block"; }
+    function closeForgotPinModal() { document.getElementById("forgotPinModal").style.display = "none"; }
+
+    function sendWeb3FormsOTP(type) {
         generatedResetCode = Math.floor(1000 + Math.random() * 9000).toString();
+        const subjectTitle = type === 'settings' ? "VIOLA STOCK - Settings Password Reset OTP" : "VIOLA STOCK - System Login PIN Reset OTP";
 
         fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -528,39 +770,66 @@
             body: JSON.stringify({
                 access_key: WEB3FORMS_ACCESS_KEY,
                 to: ADMIN_TARGET_EMAIL,
-                subject: "VIOLA STOCK - System Password Reset OTP",
-                message: `Your OTP Code for VIOLA STOCK System Password Reset is: ${generatedResetCode}`
+                subject: subjectTitle,
+                message: `Your OTP Code for VIOLA STOCK is: ${generatedResetCode}`
             })
         })
         .then(response => response.json())
         .then(data => {
             alert(`✅ Verification OTP sent to ${ADMIN_TARGET_EMAIL}! Check your inbox.`);
-            document.getElementById("otpSection").style.display = "block";
+            if(type === 'settings') {
+                document.getElementById("otpSection").style.display = "block";
+            } else {
+                document.getElementById("pinOtpSection").style.display = "block";
+            }
         })
         .catch(error => {
             alert(`📧 OTP Code sent to: ${ADMIN_TARGET_EMAIL}\n\n[FALLBACK CODE]: ${generatedResetCode}`);
-            document.getElementById("otpSection").style.display = "block";
+            if(type === 'settings') {
+                document.getElementById("otpSection").style.display = "block";
+            } else {
+                document.getElementById("pinOtpSection").style.display = "block";
+            }
         });
     }
 
-    function confirmPasswordReset() {
-        const enteredOtp = document.getElementById("otpCodeInput").value.trim();
-        const newPin = document.getElementById("newAdminPinInput").value.trim();
+    function confirmPasswordReset(type) {
+        if(type === 'settings') {
+            const enteredOtp = document.getElementById("otpCodeInput").value.trim();
+            const newPass = document.getElementById("newSettingsPasswordInput").value.trim();
 
-        if (enteredOtp !== generatedResetCode) {
-            alert("Invalid OTP Verification Code!");
-            return;
-        }
-        if (!newPin) {
-            alert("Please enter a valid new PIN!");
-            return;
-        }
+            if (enteredOtp !== generatedResetCode) {
+                alert("Invalid OTP Verification Code!");
+                return;
+            }
+            if (!newPass) {
+                alert("Please enter a valid new Settings Password!");
+                return;
+            }
 
-        ADMIN_PIN = newPin;
-        localStorage.setItem("admin_pin", newPin);
-        alert("✅ Password Reset Successful! Login with your new Admin PIN.");
-        closeForgotPasswordModal();
-        closeSettings();
+            SETTINGS_PASSWORD = newPass;
+            localStorage.setItem("settings_password", newPass);
+            alert("✅ Settings Password Reset Successful! You can now use your new password.");
+            closeForgotPasswordModal();
+            closeSettingsPromptModal();
+        } else {
+            const enteredOtp = document.getElementById("pinOtpCodeInput").value.trim();
+            const newPin = document.getElementById("newAdminPinInput").value.trim();
+
+            if (enteredOtp !== generatedResetCode) {
+                alert("Invalid OTP Verification Code!");
+                return;
+            }
+            if (!newPin) {
+                alert("Please enter a valid new Admin PIN!");
+                return;
+            }
+
+            ADMIN_PIN = newPin;
+            localStorage.setItem("admin_pin", newPin);
+            alert("✅ Admin Login PIN Reset Successful! You can now log in using the new PIN.");
+            closeForgotPinModal();
+        }
     }
 
     function parseCSVRows(rows) {
@@ -707,7 +976,7 @@
                     <td>${item.box}</td>
                     <td>${item.sku}</td>
                     <td>${item.name}</td>
-                    <td><span class="size-badge">${item.size}</span></td>
+                    <td><span class="size-badge">${item.size}</td>
                     <td>${item.qty}</td>
                 </tr>
             `;
