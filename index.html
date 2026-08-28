@@ -154,9 +154,18 @@
             font-weight: 800;
         }
 
+        /* Responsive Table Container */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
         table {
             width: 100%;
-            margin-top: 15px;
+            min-width: 650px;
             border-collapse: collapse;
             font-size: 14px;
         }
@@ -165,6 +174,7 @@
             border: 1px solid var(--border-color);
             padding: 12px 14px;
             text-align: left;
+            white-space: nowrap;
         }
 
         th { background-color: #0d0f17; color: var(--accent-blue); }
@@ -322,23 +332,25 @@
         <button id="processBtn" class="action-btn" onclick="addItem()">Process Stock Transaction</button>
     </div>
 
-    <!-- Embedded Viewer Table -->
+    <!-- Embedded Viewer Table with Horizontal Scroll -->
     <div id="viewerScreenArea" class="viewer-only-section">
         <h3 style="color:#38bdf8; text-align:center;">📊 Live Stock Report View</h3>
-        <table id="viewerTable">
-            <thead>
-                <tr>
-                    <th>Date / Time</th>
-                    <th>Mode</th>
-                    <th>Box No</th>
-                    <th>SKU</th>
-                    <th>Item Name</th>
-                    <th>Size</th>
-                    <th>Qty</th>
-                </tr>
-            </thead>
-            <tbody id="viewerTableBody"></tbody>
-        </table>
+        <div class="table-responsive">
+            <table id="viewerTable">
+                <thead>
+                    <tr>
+                        <th>Date / Time</th>
+                        <th>Mode</th>
+                        <th>Box No</th>
+                        <th>SKU</th>
+                        <th>Item Name</th>
+                        <th>Size</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody id="viewerTableBody"></tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -390,25 +402,27 @@
     </div>
 </div>
 
-<!-- Stock Report Modal -->
+<!-- Stock Report Modal with Horizontal Scroll -->
 <div id="reportModal" class="modal">
     <div class="modal-content wide" id="printableArea">
         <span class="close" onclick="closeReportModal()">&times;</span>
         <h3>📊 Transacted Items Log Report</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Date / Time</th>
-                    <th>Mode</th>
-                    <th>Box No</th>
-                    <th>SKU</th>
-                    <th>Item Name</th>
-                    <th>Size</th>
-                    <th>Qty</th>
-                </tr>
-            </thead>
-            <tbody id="reportTableBody"></tbody>
-        </table>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date / Time</th>
+                        <th>Mode</th>
+                        <th>Box No</th>
+                        <th>SKU</th>
+                        <th>Item Name</th>
+                        <th>Size</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody id="reportTableBody"></tbody>
+            </table>
+        </div>
     </div>
 </div>
 
