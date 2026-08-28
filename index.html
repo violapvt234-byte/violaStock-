@@ -53,12 +53,13 @@
         .header-area {
             position: relative;
             margin: -25px -25px 25px -25px;
-            padding: 50px 25px 40px 25px;
+            padding: 60px 25px 50px 25px;
             background-color: #1e293b;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            background-image: var(--header-bg-image, none);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -67,16 +68,15 @@
             border-bottom: 3px solid rgba(255, 255, 255, 0.15);
         }
 
-        /* Background Logo Overlay Effect */
         .header-area::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: var(--header-bg-image, none);
-            background-size: contain;
+            background: inherit;
+            background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             opacity: var(--header-bg-opacity, 0.25);
+            filter: contrast(120%) brightness(90%);
             pointer-events: none;
             transition: all 0.3s ease;
         }
@@ -128,25 +128,22 @@
             padding: 10px 14px;
         }
 
-        /* Embroided / Stitched 3D Premium Title Style */
         h2 {
-            color: #ffffff;
             text-align: center;
             margin-top: 10px;
             margin-bottom: 0;
-            font-size: 38px;
+            font-size: 40px;
             font-weight: 900;
             letter-spacing: 2px;
             z-index: 2;
             position: relative;
             text-transform: uppercase;
-            /* Embroided / Stitched text effect */
-            text-shadow: 0 1px 0 #000, 0 -1px 0 rgba(255,255,255,0.4), 
-                         0 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(99,102,241,0.5);
-            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.9));
+            color: var(--title-color, #ffffff);
+            text-shadow: 0 1px 0 #000000, 
+                         0 -1px 0 rgba(255,255,255,0.4), 
+                         0 4px 8px rgba(0,0,0,0.9), 
+                         0 0 25px rgba(0,0,0,0.6);
+            filter: drop-shadow(0 3px 5px rgba(0,0,0,0.95));
         }
 
         .status-msg {
@@ -282,7 +279,6 @@
             font-weight: bold;
         }
 
-        /* Settings Sub-tabs Style */
         .settings-tabs {
             display: flex;
             gap: 10px;
@@ -318,7 +314,7 @@
         }
 
         @media (max-width: 768px) {
-            .header-area { padding: 40px 15px 20px 15px; }
+            .header-area { padding: 40px 15px 30px 15px; }
             .top-buttons { position: relative; top: 0; right: 0; justify-content: center; margin-bottom: 10px; }
             h2 { font-size: 26px; padding: 8px 16px; }
             .form-grid { grid-template-columns: 1fr; }
@@ -370,8 +366,8 @@
 <div class="container">
     <div class="header-area" id="headerArea">
         <div class="top-buttons no-print">
-            <button class="top-btn summary-btn" onclick="openStockSummaryModal()">📋 Active Stock Summary (<span id="btnTotalQty">0</span>)</button>
-            <button class="top-btn report-btn" onclick="openReportModal()">📊 View Full Report</button>
+            <button class="top-btn summary-btn" onclick="openStockSummaryModal()">📋 (<span id="btnTotalQty">0</span>)</button>
+            <button class="top-btn report-btn" onclick="openReportModal()">📊</button>
             <button class="top-btn settings-btn" onclick="requestSettingsAccess()">⚙️</button>
         </div>
         <h2 id="displayStoreName">VIOLA STOCK</h2>
@@ -466,7 +462,6 @@
             <button onclick="lockAdminMode()" style="background: #f43f5e; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold;">🔒 Lock / Exit Admin</button>
         </div>
 
-        <!-- Settings Sub-tabs -->
         <div class="settings-tabs">
             <button class="tab-btn active" onclick="switchSettingsTab('generalTab', this)">🌐 General Interface</button>
             <button class="tab-btn" onclick="switchSettingsTab('databaseTab', this)">💾 Database & Backup</button>
@@ -475,7 +470,7 @@
 
         <!-- GENERAL TAB -->
         <div id="generalTab" class="tab-content active">
-            <h4 style="color:#f1f5f9; margin-top:0;">🎨 Interface Customization & Background Logo</h4>
+            <h4 style="color:#f1f5f9; margin-top:0;">🎨 Interface Customization & Full Background Logo</h4>
             <div class="form-group">
                 <label>Store / System Name:</label>
                 <input type="text" id="storeNameInput" placeholder="Enter Store Name...">
@@ -483,12 +478,20 @@
             <button class="action-btn" onclick="saveStoreSettings()" style="margin-bottom: 20px;">Save Store Identity</button>
 
             <div class="form-group">
-                <label>Upload Header Background Logo Image:</label>
+                <label>Title Text Color (VIOLA STOCK):</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="color" id="titleColorPicker" value="#ffffff" onchange="updateTitleColor(this.value)" style="width: 60px; height: 42px; padding: 2px; cursor: pointer; background: var(--input-bg);">
+                    <input type="text" id="titleColorText" value="#ffffff" oninput="updateTitleColor(this.value)" placeholder="#ffffff">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Upload Header Background Logo Image (Full Coverage):</label>
                 <input type="file" id="bgLogoFile" accept="image/*" style="margin-bottom: 8px; padding: 6px; border: 1px dashed var(--border-color); border-radius: 6px; width: 100%;" onchange="handleHeaderLogoUpload(event)">
             </div>
             
             <div class="form-group">
-                <label>Background Logo Opacity (Watermark Effect): <span id="opacityValLabel">0.25</span></label>
+                <label>Logo Watermark Opacity: <span id="opacityValLabel">0.25</span></label>
                 <input type="range" id="logoOpacityRange" min="0.05" max="0.8" step="0.05" value="0.25" oninput="updateLogoOpacity(this.value)" style="accent-color: var(--primary-color);">
             </div>
 
@@ -601,6 +604,7 @@
     let storeName = "VIOLA STOCK";
     let customHeaderLogo = "";
     let customLogoOpacity = 0.25;
+    let titleTextColor = "#ffffff";
 
     let generatedOtp = "";
     let systemPinOtp = "";
@@ -645,6 +649,7 @@
         storeName = localStorage.getItem('viola_store_name') || "VIOLA STOCK";
         customHeaderLogo = localStorage.getItem('viola_header_logo') || "";
         customLogoOpacity = parseFloat(localStorage.getItem('viola_logo_opacity')) || 0.25;
+        titleTextColor = localStorage.getItem('viola_title_color') || "#ffffff";
     }
 
     function initFirebase() {
@@ -821,6 +826,7 @@
             stockList: stockList,
             customHeaderLogo: customHeaderLogo,
             customLogoOpacity: customLogoOpacity,
+            titleTextColor: titleTextColor,
             backupDate: new Date().toISOString()
         };
         let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData, null, 2));
@@ -854,6 +860,7 @@
                 if (backupData.stockList) { stockList = backupData.stockList; localStorage.setItem('viola_stock_list', JSON.stringify(stockList)); if (dbRef) dbRef.set(stockList); }
                 if (backupData.customHeaderLogo !== undefined) { customHeaderLogo = backupData.customHeaderLogo; localStorage.setItem('viola_header_logo', customHeaderLogo); }
                 if (backupData.customLogoOpacity !== undefined) { customLogoOpacity = backupData.customLogoOpacity; localStorage.setItem('viola_logo_opacity', customLogoOpacity); }
+                if (backupData.titleTextColor) { titleTextColor = backupData.titleTextColor; localStorage.setItem('viola_title_color', titleTextColor); }
 
                 applyStoreIdentity();
                 updateBoxDropdown();
@@ -893,6 +900,10 @@
         headerArea.style.setProperty('--header-bg-opacity', customLogoOpacity);
         document.getElementById('logoOpacityRange').value = customLogoOpacity;
         document.getElementById('opacityValLabel').innerText = customLogoOpacity;
+
+        headerArea.style.setProperty('--title-color', titleTextColor);
+        document.getElementById('titleColorPicker').value = titleTextColor;
+        document.getElementById('titleColorText').value = titleTextColor;
     }
 
     function saveStoreSettings() {
@@ -904,6 +915,15 @@
             applyStoreIdentity();
             alert("Store name updated!");
         }
+    }
+
+    function updateTitleColor(color) {
+        titleTextColor = color;
+        localStorage.setItem('viola_title_color', titleTextColor);
+        let headerArea = document.getElementById('headerArea');
+        headerArea.style.setProperty('--title-color', titleTextColor);
+        document.getElementById('titleColorPicker').value = titleTextColor;
+        document.getElementById('titleColorText').value = titleTextColor;
     }
 
     function handleHeaderLogoUpload(event) {
@@ -1005,7 +1025,8 @@
 
     function saveNewPassword() {
         let newPwd = document.getElementById('newPwdInput').value;
-        if (newPwd.length < 4 || newPwd !== document.getElementById('confirmPwdInput').value) {
+        let confirmPwd = document.getElementById('confirmPwdInput').value;
+        if (newPwd.length < 4 || newPwd !== confirmPwd) {
             alert("Passwords do not match or too short!"); return;
         }
         ADMIN_PASSWORD = newPwd;
@@ -1077,10 +1098,10 @@
     }
 
     function renderTable() {
-        let tableBody = document.getElementById('tableBody');
-        tableBody.innerHTML = '';
+        let tableButtonBody = document.getElementById('tableBody');
+        tableButtonBody.innerHTML = '';
         stockList.forEach((item, index) => {
-            let row = tableBody.insertRow();
+            let row = tableButtonBody.insertRow();
             let actionTd = isAdminLoggedIn ? `<td><button style="background:#f43f5e; color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;" onclick="deleteRow(${index})">Delete</button></td>` : `<td>-</td>`;
             row.innerHTML = `<td>${item.boxNo}</td><td>${item.sku}</td><td>${item.name}</td><td>${item.category}</td><td>${item.brand || '-'}</td><td><span class="qty-badge">${item.qty}</span></td>${actionTd}`;
         });
