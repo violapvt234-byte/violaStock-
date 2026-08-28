@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Viola Stock List & POS System</title>
+    <!-- Include SheetJS for Excel Upload Support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    
+    <!-- Firebase App & Realtime Database SDKs for Live Sync -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --border-color: #334155;
+            --input-bg: #0f172a;
+            --accent-green: #10b981;
+            --accent-red: #f43f5e;
+            --accent-blue: #38bdf8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 980px;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--border-color);
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .header-area {
+            position: relative;
+            margin: -25px -25px 25px -25px;
+            padding: 50px 25px 35px 25px;
+            background-color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .top-buttons {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+            flex-wrap: wrap;
+        }
+
+        .top-btn {
+            background: rgba(15, 23, 42, 0.85);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 800;
+            backdrop-filter: blur(8px);
+            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+            letter-spacing: 0.3px;
+        }
+
+        .top-btn:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 12px rgba(255, 255, 255, 0.4);
+        }
+
+        .summary-btn { 
+            background: linear-gradient(135deg, #059669, #10b981); 
+            color: #ffffff;
+            border-color: #34d399;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+        .report-btn { 
+            background: linear-gradient(135deg, #0284c7, #38bdf8); 
+            color: #ffffff;
+            border-color: #7dd3fc;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+        .settings-btn { 
+            background: linear-gradient(135deg, #7c3aed, #c084fc); 
+            color: #ffffff;
+            border-color: #e9d5ff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 0;
+            font-size: 40px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0,0,0,0.8);
+            background: rgba(15, 23, 42, 0.55);
+            padding: 12px 30px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .status-msg {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.1);
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 11px 14px;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: var(--input-bg);
+            color: var(--text-color);
+        }
+
+        input:focus, select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+        }
+
+        input[readonly] {
+            background: #1e293b;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        button.action-btn {
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 14px;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 800;
+            margin-top: 5px;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        button.action-btn:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6), 0 0 15px rgba(99, 102, 241, 0.5);
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: var(--accent-blue);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0f172a;
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.02); }
+
+        .total-box {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: right;
+            color: var(--accent-green);
+        }
+
+        .toast-container {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: none;
+        }
+
+        .toast {
+            background: #022c22;
+            color: #f8fafc;
+            border: 2px solid #10b981;
+            border-left: 10px solid #34d399;
+            padding: 18px 24px;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-width: 380px;
+            animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 0.4s ease 3.2s forwards;
+            pointer-events: auto;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(120%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; transform: translateX(0); }
+            to { opacity: 0; transform: translateX(50px); }
+        }
+
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); backdrop-filter: blur(4px); }
+        .modal-content { background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin: 3% auto; padding: 25px; border-radius: 12px; width: 90%; max-width: 650px; max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+        .modal-content.wide { max-width: 1000px; }
+        .close { color: #64748b; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close:hover { color: #f8fafc; }
+
+        .qty-badge {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header-area { padding: 60px 15px 25px 15px; }
+            .top-buttons { position: relative; top: 0; right: 0; justify-content: center; margin-bottom: 15px; }
+            h2 { font-size: 24px; margin-top: 0; padding: 8px 16px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="toastContainer" class="toast-container"></div>
+
+<div class="container">
+    <div class="header-area" id="headerArea">
+        <div class="top-buttons no-print">
+            <button class="top-btn summary-btn" onclick="openStockSummaryModal()">📋 Active Stock Summary (<span id="btnTotalQty">0</span>)</button>
+            <button class="top-btn report-btn" onclick="openReportModal()">📊 View Full Report</button>
+            <button class="top-btn settings-btn" onclick="openSettings()">⚙️ Settings & Database</button>
+        </div>
+        <h2 id="displayStoreName">Viola Stock List & POS System</h2>
+    </div>
+
+    <div class="status-msg">
+        <span>🔒 Cloud Admin Password Security Active | ☁️ Multi-Device Live Sync Ready</span>
+        <button id="authRoleBtn" onclick="toggleAuthRole()" style="background: #0284c7; color: white; border: none; padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold;">🔑 Viewer Mode (Switch to Admin)</button>
+    </div>
+    
+    <div class="form-grid">
+        <div class="form-group">
+            <label>Operation Mode:</label>
+            <select id="operationMode" style="font-weight: bold; color: #34d399; background: #064e3b; border-color: #059669;" onchange="updateModeColor()">
+                <option value="add">➕ Add Stock (Increase)</option>
+                <option value="deduct">➖ Remove / Take to Store (Decrease)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Box Number:</label>
+            <select id="boxNo"></select>
+        </div>
+        
+        <div class="form-group">
+            <label>SKU / Item Code:</label>
+            <input type="text" id="itemCode" list="skuList" placeholder="Enter or scan SKU..." oninput="autoFillBySKU()" autocomplete="off">
+            <datalist id="skuList"></datalist>
+        </div>
+
+        <div class="form-group full-width">
+            <label>Item Name:</label>
+            <input type="text" id="itemName" list="nameList" placeholder="Type or select item name..." oninput="autoFillByName()" autocomplete="off">
+            <datalist id="nameList"></datalist>
+        </div>
+
+        <div class="form-group">
+            <label>System Quantity (Current Stock):</label>
+            <input type="number" id="systemQty" placeholder="0" readonly>
+        </div>
+          
+        <div class="form-group">
+            <label>Category / Item Type:</label>
+            <input type="text" id="itemType" placeholder="Auto-filled">
+        </div>
+
+        <div class="form-group">
+            <label>Brand Name:</label>
+            <input type="text" id="brandName" placeholder="Auto-filled">
+        </div>
+
+        <div class="form-group">
+            <label>Quantity to Process:</label>
+            <input type="number" id="qty" placeholder="Enter quantity">
+        </div>
+    </div>
+
+    <button id="processBtn" class="action-btn" onclick="addItem()">Process Stock Transaction</button>
+</div>
+
+<!-- Modals -->
+<div id="stockSummaryModal" class="modal">
+    <div class="modal-content wide">
+        <span class="close" onclick="closeStockSummaryModal()">&times;</span>
+        <h3>📋 Active Stock Summary List</h3>
+        <div style="overflow-x: auto;">
+            <table id="stockTable">
+                <thead>
+                    <tr>
+                        <th>Box No</th>
+                        <th>SKU</th>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Brand</th>
+                        <th>Current Stock Qty</th>
+                        <th class="no-print">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <div class="total-box">Total Unique Items in Summary: <span id="totalQty">0</span></div>
+    </div>
+</div>
+
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSettings()">&times;</span>
+        <h3 style="margin-top:0;">⚙️ Settings & Customization</h3>
+        <div class="form-group">
+            <label>Store / System Name:</label>
+            <input type="text" id="storeNameInput" placeholder="Enter Store Name...">
+        </div>
+        <button class="action-btn" onclick="saveStoreSettings()">Save Store Identity</button>
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+        <h4 style="color:#f1f5f9;">🔑 Admin Password</h4>
+        <button class="action-btn" style="background: linear-gradient(135deg, #0284c7, #38bdf8);" onclick="openPasswordChangeModal()">Change Password</button>
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+        <h4 style="color:#f1f5f9;">📂 Upload Excel File to Master Database</h4>
+        <input type="file" id="excelFile" accept=".xlsx, .xls" style="margin-bottom: 8px; padding: 6px; border: 1px dashed var(--border-color); border-radius: 6px; width: 100%;" onchange="handleExcelUpload(event)">
+        <div style="font-size: 14px; font-weight: bold; color: var(--accent-blue);">Total Items in DB: <span id="dbCount">0</span></div>
+    </div>
+</div>
+
+<div id="passwordModal" class="modal">
+    <div class="modal-content" style="max-width: 450px;">
+        <span class="close" onclick="closePasswordModal()">&times;</span>
+        <h3>🔒 Admin Password Management</h3>
+        <div id="pwdStep1">
+            <div class="form-group">
+                <label>Current Password:</label>
+                <input type="password" id="currentPwdInput" placeholder="Enter current password">
+            </div>
+            <button class="action-btn" onclick="verifyCurrentPassword()">Next</button>
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="javascript:void(0)" onclick="triggerOtpRequest()" style="color: #38bdf8; font-size: 14px; text-decoration: underline;">Forgot Password? (Get OTP)</a>
+            </div>
+        </div>
+        <div id="pwdStepOtp" style="display: none;">
+            <div class="form-group">
+                <label>Enter 6-Digit OTP:</label>
+                <input type="text" id="otpCodeInput" placeholder="Enter OTP" maxlength="6">
+            </div>
+            <button class="action-btn" onclick="verifyOtpCode()">Verify OTP</button>
+        </div>
+        <div id="pwdStep2" style="display: none;">
+            <div class="form-group">
+                <label>New Password:</label>
+                <input type="password" id="newPwdInput" placeholder="New password">
+            </div>
+            <div class="form-group">
+                <label>Confirm Password:</label>
+                <input type="password" id="confirmPwdInput" placeholder="Confirm password">
+            </div>
+            <button class="action-btn" style="background: #10b981;" onclick="saveNewPassword()">Update Password</button>
+        </div>
+    </div>
+</div>
+
+<div id="reportModal" class="modal">
+    <div class="modal-content wide">
+        <span class="close" onclick="closeReportModal()">&times;</span>
+        <h3 id="reportHeaderTitle">📊 Complete Stock Report</h3>
+        <div style="margin-bottom: 15px;"><button class="action-btn" style="width: auto; background: #0ea5e9;" onclick="window.print()">🖨️ Print / Save as PDF</button></div>
+        <div id="reportContent" style="overflow-x: auto;"></div>
+    </div>
+</div>
+
+<script>
+    let ADMIN_PASSWORD = "1234";
+    let isAdminLoggedIn = false;
+    let itemDatabase = JSON.parse(localStorage.getItem('master_item_db')) || {};
+    let boxes = JSON.parse(localStorage.getItem('stock_boxes')) || ["Box-01", "Box-02", "Box-03", "Box-04", "Box-05"];
+    let stockList = JSON.parse(localStorage.getItem('stock_list_items')) || [];
+    let storeName = localStorage.getItem('store_custom_name') || "Viola Stock List & POS System";
+    let generatedOtp = "";
+    const targetEmail = "violapv234@gmail.com";
+
+    // මෙන්න ඔබේ නිවැරදි කරගත් Firebase වින්‍යාසය (Config)
+    const firebaseConfig = {
+        apiKey: "AIzaSy...", 
+        authDomain: "viola-stok-191c8.firebaseapp.com",
+        databaseURL: "https://viola-stok-191c8-default-rtdb.firebaseio.com",
+        projectId: "viola-stok-191c8",
+        storageBucket: "viola-stok-191c8.appspot.com",
+        messagingSenderId: "...",
+        appId: "..."
+    };
+
+    let dbRef = null;
+    let pwdRef = null;
+
+    window.onload = function() {
+        initFirebase();
+        applyStoreIdentity();
+        updateBoxDropdown();
+        populateDatalists();
+        updateDbCount();
+        renderTable();
+        updateModeColor();
+        updateUIMode();
+    };
+
+    function initFirebase() {
+        try {
+            if (typeof firebase !== 'undefined' && firebaseConfig.apiKey !== "YOUR_FIREBASE_API_KEY") {
+                if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+                
+                dbRef = firebase.database().ref('stock_list');
+                dbRef.on('value', (snapshot) => {
+                    const data = snapshot.val();
+                    if (data) {
+                        stockList = data;
+                        localStorage.setItem('stock_list_items', JSON.stringify(stockList));
+                        renderTable();
+                    }
+                });
+
+                pwdRef = firebase.database().ref('admin_password');
+                pwdRef.on('value', (snapshot) => {
+                    const cloudPwd = snapshot.val();
+                    if (cloudPwd) {
+                        ADMIN_PASSWORD = cloudPwd;
+                        localStorage.setItem('admin_custom_pwd', ADMIN_PASSWORD);
+                    } else {
+                        let localPwd = localStorage.getItem('admin_custom_pwd') || "1234";
+                        pwdRef.set(localPwd);
+                        ADMIN_PASSWORD = localPwd;
+                    }
+                });
+            } else {
+                ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
+            }
+        } catch(e) {
+            ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
+        }
+    }
+
+    function toggleAuthRole() {
+        if (!isAdminLoggedIn) {
+            let pwd = prompt("🔐 Enter Admin Password:");
+            if (pwd === ADMIN_PASSWORD) {
+                isAdminLoggedIn = true;
+                updateUIMode();
+                alert("✅ Admin Mode Activated!");
+            } else if (pwd !== null) {
+                alert("❌ Incorrect Password!");
+            }
+        } else {
+            isAdminLoggedIn = false;
+            updateUIMode();
+            alert("🔒 Switched to Viewer Mode.");
+        }
+    }
+
+    function updateUIMode() {
+        let authBtn = document.getElementById('authRoleBtn');
+        let processBtn = document.getElementById('processBtn');
+        let inputs = document.querySelectorAll('.form-grid input, .form-grid select');
+
+        if (isAdminLoggedIn) {
+            authBtn.innerText = "👑 Admin Mode (Click to Switch)";
+            authBtn.style.background = "#10b981";
+            processBtn.style.display = "block";
+            inputs.forEach(el => el.removeAttribute('disabled'));
+        } else {
+            authBtn.innerText = "🔑 Viewer Mode (Click to Switch)";
+            authBtn.style.background = "#0284c7";
+            processBtn.style.display = "none";
+        }
+    }
+
+    function saveToLocalStorage() {
+        localStorage.setItem('stock_list_items', JSON.stringify(stockList));
+        localStorage.setItem('stock_boxes', JSON.stringify(boxes));
+        localStorage.setItem('master_item_db', JSON.stringify(itemDatabase));
+        if (dbRef) dbRef.set(stockList);
+    }
+
+    function updateModeColor() {
+        let mode = document.getElementById('operationMode').value;
+        let selectEl = document.getElementById('operationMode');
+        if (mode === 'add') {
+            selectEl.style.color = '#34d399'; selectEl.style.background = '#064e3b'; selectEl.style.borderColor = '#059669';
+        } else {
+            selectEl.style.color = '#fecdd3'; selectEl.style.background = '#881337'; selectEl.style.borderColor = '#e11d48';
+        }
+    }
+
+    function showSuccessToast(itemName, qty, mode) {
+        let container = document.getElementById('toastContainer');
+        let toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = `<div><b>✅ Success!</b> ${itemName} (${qty} Pcs) processed successfully.</div>`;
+        container.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    function applyStoreIdentity() {
+        document.getElementById('displayStoreName').innerText = storeName;
+        document.getElementById('pageTitle').innerText = storeName;
+        document.getElementById('storeNameInput').value = storeName;
+    }
+
+    function saveStoreSettings() {
+        if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); return; }
+        let nameInput = document.getElementById('storeNameInput').value.trim();
+        if (nameInput) {
+            storeName = nameInput;
+            localStorage.setItem('store_custom_name', storeName);
+            applyStoreIdentity();
+            alert("Store name updated!");
+        }
+    }
+
+    function updateBoxDropdown() {
+        let boxSelect = document.getElementById('boxNo');
+        boxSelect.innerHTML = '';
+        boxes.forEach(box => {
+            let option = document.createElement('option');
+            option.value = box; option.text = box;
+            boxSelect.appendChild(option);
+        });
+    }
+
+    function populateDatalists() {
+        let skuList = document.getElementById('skuList');
+        let nameList = document.getElementById('nameList');
+        skuList.innerHTML = ''; nameList.innerHTML = '';
+        for (let sku in itemDatabase) {
+            let item = itemDatabase[sku];
+            let optSku = document.createElement('option'); optSku.value = sku; skuList.appendChild(optSku);
+            if (item.name) { let optName = document.createElement('option'); optName.value = item.name; nameList.appendChild(optName); }
+        }
+    }
+
+    function updateDbCount() {
+        document.getElementById('dbCount').innerText = Object.keys(itemDatabase).length;
+    }
+
+    function openSettings() {
+        if (!isAdminLoggedIn) {
+            let pwd = prompt("⚙️ Enter Admin Password:");
+            if (pwd === ADMIN_PASSWORD) { isAdminLoggedIn = true; updateUIMode(); } else { alert("❌ Incorrect Password!"); return; }
+        }
+        document.getElementById('settingsModal').style.display = 'block';
+    }
+
+    function closeSettings() { document.getElementById('settingsModal').style.display = 'none'; }
+    function openPasswordChangeModal() { document.getElementById('passwordModal').style.display = 'block'; }
+    function closePasswordModal() { document.getElementById('passwordModal').style.display = 'none'; }
+    function verifyCurrentPassword() {
+        if (document.getElementById('currentPwdInput').value === ADMIN_PASSWORD) {
+            document.getElementById('pwdStep1').style.display = 'none';
+            document.getElementById('pwdStep2').style.display = 'block';
+        } else { alert("❌ Incorrect Password!"); }
+    }
+    function triggerOtpRequest() {
+        generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+        let formData = new FormData();
+        formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY");
+        formData.append("email", targetEmail);
+        formData.append("subject", "Password Reset OTP");
+        formData.append("message", "Your OTP is: " + generatedOtp);
+        fetch("https://api.web3forms.com/submit", { method: "POST", body: formData })
+        .then(res => res.json()).then(data => {
+            if (data.success) alert("📧 OTP sent to " + targetEmail);
+            else alert("❌ Failed to send email.");
+        });
+        document.getElementById('pwdStep1').style.display = 'none';
+        document.getElementById('pwdStepOtp').style.display = 'block';
+    }
+    function verifyOtpCode() {
+        if (document.getElementById('otpCodeInput').value.trim() === generatedOtp) {
+            document.getElementById('pwdStepOtp').style.display = 'none';
+            document.getElementById('pwdStep2').style.display = 'block';
+        } else { alert("❌ Incorrect OTP!"); }
+    }
+    function saveNewPassword() {
+        let newPwd = document.getElementById('newPwdInput').value;
+        if (newPwd.length < 4 || newPwd !== document.getElementById('confirmPwdInput').value) {
+            alert("Passwords do not match or too short!"); return;
+        }
+        ADMIN_PASSWORD = newPwd;
+        localStorage.setItem('admin_custom_pwd', ADMIN_PASSWORD);
+        if (pwdRef) pwdRef.set(ADMIN_PASSWORD);
+        alert("✅ Password updated successfully across all devices!");
+        closePasswordModal();
+    }
+
+    function openStockSummaryModal() { document.getElementById('stockSummaryModal').style.display = 'block'; }
+    function closeStockSummaryModal() { document.getElementById('stockSummaryModal').style.display = 'none'; }
+
+    function handleExcelUpload(event) {
+        let file = event.target.files[0];
+        if (!file) return;
+        let reader = new FileReader();
+        reader.onload = function(e) {
+            let workbook = XLSX.read(new Uint8Array(e.target.result), { type: 'array' });
+            let worksheet = workbook.Sheets[workbook.SheetNames[0]];
+            let jsonRows = XLSX.utils.sheet_to_json(worksheet);
+            jsonRows.forEach(row => {
+                let sku = String(row['sku'] || row['SKU'] || '').trim().toUpperCase();
+                let name = String(row['product_name'] || row['Name'] || '').trim();
+                if (sku) {
+                    itemDatabase[sku] = { name: name || "Item", category: row['category'] || "Gen", unit_qty: parseInt(row['quantity'] || 0) || 0, brand: row['brand'] || "" };
+                }
+            });
+            saveToLocalStorage();
+            populateDatalists();
+            updateDbCount();
+            alert("Excel uploaded successfully!");
+        };
+        reader.readAsArrayBuffer(file);
+    }
+
+    function autoFillBySKU() {
+        let code = document.getElementById('itemCode').value.trim().toUpperCase();
+        let item = itemDatabase[code];
+        if (item) {
+            document.getElementById('itemName').value = item.name || "";
+            document.getElementById('systemQty').value = item.unit_qty || 0;
+            document.getElementById('itemType').value = item.category || "";
+            document.getElementById('brandName').value = item.brand || "";
+        }
+    }
+    function autoFillByName() {}
+
+    function addItem() {
+        if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); return; }
+        let mode = document.getElementById('operationMode').value;
+        let boxNo = document.getElementById('boxNo').value;
+        let sku = document.getElementById('itemCode').value.trim().toUpperCase() || "SKU-" + Date.now();
+        let name = document.getElementById('itemName').value.trim();
+        let qty = parseInt(document.getElementById('qty').value);
+
+        if (!name || isNaN(qty) || qty <= 0) { alert("Please enter valid item name and quantity!"); return; }
+
+        let idx = stockList.findIndex(i => i.sku === sku);
+        if (idx > -1) {
+            stockList[idx].qty += (mode === 'add' ? qty : -qty);
+            stockList[idx].boxNo = boxNo;
+        } else {
+            stockList.push({ boxNo, sku, name, category: document.getElementById('itemType').value || "Gen", brand: document.getElementById('brandName').value || "", qty: (mode === 'add' ? qty : -qty) });
+        }
+        saveToLocalStorage();
+        renderTable();
+        showSuccessToast(name, qty, mode);
+        document.getElementById('itemCode').value = '';
+        document.getElementById('itemName').value = '';
+        document.getElementById('qty').value = '';
+    }
+
+    function renderTable() {
+        let tableBody = document.getElementById('tableBody');
+        tableBody.innerHTML = '';
+        stockList.forEach((item, index) => {
+            let row = tableBody.insertRow();
+            row.innerHTML = `<td>${item.boxNo}</td><td>${item.sku}</td><td>${item.name}</td><td>${item.category}</td><td>${item.brand || '-'}</td><td><span class="qty-badge">${item.qty}</span></td><td><button style="background:#f43f5e; color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;" onclick="deleteRow(${index})">Delete</button></td>`;
+        });
+        document.getElementById('totalQty').innerText = stockList.length;
+        document.getElementById('btnTotalQty').innerText = stockList.length;
+    }
+
+    function deleteRow(index) {
+        if (prompt("Enter Admin Password to delete:") === ADMIN_PASSWORD) {
+            stockList.splice(index, 1);
+            saveToLocalStorage();
+            renderTable();
+            alert("Deleted successfully.");
+        } else { alert("Incorrect Password!"); }
+    }
+
+    function openReportModal() {
+        let html = `<table><thead><tr><th>Box</th><th>SKU</th><th>Name</th><th>Category</th><th>Qty</th></tr></thead><tbody>`;
+        stockList.forEach(i => html += `<tr><td>${i.boxNo}</td><td>${i.sku}</td><td>${i.name}</td><td>${i.category}</td><td><b>${i.qty}</b></td></tr>`);
+        html += `</tbody></table>`;
+        document.getElementById('reportContent').innerHTML = html;
+        document.getElementById('reportModal').style.display = 'block';
+    }
+    function closeReportModal() { document.getElementById('reportModal').style.display = 'none'; }
+</script>
+
+</body>
+</html>
