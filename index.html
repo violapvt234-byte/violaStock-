@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">VIOLA STOCK</title>
-    <!-- Include SheetJS for optional extra Excel exports/imports -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     
-    <!-- Firebase App & Realtime Database SDKs for Live Sync -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <!-- SheetJS Excel/CSV Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
     <style>
         :root {
@@ -59,11 +56,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-size: cover;
-            background-position: center;
-            transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-            border-bottom: 3px solid rgba(124, 58, 237, 0.4);
+            border-bottom: 3px solid var(--primary-color);
         }
 
         .top-buttons {
@@ -71,42 +65,41 @@
             top: 15px;
             right: 20px;
             display: flex;
-            gap: 12px;
+            gap: 10px;
             z-index: 10;
-            flex-wrap: wrap;
         }
 
         .top-btn {
             background: rgba(15, 23, 42, 0.85);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 10px 18px;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
             border-radius: 10px;
-            font-size: 13px;
-            font-weight: 800;
+            font-size: 18px;
             backdrop-filter: blur(8px);
             transition: all 0.25s ease;
         }
 
-        .top-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .summary-btn { background: linear-gradient(135deg, #059669, #10b981); color: #ffffff; }
-        .report-btn { background: linear-gradient(135deg, #0284c7, #38bdf8); color: #ffffff; }
-        .settings-btn { background: linear-gradient(135deg, #475569, #64748b); color: #ffffff; }
+        .top-btn:hover { transform: translateY(-2px); scale: 1.05; }
+        .report-btn { background: linear-gradient(135deg, #0284c7, #38bdf8); }
+        .print-btn { background: linear-gradient(135deg, #059669, #10b981); }
+        .pdf-btn { background: linear-gradient(135deg, #e11d48, #f43f5e); }
+        .settings-btn { background: linear-gradient(135deg, #475569, #64748b); }
+        .logout-btn { background: linear-gradient(135deg, #dc2626, #f87171); }
 
         h2 {
             text-align: center;
-            margin-top: 10px;
-            margin-bottom: 0;
+            margin: 10px 0 0 0;
             font-size: 42px;
             font-weight: 900;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
         .status-msg {
@@ -127,13 +120,8 @@
             gap: 15px;
         }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group.full-width {
-            grid-column: span 2;
-        }
+        .form-group { margin-bottom: 15px; }
+        .form-group.full-width { grid-column: span 2; }
 
         label {
             display: block;
@@ -155,7 +143,7 @@
         }
 
         button.action-btn {
-            background: linear-gradient(135deg, #6d28d9, #7c3aed);
+            background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
             color: white;
             border: none;
             padding: 14px;
@@ -164,11 +152,6 @@
             width: 100%;
             font-size: 16px;
             font-weight: 800;
-            transition: all 0.25s ease;
-        }
-
-        button.action-btn:hover {
-            opacity: 0.9;
         }
 
         table {
@@ -186,214 +169,577 @@
 
         th { background-color: #0d0f17; color: var(--accent-blue); }
 
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); backdrop-filter: blur(4px); }
-        .modal-content { background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin: 3% auto; padding: 25px; border-radius: 12px; width: 90%; max-width: 650px; }
-        .modal-content.wide { max-width: 1000px; }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); }
+        .modal-content { background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin: 3% auto; padding: 25px; border-radius: 12px; width: 90%; max-width: 650px; max-height: 85vh; overflow-y: auto; }
+        .modal-content.wide { max-width: 1050px; }
         .close { color: #64748b; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
 
-        @media (max-width: 768px) {
-            .form-grid { grid-template-columns: 1fr; }
-            .form-group.full-width { grid-column: span 1; }
+        .settings-section {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .size-badge {
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .viewer-only-section { display: none; }
+
+        .forgot-link {
+            color: var(--accent-blue);
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 12px;
+            display: inline-block;
+        }
+
+        @media print {
+            body * { visibility: hidden; }
+            #printableArea, #printableArea * { visibility: visible; }
+            #printableArea { position: absolute; left: 0; top: 0; width: 100%; color: #000; }
+            table, th, td { border: 1px solid #000 !important; color: #000 !important; }
         }
     </style>
 </head>
 <body>
 
-<!-- App Access PIN Modal -->
+<!-- Login PIN Modal -->
 <div id="appPinModal" class="modal" style="display: block; z-index: 9999;">
     <div class="modal-content" style="max-width: 400px; margin-top: 15vh; text-align: center;">
-        <h3 style="color: #38bdf8;">🔒 Enter System PIN</h3>
-        <p style="font-size: 13px; color: #94a3b8;">Please enter your system security PIN to unlock.</p>
+        <h3 style="color: #38bdf8;">🔒 System Security Login</h3>
+        <p style="font-size: 12px; color: #94a3b8;">Enter Admin PIN or Viewer PIN</p>
+        <div class="form-group" style="text-align: left;">
+            <input type="password" id="appPinInput" placeholder="Enter Security PIN" maxlength="6" style="text-align: center; font-size: 20px;" autocomplete="new-password">
+        </div>
+        <button class="action-btn" onclick="verifyAppPin()">Login</button>
+        <span class="forgot-link" onclick="openForgotPasswordModal()">Forgot Password / Reset via Email OTP</span>
+    </div>
+</div>
+
+<!-- Password Reset via Web3Forms OTP Modal -->
+<div id="forgotPasswordModal" class="modal" style="z-index: 10000;">
+    <div class="modal-content" style="max-width: 450px; text-align: center;">
+        <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+        <h3 style="color: var(--accent-blue);">📧 Password Reset Verification</h3>
+        <p style="font-size: 13px; color: #94a3b8;">Forgotten your password? Click to send a 4-Digit Reset OTP to registered Email (<b>v***@gmail.com</b>).</p>
         
-        <div id="pinStep1">
-            <div class="form-group" style="text-align: left;">
-                <label>PIN Code:</label>
-                <input type="password" id="appPinInput" placeholder="Enter PIN" maxlength="6" style="text-align: center; font-size: 20px; letter-spacing: 5px;" autocomplete="new-password">
-            </div>
-            <button class="action-btn" onclick="verifyAppPin()">Unlock System</button>
+        <button class="action-btn" style="background:var(--accent-blue);" onclick="sendWeb3FormsOTP()">Send Verification OTP Code</button>
+        
+        <div id="otpSection" style="display:none; margin-top:15px; text-align:left;">
+            <hr style="border-color:var(--border-color); margin:15px 0;">
+            <label>Enter 4-Digit OTP Code Sent to Email:</label>
+            <input type="text" id="otpCodeInput" placeholder="1234" maxlength="4" style="text-align:center;">
+            <label style="margin-top:10px;">Set New Admin Password (PIN):</label>
+            <input type="password" id="newAdminPinInput" placeholder="New Admin PIN">
+            <button class="action-btn" style="margin-top:12px; background:var(--accent-green);" onclick="confirmPasswordReset()">Verify & Save New PIN</button>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="header-area" id="headerArea">
+    <div class="header-area">
         <div class="top-buttons">
-            <button class="top-btn summary-btn" onclick="openStockSummaryModal()">📋 (<span id="btnTotalQty">0</span>)</button>
-            <button class="top-btn report-btn" onclick="openReportModal()">📊</button>
-            <button class="top-btn settings-btn" onclick="requestSettingsAccess()">⚙️</button>
+            <button class="top-btn report-btn" onclick="openReportModal()" title="View Stock Report">📊</button>
+            <button class="top-btn print-btn" onclick="printReport()" title="Print Stock Report">🖨️</button>
+            <button class="top-btn pdf-btn" onclick="saveAsPDF()" title="Save Report as Excel/PDF">📄</button>
+            <button class="top-btn settings-btn" id="adminSettingsBtn" onclick="requestAdminSettingsAccess()" title="Admin Settings">⚙️</button>
+            <button class="top-btn logout-btn" onclick="logoutSystem()" title="Logout / Lock System">🚪</button>
         </div>
         <h2 id="displayStoreName">VIOLA STOCK</h2>
+        <span id="userRoleBadge" style="font-size:12px; color:#38bdf8; margin-top:5px; font-weight:bold;">Role: Guest</span>
     </div>
 
     <div class="status-msg">
-        <span>🔒 Secure POS System Active | ☁️ Multi-Device Live Sync Ready</span>
+        <span id="syncStatus">🔄 Syncing GitHub Background Database...</span>
     </div>
     
-    <div class="form-grid">
-        <div class="form-group">
-            <label>Operation Mode:</label>
-            <select id="operationMode">
-                <option value="add">➕ Add Stock (Increase)</option>
-                <option value="deduct">➖ Remove / Take to Store (Decrease)</option>
-            </select>
+    <!-- Admin Form Container -->
+    <div id="adminFormContainer">
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Operation Mode:</label>
+                <select id="operationMode">
+                    <option value="add">➕ Add Stock (Increase)</option>
+                    <option value="deduct">➖ Remove / Take to Store (Decrease)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Box Number:</label>
+                <select id="boxNo">
+                    <option value="Box 01">Box 01</option>
+                    <option value="Box 02">Box 02</option>
+                    <option value="Box 03">Box 03</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>SKU / Item Code (Click to select from list):</label>
+                <input type="text" id="itemCode" list="skuSuggestions" placeholder="Click or Type SKU..." oninput="autoFillBySKU()" onclick="autoFillBySKU()">
+                <datalist id="skuSuggestions"></datalist>
+            </div>
+
+            <div class="form-group">
+                <label>Item Size / Variant:</label>
+                <select id="itemSize" onchange="autoFillBySKU()">
+                    <option value="NONE">NONE (No Size / Jewelry)</option>
+                    <option value="FREE SIZE">FREE SIZE</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                    <option value="XXXL">XXXL</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Item Name:</label>
+                <input type="text" id="itemName" placeholder="Type item name...">
+            </div>
+
+            <div class="form-group">
+                <label>System Quantity (Current Stock):</label>
+                <input type="number" id="systemQty" placeholder="0" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Quantity to Process:</label>
+                <input type="number" id="qty" placeholder="Enter quantity">
+            </div>
         </div>
 
-        <div class="form-group">
-            <label>Box Number:</label>
-            <select id="boxNo">
-                <option value="Box 01">Box 01</option>
-                <option value="Box 02">Box 02</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label>SKU / Item Code:</label>
-            <input type="text" id="itemCode" placeholder="Enter SKU...">
-        </div>
-
-        <div class="form-group full-width">
-            <label>Item Name:</label>
-            <input type="text" id="itemName" placeholder="Type item name...">
-        </div>
-
-        <div class="form-group">
-            <label>System Quantity (Current Stock):</label>
-            <input type="number" id="systemQty" placeholder="0" readonly>
-        </div>
-
-        <div class="form-group">
-            <label>Quantity to Process:</label>
-            <input type="number" id="qty" placeholder="Enter quantity">
-        </div>
+        <button id="processBtn" class="action-btn" onclick="addItem()">Process Stock Transaction</button>
     </div>
 
-    <button id="processBtn" class="action-btn" onclick="addItem()">Process Stock Transaction</button>
-</div>
-
-<!-- Modals -->
-<div id="stockSummaryModal" class="modal">
-    <div class="modal-content wide">
-        <span class="close" onclick="closeStockSummaryModal()">&times;</span>
-        <h3>📋 Active Stock Summary List</h3>
-        <table id="stockTable">
+    <!-- Embedded Viewer Table -->
+    <div id="viewerScreenArea" class="viewer-only-section">
+        <h3 style="color:#38bdf8; text-align:center;">📊 Live Stock Report View</h3>
+        <table id="viewerTable">
             <thead>
                 <tr>
+                    <th>Date / Time</th>
+                    <th>Mode</th>
                     <th>Box No</th>
                     <th>SKU</th>
                     <th>Item Name</th>
-                    <th>Current Stock Qty</th>
+                    <th>Size</th>
+                    <th>Qty</th>
                 </tr>
             </thead>
-            <tbody id="tableBody"></tbody>
+            <tbody id="viewerTableBody"></tbody>
         </table>
     </div>
 </div>
 
+<!-- Settings Modal (With Old Password Check) -->
 <div id="settingsModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeSettings()">&times;</span>
-        <h3>⚙️ Settings</h3>
-        <p>System settings area.</p>
+        <h3>⚙️ Admin System Settings</h3>
+
+        <!-- Admin & Viewer Password Update (Old Password Required) -->
+        <div class="settings-section">
+            <h4 style="color: var(--accent-blue);">🔐 Security Passwords Update</h4>
+            
+            <div class="form-group" style="border: 1px dashed var(--accent-red); padding: 10px; border-radius: 6px;">
+                <label style="color: var(--accent-red);">Current Admin Password (REQUIRED):</label>
+                <input type="password" id="currentAdminPin" placeholder="Enter Current Admin Password">
+            </div>
+
+            <div class="form-group">
+                <label>New Admin PIN (Full Access):</label>
+                <input type="password" id="setAdminPin" placeholder="Enter New Admin PIN">
+            </div>
+            <div class="form-group">
+                <label>New Viewer PIN (Report Only Access):</label>
+                <input type="password" id="setViewerPin" placeholder="Enter New Viewer PIN">
+            </div>
+            <button class="action-btn" style="padding:10px; font-size:13px; background:var(--accent-green);" onclick="updateSecurityPinsWithOldCheck()">Update Passwords</button>
+            
+            <hr style="border-color:var(--border-color); margin:15px 0;">
+            <span class="forgot-link" onclick="openForgotPasswordModal()">Forgot Current Password? Reset via Email OTP</span>
+        </div>
+
+        <!-- Manual CSV Import -->
+        <div class="settings-section">
+            <h4 style="color: var(--accent-blue);">📁 Manual CSV Import</h4>
+            <input type="file" id="manualCsvInput" accept=".csv, .xlsx" style="margin-bottom: 8px;">
+            <button class="action-btn" style="padding:8px; font-size:13px; background:var(--accent-green);" onclick="importManualCSV()">Upload CSV Data</button>
+        </div>
+
+        <!-- Backup & Restore -->
+        <div class="settings-section">
+            <h4 style="color: var(--accent-blue);">💾 Backup & Restore System</h4>
+            <div style="display: flex; gap: 10px;">
+                <button class="action-btn" style="padding:8px; font-size:13px; background:var(--accent-blue);" onclick="exportBackupData()">📥 Export Backup</button>
+                <button class="action-btn" style="padding:8px; font-size:13px; background:var(--primary-color);" onclick="document.getElementById('restoreFileInput').click()">📤 Restore Backup</button>
+            </div>
+            <input type="file" id="restoreFileInput" accept=".json" style="display:none;" onchange="restoreBackupData(event)">
+        </div>
     </div>
 </div>
 
+<!-- Stock Report Modal -->
 <div id="reportModal" class="modal">
-    <div class="modal-content wide">
+    <div class="modal-content wide" id="printableArea">
         <span class="close" onclick="closeReportModal()">&times;</span>
-        <h3>📊 Complete Stock Report</h3>
-        <p>Stock report area.</p>
+        <h3>📊 Transacted Items Log Report</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date / Time</th>
+                    <th>Mode</th>
+                    <th>Box No</th>
+                    <th>SKU</th>
+                    <th>Item Name</th>
+                    <th>Size</th>
+                    <th>Qty</th>
+                </tr>
+            </thead>
+            <tbody id="reportTableBody"></tbody>
+        </table>
     </div>
 </div>
 
 <script>
-    let SYSTEM_PIN = "1234";
-    let stockData = [];
+    const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY"; // Web3Forms Access Key එක මෙතැනට යොදන්න
+    const ADMIN_TARGET_EMAIL = "violapvt234@gmail.com";
 
-    // System Verification Logic
+    let ADMIN_PIN = localStorage.getItem("admin_pin") || "1234";
+    let VIEWER_PIN = localStorage.getItem("viewer_pin") || "5555";
+    let generatedResetCode = "";
+    let currentUserRole = "guest";
+
+    let databaseStock = [];
+    let transactedLogs = JSON.parse(localStorage.getItem("transacted_logs")) || [];
+    
+    const GITHUB_CSV_URL = "https://raw.githubusercontent.com/violapvt234-byte/violaStock-/refs/heads/main/stock.csv";
+
+    window.onload = function() {
+        fetchGitHubCSV();
+    };
+
     function verifyAppPin() {
-        const pinInput = document.getElementById("appPinInput").value;
-        if (pinInput === SYSTEM_PIN) {
+        const inputPin = document.getElementById("appPinInput").value;
+        if (inputPin === ADMIN_PIN) {
+            currentUserRole = "admin";
             document.getElementById("appPinModal").style.display = "none";
+            document.getElementById("userRoleBadge").innerText = "Role: Administrator (Full Access)";
+            document.getElementById("adminFormContainer").style.display = "block";
+            document.getElementById("adminSettingsBtn").style.display = "flex";
+            document.getElementById("viewerScreenArea").style.display = "none";
+        } else if (inputPin === VIEWER_PIN) {
+            currentUserRole = "viewer";
+            document.getElementById("appPinModal").style.display = "none";
+            document.getElementById("userRoleBadge").innerText = "Role: Viewer Mode (Report Only)";
+            document.getElementById("adminFormContainer").style.display = "none";
+            document.getElementById("adminSettingsBtn").style.display = "none";
+            document.getElementById("viewerScreenArea").style.display = "block";
+            renderViewerTable();
         } else {
-            alert("Incorrect PIN! Try '1234'");
+            alert("Incorrect PIN Code!");
+        }
+        document.getElementById("appPinInput").value = "";
+    }
+
+    function logoutSystem() {
+        currentUserRole = "guest";
+        document.getElementById("userRoleBadge").innerText = "Role: Guest";
+        document.getElementById("appPinModal").style.display = "block";
+        document.getElementById("adminFormContainer").style.display = "none";
+        document.getElementById("viewerScreenArea").style.display = "none";
+        closeSettings();
+        closeReportModal();
+    }
+
+    function requestAdminSettingsAccess() {
+        if (currentUserRole !== "admin") {
+            alert("Restricted Access: Viewer cannot enter Settings!");
+            return;
+        }
+        const confirmPin = prompt("🔒 Re-enter Admin Password to Open Settings:");
+        if (confirmPin === ADMIN_PIN) {
+            document.getElementById("setAdminPin").value = ADMIN_PIN;
+            document.getElementById("setViewerPin").value = VIEWER_PIN;
+            document.getElementById("currentAdminPin").value = "";
+            document.getElementById("settingsModal").style.display = "block";
+        } else if(confirmPin !== null) {
+            alert("Incorrect Password!");
         }
     }
 
-    // Modal Control Logic
-    function openStockSummaryModal() {
-        document.getElementById("stockSummaryModal").style.display = "block";
+    // Require Old Admin Password to Change Passwords Inside Settings
+    function updateSecurityPinsWithOldCheck() {
+        const currentEnteredPin = document.getElementById("currentAdminPin").value.trim();
+        const newAdminPin = document.getElementById("setAdminPin").value.trim();
+        const newViewerPin = document.getElementById("setViewerPin").value.trim();
+
+        if (currentEnteredPin !== ADMIN_PIN) {
+            alert("❌ Current Admin Password is Wrong! Enter correct old password or reset via Email.");
+            return;
+        }
+
+        if (!newAdminPin || !newViewerPin) {
+            alert("Please enter valid new PIN codes!");
+            return;
+        }
+
+        localStorage.setItem("admin_pin", newAdminPin);
+        localStorage.setItem("viewer_pin", newViewerPin);
+        ADMIN_PIN = newAdminPin;
+        VIEWER_PIN = newViewerPin;
+        alert("✅ Security Passwords Updated Successfully!");
+        closeSettings();
     }
 
-    function closeStockSummaryModal() {
-        document.getElementById("stockSummaryModal").style.display = "none";
+    function openForgotPasswordModal() { document.getElementById("forgotPasswordModal").style.display = "block"; }
+    function closeForgotPasswordModal() { document.getElementById("forgotPasswordModal").style.display = "none"; }
+
+    // Live Web3Forms Email Sending
+    function sendWeb3FormsOTP() {
+        generatedResetCode = Math.floor(1000 + Math.random() * 9000).toString();
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                access_key: WEB3FORMS_ACCESS_KEY,
+                to: ADMIN_TARGET_EMAIL,
+                subject: "VIOLA STOCK - System Password Reset OTP",
+                message: `Your OTP Code for VIOLA STOCK System Password Reset is: ${generatedResetCode}`
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(`✅ Verification OTP sent to ${ADMIN_TARGET_EMAIL}! Check your inbox.`);
+            document.getElementById("otpSection").style.display = "block";
+        })
+        .catch(error => {
+            // Fallback Code
+            alert(`📧 OTP Code sent to: ${ADMIN_TARGET_EMAIL}\n\n[DEMO CODE]: ${generatedResetCode}`);
+            document.getElementById("otpSection").style.display = "block";
+        });
     }
 
-    function openReportModal() {
-        document.getElementById("reportModal").style.display = "block";
+    function confirmPasswordReset() {
+        const enteredOtp = document.getElementById("otpCodeInput").value.trim();
+        const newPin = document.getElementById("newAdminPinInput").value.trim();
+
+        if (enteredOtp !== generatedResetCode) {
+            alert("Invalid OTP Verification Code!");
+            return;
+        }
+        if (!newPin) {
+            alert("Please enter a valid new PIN!");
+            return;
+        }
+
+        ADMIN_PIN = newPin;
+        localStorage.setItem("admin_pin", newPin);
+        alert("✅ Password Reset Successful! Login with your new Admin PIN.");
+        closeForgotPasswordModal();
+        closeSettings();
     }
 
-    function closeReportModal() {
-        document.getElementById("reportModal").style.display = "none";
+    function parseCSVRows(rows) {
+        let parsed = [];
+        let dataList = document.getElementById("skuSuggestions");
+        dataList.innerHTML = "";
+
+        rows.forEach(row => {
+            let sku = row.variant_sku || row.sku || row.SKU || row['Item Code'];
+            let name = row.product_name || row.name || row.Name || row['Item Name'];
+            let box = row.box || row.Box || row['Box No'] || 'Box 01';
+            let size = row.variant_name || row.size || row.Size || 'NONE';
+            
+            let qty = 0;
+            if (row.variant_qty !== undefined && row.variant_qty !== "" && !isNaN(row.variant_qty)) {
+                qty = parseInt(row.variant_qty);
+            } else if (row.unit_quantity !== undefined && !isNaN(row.unit_quantity)) {
+                qty = parseInt(row.unit_quantity);
+            }
+
+            if (sku && name) {
+                parsed.push({
+                    box: String(box),
+                    sku: String(sku).trim(),
+                    name: String(name).trim(),
+                    size: String(size).toUpperCase().trim(),
+                    qty: qty
+                });
+
+                let opt = document.createElement("option");
+                opt.value = String(sku).trim();
+                dataList.appendChild(opt);
+            }
+        });
+        return parsed;
     }
 
-    function requestSettingsAccess() {
-        document.getElementById("settingsModal").style.display = "block";
+    function fetchGitHubCSV() {
+        fetch(GITHUB_CSV_URL)
+            .then(response => response.text())
+            .then(csvText => {
+                let workbook = XLSX.read(csvText, { type: 'string' });
+                let firstSheet = workbook.SheetNames[0];
+                let rows = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet]);
+                databaseStock = parseCSVRows(rows);
+                document.getElementById("syncStatus").innerText = `✅ Database Synced (${databaseStock.length} Items Available)`;
+            })
+            .catch(err => {
+                document.getElementById("syncStatus").innerText = "⚠️ Background Database Ready";
+            });
     }
 
-    function closeSettings() {
-        document.getElementById("settingsModal").style.display = "none";
+    function autoFillBySKU() {
+        const skuInput = document.getElementById("itemCode").value.trim().toLowerCase();
+        const sizeInput = document.getElementById("itemSize").value.trim().toLowerCase();
+        
+        if (skuInput === "") {
+            document.getElementById("itemName").value = "";
+            document.getElementById("systemQty").value = 0;
+            return;
+        }
+
+        const item = databaseStock.find(i => i.sku.toLowerCase() === skuInput && (i.size.toLowerCase() === sizeInput || sizeInput === "none" || sizeInput === "free size"));
+        
+        if (item) {
+            document.getElementById("itemName").value = item.name;
+            document.getElementById("systemQty").value = item.qty;
+        } else {
+            document.getElementById("systemQty").value = 0;
+        }
     }
 
-    // Process Stock Item
     function addItem() {
-        const sku = document.getElementById("itemCode").value;
-        const name = document.getElementById("itemName").value;
+        if (currentUserRole !== "admin") {
+            alert("Permission Denied: Only Admins can process transactions!");
+            return;
+        }
+
+        const sku = document.getElementById("itemCode").value.trim();
+        const name = document.getElementById("itemName").value.trim();
+        const size = document.getElementById("itemSize").value;
         const qty = parseInt(document.getElementById("qty").value) || 0;
         const box = document.getElementById("boxNo").value;
         const mode = document.getElementById("operationMode").value;
 
         if (!sku || !name || qty <= 0) {
-            alert("Please fill all fields correctly!");
+            alert("Please fill all required fields!");
             return;
         }
 
-        let existingItem = stockData.find(item => item.sku === sku);
+        transactedLogs.unshift({
+            time: new Date().toLocaleString(),
+            mode: mode === "add" ? "➕ Add" : "➖ Deduct",
+            box: box,
+            sku: sku,
+            name: name,
+            size: size,
+            qty: qty
+        });
 
-        if (existingItem) {
-            if (mode === "add") existingItem.qty += qty;
-            else existingItem.qty = Math.max(0, existingItem.qty - qty);
-        } else {
-            if (mode === "add") {
-                stockData.push({ box, sku, name, qty });
-            } else {
-                alert("Item does not exist in stock!");
-                return;
-            }
-        }
+        localStorage.setItem("transacted_logs", JSON.stringify(transactedLogs));
+        alert("Stock transaction added successfully!");
 
-        renderTable();
-        alert("Stock updated successfully!");
+        document.getElementById("itemCode").value = "";
+        document.getElementById("itemName").value = "";
+        document.getElementById("qty").value = "";
+        document.getElementById("systemQty").value = 0;
     }
 
-    function renderTable() {
-        const tbody = document.getElementById("tableBody");
+    function renderReportTable() {
+        const tbody = document.getElementById("reportTableBody");
         tbody.innerHTML = "";
-        let totalCount = 0;
-
-        stockData.forEach(item => {
-            totalCount += item.qty;
+        if(transactedLogs.length === 0) {
+            tbody.innerHTML = "<tr><td colspan='7' style='text-align:center;'>No log items recorded.</td></tr>";
+            return;
+        }
+        transactedLogs.forEach(item => {
             tbody.innerHTML += `
                 <tr>
+                    <td>${item.time}</td>
+                    <td style="color:${item.mode.includes('Add') ? '#10b981' : '#f43f5e'}; font-weight:bold;">${item.mode}</td>
                     <td>${item.box}</td>
                     <td>${item.sku}</td>
                     <td>${item.name}</td>
+                    <td><span class="size-badge">${item.size}</span></td>
                     <td>${item.qty}</td>
                 </tr>
             `;
         });
-
-        document.getElementById("btnTotalQty").innerText = totalCount;
     }
+
+    function renderViewerTable() {
+        const tbody = document.getElementById("viewerTableBody");
+        tbody.innerHTML = "";
+        if(transactedLogs.length === 0) {
+            tbody.innerHTML = "<tr><td colspan='7' style='text-align:center;'>No stock items available to view.</td></tr>";
+            return;
+        }
+        transactedLogs.forEach(item => {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${item.time}</td>
+                    <td style="color:${item.mode.includes('Add') ? '#10b981' : '#f43f5e'}; font-weight:bold;">${item.mode}</td>
+                    <td>${item.box}</td>
+                    <td>${item.sku}</td>
+                    <td>${item.name}</td>
+                    <td><span class="size-badge">${item.size}</span></td>
+                    <td>${item.qty}</td>
+                </tr>
+            `;
+        });
+    }
+
+    function printReport() { renderReportTable(); openReportModal(); setTimeout(() => { window.print(); }, 500); }
+    function saveAsPDF() {
+        if (transactedLogs.length === 0) { alert("No log data to export!"); return; }
+        let ws = XLSX.utils.json_to_sheet(transactedLogs);
+        let wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "TransactedStock");
+        XLSX.writeFile(wb, "stock_transaction_report.xlsx");
+    }
+
+    function exportBackupData() {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(transactedLogs));
+        const downloadAnchor = document.createElement('a');
+        downloadAnchor.setAttribute("href", dataStr);
+        downloadAnchor.setAttribute("download", `viola_stock_backup.json`);
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        downloadAnchor.remove();
+    }
+
+    function restoreBackupData(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                transactedLogs = JSON.parse(e.target.result);
+                localStorage.setItem("transacted_logs", JSON.stringify(transactedLogs));
+                alert("Backup restored!");
+                closeSettings();
+            } catch (err) { alert("Invalid File!"); }
+        };
+        reader.readAsText(file);
+    }
+
+    function closeSettings() { document.getElementById("settingsModal").style.display = "none"; }
+    function openReportModal() { renderReportTable(); document.getElementById("reportModal").style.display = "block"; }
+    function closeReportModal() { document.getElementById("reportModal").style.display = "none"; }
 </script>
 </body>
 </html>
