@@ -602,7 +602,8 @@
     let boxes = ["Box-01", "Box-02", "Box-03", "Box-05"];
     let stockList = [];
     let storeName = "VIOLA STOCK";
-    let customHeaderLogo = "";
+    // ඔබේ GitHub ලෝගෝ පින්තූරය ස්වයංක්‍රීයව මෙහි සටහන් කර ඇත
+    let customHeaderLogo = "https://raw.githubusercontent.com/VIOLAPV/viola-stock/main/Untitled-removebg-preview.png";
     let customLogoOpacity = 0.25;
     let titleTextColor = "#ffffff";
 
@@ -648,7 +649,7 @@
             localStorage.setItem('viola_item_db', JSON.stringify(itemDatabase));
         }
         storeName = localStorage.getItem('viola_store_name') || "VIOLA STOCK";
-        customHeaderLogo = localStorage.getItem('viola_header_logo') || "";
+        customHeaderLogo = localStorage.getItem('viola_header_logo') || "https://raw.githubusercontent.com/VIOLAPV/viola-stock/main/Untitled-removebg-preview.png";
         customLogoOpacity = parseFloat(localStorage.getItem('viola_logo_opacity')) || 0.25;
         titleTextColor = localStorage.getItem('viola_title_color') || "#ffffff";
     }
