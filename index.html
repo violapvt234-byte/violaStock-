@@ -49,6 +49,65 @@
             transition: background 0.3s ease, border-color 0.3s ease;
         }
 
+        /* --- Animated Toast Notifications Container --- */
+        #toastContainer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: none;
+        }
+
+        .toast-notification {
+            background: rgba(22, 27, 34, 0.95);
+            backdrop-filter: blur(10px);
+            color: #f3f4f6;
+            padding: 14px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 280px;
+            max-width: 380px;
+            font-size: 14px;
+            font-weight: 600;
+            pointer-events: auto;
+            animation: slideInRight 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        .toast-notification.success { border-left-color: var(--accent-green); }
+        .toast-notification.error { border-left-color: var(--accent-red); }
+        .toast-notification.info { border-left-color: var(--accent-blue); }
+
+        .toast-notification.fade-out {
+            animation: slideOutRight 0.3s ease forwards;
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOutRight {
+            to {
+                opacity: 0;
+                transform: translateX(110%);
+            }
+        }
+
+        .toast-icon {
+            font-size: 18px;
+        }
+
         .header-area {
             position: relative;
             margin: -25px -25px 25px -25px;
@@ -184,9 +243,10 @@
             width: 100%;
             font-size: 16px;
             font-weight: 800;
-            transition: opacity 0.2s;
+            transition: opacity 0.2s, transform 0.1s;
         }
-        button.action-btn:hover { opacity: 0.9; }
+        button.action-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+        button.action-btn:active { transform: translateY(0); }
 
         .table-responsive {
             width: 100%;
@@ -212,10 +272,14 @@
 
         th { background-color: var(--input-bg); color: var(--accent-blue); }
 
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); }
-        .modal-content { background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin: 3% auto; padding: 25px; border-radius: 12px; width: 90%; max-width: 650px; max-height: 85vh; overflow-y: auto; }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); animation: fadeInModal 0.25s ease; }
+        @keyframes fadeInModal { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal-content { background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin: 3% auto; padding: 25px; border-radius: 12px; width: 90%; max-width: 650px; max-height: 85vh; overflow-y: auto; transform: scale(0.95); animation: scaleUpModal 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        @keyframes scaleUpModal { to { transform: scale(1); } }
+
         .modal-content.wide { max-width: 1050px; }
-        .close { color: #64748b; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close { color: #64748b; float: right; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.2s; }
         .close:hover { color: #fff; }
 
         .settings-section {
@@ -269,7 +333,9 @@
             text-decoration: underline;
             margin-top: 6px;
             display: inline-block;
+            transition: opacity 0.2s;
         }
+        .forgot-link:hover { opacity: 0.8; }
 
         @media print {
             body * { visibility: hidden; }
@@ -280,6 +346,9 @@
     </style>
 </head>
 <body>
+
+<!-- Floating Toast Notification Container -->
+<div id="toastContainer"></div>
 
 <!-- Login PIN Modal -->
 <div id="appPinModal" class="modal" style="display: block; z-index: 9999;">
@@ -593,6 +662,25 @@
     
     const GITHUB_CSV_URL = "https://raw.githubusercontent.com/violapvt234-byte/violaStock-/refs/heads/main/stock.csv";
 
+    // --- Modern Custom Animated Toast Notification Function ---
+    function showToast(message, type = "success") {
+        const container = document.getElementById("toastContainer");
+        const toast = document.createElement("div");
+        toast.className = `toast-notification ${type}`;
+        
+        let icon = "✅";
+        if (type === "error") icon = "❌";
+        if (type === "info") icon = "ℹ️";
+
+        toast.innerHTML = `<span class="toast-icon">${icon}</span> <span>${message}</span>`;
+        container.appendChild(toast);
+
+        setTimeout(() => {
+            toast.classList.add("fade-out");
+            setTimeout(() => toast.remove(), 300);
+        }, 3500);
+    }
+
     window.onload = function() {
         loadCustomizations();
         fetchGitHubCSV();
@@ -648,7 +736,7 @@
         localStorage.setItem("primary_color", primaryColor);
 
         loadCustomizations();
-        alert("✅ Appearance & Branding Updated Successfully!");
+        showToast("Appearance & Branding Updated Successfully!", "success");
         closeSettings();
     }
 
@@ -661,7 +749,7 @@
         localStorage.removeItem("primary_color");
         
         loadCustomizations();
-        alert("🔄 Reset to Default Theme!");
+        showToast("Reset to Default Theme!", "info");
         closeSettings();
     }
 
@@ -674,6 +762,7 @@
             document.getElementById("adminFormContainer").style.display = "block";
             document.getElementById("adminSettingsBtn").style.display = "flex";
             document.getElementById("viewerScreenArea").style.display = "none";
+            showToast("Welcome Admin! Logged in successfully.", "success");
         } else if (inputPin === VIEWER_PIN) {
             currentUserRole = "viewer";
             document.getElementById("appPinModal").style.display = "none";
@@ -682,8 +771,9 @@
             document.getElementById("adminSettingsBtn").style.display = "none";
             document.getElementById("viewerScreenArea").style.display = "block";
             renderViewerTable();
+            showToast("Logged in as Viewer.", "info");
         } else {
-            alert("Incorrect PIN Code!");
+            showToast("Incorrect PIN Code!", "error");
         }
         document.getElementById("appPinInput").value = "";
     }
@@ -696,11 +786,12 @@
         document.getElementById("viewerScreenArea").style.display = "none";
         closeSettings();
         closeReportModal();
+        showToast("Logged out successfully.", "info");
     }
 
     function openSettingsPromptModal() {
         if (currentUserRole !== "admin") {
-            alert("Restricted Access: Viewer cannot enter Settings!");
+            showToast("Restricted Access: Viewer cannot enter Settings!", "error");
             return;
         }
         document.getElementById("settingsPromptInput").value = "";
@@ -720,8 +811,9 @@
             document.getElementById("setViewerPin").value = VIEWER_PIN;
             document.getElementById("currentSettingsPass").value = "";
             document.getElementById("settingsModal").style.display = "block";
+            showToast("Settings Unlocked!", "success");
         } else {
-            alert("Incorrect Settings Password!");
+            showToast("Incorrect Settings Password!", "error");
         }
         document.getElementById("settingsPromptInput").value = "";
     }
@@ -733,12 +825,12 @@
         const newViewerPin = document.getElementById("setViewerPin").value.trim();
 
         if (currentEnteredPass !== SETTINGS_PASSWORD) {
-            alert("❌ Current Settings Password is Wrong! Enter correct old password or reset via Email.");
+            showToast("Current Settings Password is Wrong!", "error");
             return;
         }
 
         if (!newSettingsPass || !newAdminPin || !newViewerPin) {
-            alert("Please fill all security fields!");
+            showToast("Please fill all security fields!", "error");
             return;
         }
 
@@ -750,7 +842,7 @@
         localStorage.setItem("admin_pin", newAdminPin);
         localStorage.setItem("viewer_pin", newViewerPin);
 
-        alert("✅ Security Credentials Updated Successfully!");
+        showToast("Security Credentials Updated Successfully!", "success");
         closeSettings();
     }
 
@@ -776,7 +868,7 @@
         })
         .then(response => response.json())
         .then(data => {
-            alert(`✅ Verification OTP sent to ${ADMIN_TARGET_EMAIL}! Check your inbox.`);
+            showToast("Verification OTP sent to Email!", "success");
             if(type === 'settings') {
                 document.getElementById("otpSection").style.display = "block";
             } else {
@@ -784,7 +876,8 @@
             }
         })
         .catch(error => {
-            alert(`📧 OTP Code sent to: ${ADMIN_TARGET_EMAIL}\n\n[FALLBACK CODE]: ${generatedResetCode}`);
+            showToast(`OTP Generated (Check Console/Fallback)`, "info");
+            console.log("Fallback Code:", generatedResetCode);
             if(type === 'settings') {
                 document.getElementById("otpSection").style.display = "block";
             } else {
@@ -799,17 +892,17 @@
             const newPass = document.getElementById("newSettingsPasswordInput").value.trim();
 
             if (enteredOtp !== generatedResetCode) {
-                alert("Invalid OTP Verification Code!");
+                showToast("Invalid OTP Verification Code!", "error");
                 return;
             }
             if (!newPass) {
-                alert("Please enter a valid new Settings Password!");
+                showToast("Please enter a new Settings Password!", "error");
                 return;
             }
 
             SETTINGS_PASSWORD = newPass;
             localStorage.setItem("settings_password", newPass);
-            alert("✅ Settings Password Reset Successful! You can now use your new password.");
+            showToast("Settings Password Reset Successful!", "success");
             closeForgotPasswordModal();
             closeSettingsPromptModal();
         } else {
@@ -817,17 +910,17 @@
             const newPin = document.getElementById("newAdminPinInput").value.trim();
 
             if (enteredOtp !== generatedResetCode) {
-                alert("Invalid OTP Verification Code!");
+                showToast("Invalid OTP Verification Code!", "error");
                 return;
             }
             if (!newPin) {
-                alert("Please enter a valid new Admin PIN!");
+                showToast("Please enter a new Admin PIN!", "error");
                 return;
             }
 
             ADMIN_PIN = newPin;
             localStorage.setItem("admin_pin", newPin);
-            alert("✅ Admin Login PIN Reset Successful! You can now log in using the new PIN.");
+            showToast("Admin Login PIN Reset Successful!", "success");
             closeForgotPinModal();
         }
     }
@@ -876,6 +969,7 @@
                 let rows = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet]);
                 databaseStock = parseCSVRows(rows);
                 document.getElementById("syncStatus").innerText = `✅ Database Synced (${databaseStock.length} Items Available)`;
+                showToast("Database Synced from GitHub successfully!", "success");
             })
             .catch(err => {
                 document.getElementById("syncStatus").innerText = "⚠️ Background Database Ready";
@@ -904,7 +998,7 @@
 
     function addItem() {
         if (currentUserRole !== "admin") {
-            alert("Permission Denied: Only Admins can process transactions!");
+            showToast("Permission Denied: Only Admins can process transactions!", "error");
             return;
         }
 
@@ -916,7 +1010,7 @@
         const mode = document.getElementById("operationMode").value;
 
         if (!sku || !name || qty <= 0) {
-            alert("Please fill all required fields!");
+            showToast("Please fill all required fields correctly!", "error");
             return;
         }
 
@@ -931,7 +1025,7 @@
         });
 
         localStorage.setItem("transacted_logs", JSON.stringify(transactedLogs));
-        alert("Stock transaction added successfully!");
+        showToast("Stock transaction recorded successfully!", "success");
 
         document.getElementById("itemCode").value = "";
         document.getElementById("itemName").value = "";
@@ -985,11 +1079,12 @@
 
     function printReport() { renderReportTable(); openReportModal(); setTimeout(() => { window.print(); }, 500); }
     function saveAsPDF() {
-        if (transactedLogs.length === 0) { alert("No log data to export!"); return; }
+        if (transactedLogs.length === 0) { showToast("No log data to export!", "error"); return; }
         let ws = XLSX.utils.json_to_sheet(transactedLogs);
         let wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, "TransactedStock");
         XLSX.writeFile(wb, "stock_transaction_report.xlsx");
+        showToast("Report exported successfully!", "success");
     }
 
     function exportBackupData() {
@@ -1000,6 +1095,7 @@
         document.body.appendChild(downloadAnchor);
         downloadAnchor.click();
         downloadAnchor.remove();
+        showToast("Backup exported successfully!", "success");
     }
 
     function restoreBackupData(event) {
@@ -1010,9 +1106,9 @@
             try {
                 transactedLogs = JSON.parse(e.target.result);
                 localStorage.setItem("transacted_logs", JSON.stringify(transactedLogs));
-                alert("Backup restored!");
+                showToast("System backup restored successfully!", "success");
                 closeSettings();
-            } catch (err) { alert("Invalid File!"); }
+            } catch (err) { showToast("Invalid Backup File!", "error"); }
         };
         reader.readAsText(file);
     }
