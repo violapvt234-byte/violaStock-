@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">Viola Stock List & POS System</title>
-    <!-- Include SheetJS for Excel Upload Support -->
+    <title id="pageTitle">VIOLA STOCK</title>
+    <!-- Include SheetJS for optional extra Excel exports/imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     
     <!-- Firebase App & Realtime Database SDKs for Live Sync -->
@@ -53,7 +53,7 @@
         .header-area {
             position: relative;
             margin: -25px -25px 25px -25px;
-            padding: 50px 25px 35px 25px;
+            padding: 50px 25px 40px 25px;
             background-color: #1e293b;
             display: flex;
             flex-direction: column;
@@ -63,8 +63,22 @@
             background-position: center;
             background-repeat: no-repeat;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
             border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+        }
+
+        /* Background Logo Overlay Effect */
+        .header-area::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: var(--header-bg-image, none);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: var(--header-bg-opacity, 0.25);
+            pointer-events: none;
+            transition: all 0.3s ease;
         }
 
         .top-buttons {
@@ -101,36 +115,38 @@
             background: linear-gradient(135deg, #059669, #10b981); 
             color: #ffffff;
             border-color: #34d399;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
         .report-btn { 
             background: linear-gradient(135deg, #0284c7, #38bdf8); 
             color: #ffffff;
             border-color: #7dd3fc;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
         .settings-btn { 
-            background: linear-gradient(135deg, #7c3aed, #c084fc); 
+            background: linear-gradient(135deg, #475569, #64748b); 
             color: #ffffff;
-            border-color: #e9d5ff;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            border-color: #94a3b8;
+            padding: 10px 14px;
         }
 
+        /* Embroided / Stitched 3D Premium Title Style */
         h2 {
             color: #ffffff;
             text-align: center;
-            margin-top: 35px;
+            margin-top: 10px;
             margin-bottom: 0;
-            font-size: 40px;
+            font-size: 38px;
             font-weight: 900;
-            letter-spacing: 1px;
-            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0,0,0,0.8);
-            background: rgba(15, 23, 42, 0.55);
-            padding: 12px 30px;
-            border-radius: 14px;
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            letter-spacing: 2px;
+            z-index: 2;
+            position: relative;
+            text-transform: uppercase;
+            /* Embroided / Stitched text effect */
+            text-shadow: 0 1px 0 #000, 0 -1px 0 rgba(255,255,255,0.4), 
+                         0 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(99,102,241,0.5);
+            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.9));
         }
 
         .status-msg {
@@ -208,12 +224,11 @@
             margin-top: 5px;
             transition: all 0.25s ease;
             box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-            letter-spacing: 0.5px;
         }
 
         button.action-btn:hover { 
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6), 0 0 15px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
         }
 
         h3 {
@@ -253,44 +268,6 @@
             color: var(--accent-green);
         }
 
-        .toast-container {
-            position: fixed;
-            top: 25px;
-            right: 25px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            pointer-events: none;
-        }
-
-        .toast {
-            background: #022c22;
-            color: #f8fafc;
-            border: 2px solid #10b981;
-            border-left: 10px solid #34d399;
-            padding: 18px 24px;
-            border-radius: 14px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            min-width: 380px;
-            animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 0.4s ease 3.2s forwards;
-            pointer-events: auto;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateX(120%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes fadeOut {
-            from { opacity: 1; transform: translateX(0); }
-            to { opacity: 0; transform: translateX(50px); }
-        }
-
         .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); backdrop-filter: blur(4px); }
         .modal-content { background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin: 3% auto; padding: 25px; border-radius: 12px; width: 90%; max-width: 650px; max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
         .modal-content.wide { max-width: 1000px; }
@@ -305,10 +282,45 @@
             font-weight: bold;
         }
 
+        /* Settings Sub-tabs Style */
+        .settings-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .tab-btn {
+            background: #0f172a;
+            color: #94a3b8;
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         @media (max-width: 768px) {
-            .header-area { padding: 60px 15px 25px 15px; }
-            .top-buttons { position: relative; top: 0; right: 0; justify-content: center; margin-bottom: 15px; }
-            h2 { font-size: 24px; margin-top: 0; padding: 8px 16px; }
+            .header-area { padding: 40px 15px 20px 15px; }
+            .top-buttons { position: relative; top: 0; right: 0; justify-content: center; margin-bottom: 10px; }
+            h2 { font-size: 26px; padding: 8px 16px; }
             .form-grid { grid-template-columns: 1fr; }
             .form-group.full-width { grid-column: span 1; }
         }
@@ -316,28 +328,41 @@
 </head>
 <body>
 
-<div id="toastContainer" class="toast-container"></div>
-
-<!-- App Access PIN Modal (Appears immediately when opening web) -->
+<!-- App Access PIN Modal -->
 <div id="appPinModal" class="modal" style="display: block; z-index: 9999;">
     <div class="modal-content" style="max-width: 400px; margin-top: 15vh; text-align: center;">
         <h3 style="color: #38bdf8;">🔒 Enter System PIN</h3>
-        <p style="font-size: 13px; color: #94a3b8;">මෙම පද්ධතියට පිවිසීමට ඔබේ ආරක්‍ෂක PIN අංකය ඇතුළත් කරන්න.</p>
-        <div class="form-group" style="text-align: left;">
-            <label>4-Digit PIN (Default: 6060):</label>
-            <input type="password" id="appPinInput" placeholder="Enter PIN" maxlength="6" style="text-align: center; font-size: 20px; letter-spacing: 5px;">
-        </div>
-        <button class="action-btn" onclick="verifyAppPin()">Unlock System</button>
-        <div style="margin-top: 15px;">
-            <a href="javascript:void(0)" onclick="triggerSystemPinOtp()" style="color: #38bdf8; font-size: 13px; text-decoration: underline;">Forgot PIN? (Get OTP to Email)</a>
-        </div>
-        <!-- Forgot PIN OTP Step inside modal -->
-        <div id="pinOtpBox" style="display: none; margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+        <p style="font-size: 13px; color: #94a3b8;">Please enter your system security PIN to unlock.</p>
+        
+        <div id="pinStep1">
             <div class="form-group" style="text-align: left;">
+                <label>PIN Code:</label>
+                <input type="password" id="appPinInput" placeholder="Enter PIN" maxlength="6" style="text-align: center; font-size: 20px; letter-spacing: 5px;" autocomplete="new-password">
+            </div>
+            <button class="action-btn" onclick="verifyAppPin()">Unlock System</button>
+            <div style="margin-top: 15px;">
+                <a href="javascript:void(0)" onclick="triggerSystemPinOtp()" style="color: #38bdf8; font-size: 13px; text-decoration: underline;">Forgot PIN? (Get OTP to Email)</a>
+            </div>
+        </div>
+
+        <div id="pinStepOtp" style="display: none; text-align: left;">
+            <div class="form-group">
                 <label>Enter 6-Digit OTP:</label>
                 <input type="text" id="systemOtpInput" placeholder="Enter OTP" maxlength="6">
             </div>
-            <button class="action-btn" style="background: #10b981;" onclick="verifySystemPinOtp()">Verify & Reset PIN to 6060</button>
+            <button class="action-btn" onclick="verifySystemPinOtp()">Verify OTP</button>
+        </div>
+
+        <div id="pinStepNew" style="display: none; text-align: left;">
+            <div class="form-group">
+                <label>Enter New PIN:</label>
+                <input type="password" id="newSystemPinField" placeholder="New PIN" maxlength="6">
+            </div>
+            <div class="form-group">
+                <label>Confirm New PIN:</label>
+                <input type="password" id="confirmSystemPinField" placeholder="Confirm PIN" maxlength="6">
+            </div>
+            <button class="action-btn" style="background: #10b981;" onclick="saveNewSystemPin()">Save & Unlock</button>
         </div>
     </div>
 </div>
@@ -347,14 +372,13 @@
         <div class="top-buttons no-print">
             <button class="top-btn summary-btn" onclick="openStockSummaryModal()">📋 Active Stock Summary (<span id="btnTotalQty">0</span>)</button>
             <button class="top-btn report-btn" onclick="openReportModal()">📊 View Full Report</button>
-            <button class="top-btn settings-btn" onclick="openSettings()">⚙️ Settings & Database</button>
+            <button class="top-btn settings-btn" onclick="requestSettingsAccess()">⚙️</button>
         </div>
-        <h2 id="displayStoreName">Viola Stock List & POS System</h2>
+        <h2 id="displayStoreName">VIOLA STOCK</h2>
     </div>
 
     <div class="status-msg">
-        <span>🔒 Cloud Admin Password Security Active | ☁️ Multi-Device Live Sync Ready</span>
-        <button id="authRoleBtn" onclick="toggleAuthRole()" style="background: #0284c7; color: white; border: none; padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold;">🔑 Viewer Mode (Switch to Admin)</button>
+        <span>🔒 Secure POS System Active | ☁️ Multi-Device Live Sync Ready</span>
     </div>
     
     <div class="form-grid">
@@ -379,7 +403,7 @@
 
         <div class="form-group full-width">
             <label>Item Name:</label>
-            <input type="text" id="itemName" list="nameList" placeholder="Type or select item name..." oninput="autoFillByName()" autocomplete="off">
+            <input type="text" id="itemName" list="nameList" placeholder="Type or select item name..." autocomplete="off">
             <datalist id="nameList"></datalist>
         </div>
 
@@ -435,39 +459,72 @@
 <div id="settingsModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeSettings()">&times;</span>
-        <h3 style="margin-top:0;">⚙️ Settings & Customization</h3>
+        <h3 style="margin-top:0;">⚙️ Settings & Administration</h3>
         
         <div style="background: rgba(15, 23, 42, 0.6); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
-            <span id="settingsRoleStatus" style="font-size: 13px; font-weight: bold;">Status: Viewer Mode</span>
-            <button id="settingsAuthBtn" onclick="toggleAuthRole()" style="background: #0284c7; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold;">🔑 Switch to Admin</button>
+            <span id="settingsRoleStatus" style="font-size: 13px; font-weight: bold; color: #34d399;">Status: 👑 Admin Mode Active</span>
+            <button onclick="lockAdminMode()" style="background: #f43f5e; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold;">🔒 Lock / Exit Admin</button>
         </div>
 
-        <div class="form-group">
-            <label>Store / System Name:</label>
-            <input type="text" id="storeNameInput" placeholder="Enter Store Name...">
+        <!-- Settings Sub-tabs -->
+        <div class="settings-tabs">
+            <button class="tab-btn active" onclick="switchSettingsTab('generalTab', this)">🌐 General Interface</button>
+            <button class="tab-btn" onclick="switchSettingsTab('databaseTab', this)">💾 Database & Backup</button>
+            <button class="tab-btn" onclick="switchSettingsTab('securityTab', this)">🔐 Security & PIN</button>
         </div>
-        <button class="action-btn" onclick="saveStoreSettings()">Save Store Identity</button>
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
-        
-        <h4 style="color:#f1f5f9;">🔐 Change System PIN (Default: 6060)</h4>
-        <div class="form-group">
-            <label>New System PIN:</label>
-            <input type="text" id="newSystemPinInput" placeholder="Enter new PIN" maxlength="6">
-        </div>
-        <button class="action-btn" style="background: #10b981;" onclick="updateSystemPin()">Update System PIN</button>
 
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
-        <h4 style="color:#f1f5f9;">🔑 Admin Password</h4>
-        <button class="action-btn" style="background: linear-gradient(135deg, #0284c7, #38bdf8);" onclick="openPasswordChangeModal()">Change Password</button>
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
-        <h4 style="color:#f1f5f9;">📂 PC Auto-Backup Folder Setup</h4>
-        <p style="font-size: 13px; color: #94a3b8;">আপনার පරිගණකයේ 'Backup' ෆෝල්ඩරය තෝරන්න. එවිට සියලුම දත්ත ස්වයංක්‍රීයව එහි බැකප් වනු ඇත.</p>
-        <button class="action-btn" style="background: #10b981;" onclick="setupAutoBackupFolder()">📁 Select Backup Folder</button>
-        <div id="backupStatusText" style="font-size: 13px; margin-top: 8px; color: #34d399;">Backup Folder: Not Set</div>
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
-        <h4 style="color:#f1f5f9;">📂 Upload Excel File to Master Database</h4>
-        <input type="file" id="excelFile" accept=".xlsx, .xls" style="margin-bottom: 8px; padding: 6px; border: 1px dashed var(--border-color); border-radius: 6px; width: 100%;" onchange="handleExcelUpload(event)">
-        <div style="font-size: 14px; font-weight: bold; color: var(--accent-blue);">Total Items in DB: <span id="dbCount">0</span></div>
+        <!-- GENERAL TAB -->
+        <div id="generalTab" class="tab-content active">
+            <h4 style="color:#f1f5f9; margin-top:0;">🎨 Interface Customization & Background Logo</h4>
+            <div class="form-group">
+                <label>Store / System Name:</label>
+                <input type="text" id="storeNameInput" placeholder="Enter Store Name...">
+            </div>
+            <button class="action-btn" onclick="saveStoreSettings()" style="margin-bottom: 20px;">Save Store Identity</button>
+
+            <div class="form-group">
+                <label>Upload Header Background Logo Image:</label>
+                <input type="file" id="bgLogoFile" accept="image/*" style="margin-bottom: 8px; padding: 6px; border: 1px dashed var(--border-color); border-radius: 6px; width: 100%;" onchange="handleHeaderLogoUpload(event)">
+            </div>
+            
+            <div class="form-group">
+                <label>Background Logo Opacity (Watermark Effect): <span id="opacityValLabel">0.25</span></label>
+                <input type="range" id="logoOpacityRange" min="0.05" max="0.8" step="0.05" value="0.25" oninput="updateLogoOpacity(this.value)" style="accent-color: var(--primary-color);">
+            </div>
+
+            <button class="action-btn" style="background: #f43f5e; margin-top: 10px;" onclick="resetHeaderLogo()">🗑️ Remove Custom Logo</button>
+        </div>
+
+        <!-- DATABASE TAB -->
+        <div id="databaseTab" class="tab-content">
+            <h4 style="color:#f1f5f9; margin-top:0;">💾 Manual Data Backup (Download JSON)</h4>
+            <button class="action-btn" style="background: linear-gradient(135deg, #059669, #10b981);" onclick="downloadSystemBackup()">📥 Download Complete Backup File</button>
+
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+            <h4 style="color:#f1f5f9;">📤 Restore System from Backup</h4>
+            <label style="font-size: 12px; color: #94a3b8; display: block; margin-bottom: 5px;">Upload previously downloaded JSON backup file:</label>
+            <input type="file" id="restoreFile" accept=".json" style="margin-bottom: 8px; padding: 6px; border: 1px dashed var(--border-color); border-radius: 6px; width: 100%;" onchange="restoreSystemBackup(event)">
+
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+            <h4 style="color:#f1f5f9;">📂 Upload Additional Excel File (Optional)</h4>
+            <input type="file" id="excelFile" accept=".xlsx, .xls" style="margin-bottom: 8px; padding: 6px; border: 1px dashed var(--border-color); border-radius: 6px; width: 100%;" onchange="handleExcelUpload(event)">
+            <div style="font-size: 14px; font-weight: bold; color: var(--accent-blue); margin-top: 10px;">Total Items in DB: <span id="dbCount">0</span></div>
+        </div>
+
+        <!-- SECURITY TAB -->
+        <div id="securityTab" class="tab-content">
+            <h4 style="color:#f1f5f9; margin-top:0;">🔐 Change System PIN</h4>
+            <div class="form-group">
+                <label>New System PIN:</label>
+                <input type="text" id="newSystemPinInput" placeholder="Enter new PIN" maxlength="6">
+            </div>
+            <button class="action-btn" style="background: #10b981;" onclick="updateSystemPinFromSettings()">Update System PIN</button>
+
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+            <h4 style="color:#f1f5f9;">🔑 Admin Password</h4>
+            <button class="action-btn" style="background: linear-gradient(135deg, #0284c7, #38bdf8);" onclick="openPasswordChangeModal()">Change Admin Password</button>
+        </div>
+
     </div>
 </div>
 
@@ -510,23 +567,44 @@
     <div class="modal-content wide">
         <span class="close" onclick="closeReportModal()">&times;</span>
         <h3 id="reportHeaderTitle">📊 Complete Stock Report</h3>
-        <div style="margin-bottom: 15px;"><button class="action-btn" style="width: auto; background: #0ea5e9;" onclick="window.print()">🖨️ Print / Save as PDF</button></div>
+        <div style="margin-bottom: 15px;"><button class="action-btn" style="width: auto; background: #0ea5e9;" onclick="window.print()">🖨️</button></div>
         <div id="reportContent" style="overflow-x: auto;"></div>
     </div>
 </div>
 
 <script>
-    let SYSTEM_PIN = "6060";
+    let SYSTEM_PIN = "1234";
     let ADMIN_PASSWORD = "1234";
     let isAdminLoggedIn = false;
-    let itemDatabase = JSON.parse(localStorage.getItem('master_item_db')) || {};
-    let boxes = JSON.parse(localStorage.getItem('stock_boxes')) || ["Box-01", "Box-02", "Box-03", "Box-04", "Box-05"];
-    let stockList = JSON.parse(localStorage.getItem('stock_list_items')) || [];
-    let storeName = localStorage.getItem('store_custom_name') || "Viola Stock List & POS System";
+    
+    let defaultExcelDatabase = {
+        "VCSFK0171": {"name": "Button Down Shirt & Culotte Set", "category": "Full Kit", "unit_qty": 51, "brand": "Viola"},
+        "VLSFR006": {"name": "Floral One Shoulder Frock", "category": "laxary", "unit_qty": 32, "brand": "Viola"},
+        "VCBNW0005": {"name": "Bathik Night Wear", "category": "Night Wear", "unit_qty": 13, "brand": "Vyla"},
+        "S0021": {"name": "ADDA Slippers", "category": "Slippers", "unit_qty": 9, "brand": "ADDA"},
+        "TS005": {"name": "Banny T Shirt", "category": "Crop Top", "unit_qty": 13, "brand": "Banny"},
+        "VLSFR005": {"name": "Floral One Shoulder Frock", "category": "laxary", "unit_qty": 10, "brand": "Viola"},
+        "VCBNW0004": {"name": "Bathik Night Wear", "category": "Night Wear", "unit_qty": 16, "brand": "Vyla"},
+        "VCSFK0170": {"name": "Button Down Shirt & Culotte Set", "category": "Full Kit", "unit_qty": 15, "brand": "Viola"},
+        "VCBNW0002": {"name": "Bathik Night Wear", "category": "Night Wear", "unit_qty": 27, "brand": "Vyla"},
+        "VCBNW0001": {"name": "Bathik Night Wear", "category": "Night Wear", "unit_qty": 38, "brand": "Vyla"},
+        "VCBNW0003": {"name": "Bathik Night Wear", "category": "Night Wear", "unit_qty": 20, "brand": "Vyla"},
+        "VLSFR004": {"name": "Floral One Shoulder Frock", "category": "laxary", "unit_qty": 24, "brand": "Viola"},
+        "VLSFR003": {"name": "Floral One Shoulder Frock", "category": "laxary", "unit_qty": 28, "brand": "Viola"},
+        "VLSFR002": {"name": "Floral One Shoulder Frock", "category": "laxary", "unit_qty": 26, "brand": "Viola"},
+        "VLSFR001": {"name": "Floral One Shoulder Frock", "category": "laxary", "unit_qty": 21, "brand": "Viola"}
+    };
+
+    let itemDatabase = {};
+    let boxes = ["Box-01", "Box-02", "Box-03", "Box-05"];
+    let stockList = [];
+    let storeName = "VIOLA STOCK";
+    let customHeaderLogo = "";
+    let customLogoOpacity = 0.25;
+
     let generatedOtp = "";
     let systemPinOtp = "";
     const targetEmail = "violapv234@gmail.com";
-    let backupDirHandle = null;
 
     const firebaseConfig = {
         apiKey: "AIzaSy...", 
@@ -539,10 +617,12 @@
     };
 
     let dbRef = null;
+    let itemDbRef = null;
     let pwdRef = null;
     let pinRef = null;
 
     window.onload = function() {
+        loadSystemData();
         initFirebase();
         applyStoreIdentity();
         updateBoxDropdown();
@@ -553,9 +633,23 @@
         updateUIMode();
     };
 
+    function loadSystemData() {
+        stockList = JSON.parse(localStorage.getItem('viola_stock_list')) || [];
+        let savedItemDb = JSON.parse(localStorage.getItem('viola_item_db'));
+        if (savedItemDb && Object.keys(savedItemDb).length > 0) {
+            itemDatabase = savedItemDb;
+        } else {
+            itemDatabase = defaultExcelDatabase;
+            localStorage.setItem('viola_item_db', JSON.stringify(itemDatabase));
+        }
+        storeName = localStorage.getItem('viola_store_name') || "VIOLA STOCK";
+        customHeaderLogo = localStorage.getItem('viola_header_logo') || "";
+        customLogoOpacity = parseFloat(localStorage.getItem('viola_logo_opacity')) || 0.25;
+    }
+
     function initFirebase() {
         try {
-            if (typeof firebase !== 'undefined' && firebaseConfig.apiKey !== "YOUR_FIREBASE_API_KEY") {
+            if (typeof firebase !== 'undefined' && firebaseConfig.apiKey !== "AIzaSy...") {
                 if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
                 
                 dbRef = firebase.database().ref('stock_list');
@@ -563,9 +657,23 @@
                     const data = snapshot.val();
                     if (data) {
                         stockList = data;
-                        localStorage.setItem('stock_list_items', JSON.stringify(stockList));
+                        localStorage.setItem('viola_stock_list', JSON.stringify(stockList));
                         renderTable();
                     }
+                });
+
+                itemDbRef = firebase.database().ref('item_database');
+                itemDbRef.on('value', (snapshot) => {
+                    const data = snapshot.val();
+                    if (data && Object.keys(data).length > 0) {
+                        itemDatabase = data;
+                    } else {
+                        itemDbRef.set(defaultExcelDatabase);
+                        itemDatabase = defaultExcelDatabase;
+                    }
+                    localStorage.setItem('viola_item_db', JSON.stringify(itemDatabase));
+                    populateDatalists();
+                    updateDbCount();
                 });
 
                 pwdRef = firebase.database().ref('admin_password');
@@ -588,22 +696,21 @@
                         SYSTEM_PIN = cloudPin;
                         localStorage.setItem('system_custom_pin', SYSTEM_PIN);
                     } else {
-                        let localPin = localStorage.getItem('system_custom_pin') || "6060";
+                        let localPin = localStorage.getItem('system_custom_pin') || "1234";
                         pinRef.set(localPin);
                         SYSTEM_PIN = localPin;
                     }
                 });
             } else {
                 ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
-                SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "6060";
+                SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "1234";
             }
         } catch(e) {
             ADMIN_PASSWORD = localStorage.getItem('admin_custom_pwd') || "1234";
-            SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "6060";
+            SYSTEM_PIN = localStorage.getItem('system_custom_pin') || "1234";
         }
     }
 
-    // App Startup PIN Verification
     function verifyAppPin() {
         let enteredPin = document.getElementById('appPinInput').value.trim();
         if (enteredPin === SYSTEM_PIN) {
@@ -616,32 +723,44 @@
     function triggerSystemPinOtp() {
         systemPinOtp = Math.floor(100000 + Math.random() * 900000).toString();
         let formData = new FormData();
-        formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY");
+        formData.append("access_key", "8d706dba-27ef-40b8-8bae-06ea72d014da");
         formData.append("email", targetEmail);
         formData.append("subject", "System PIN Reset OTP");
         formData.append("message", "Your System PIN Reset OTP is: " + systemPinOtp);
         fetch("https://api.web3forms.com/submit", { method: "POST", body: formData })
         .then(res => res.json()).then(data => {
             if (data.success) alert("📧 OTP sent to " + targetEmail);
-            else alert("❌ Failed to send email. Check API key.");
+            else alert("❌ Failed to send email.");
         });
-        document.getElementById('pinOtpBox').style.display = 'block';
+        document.getElementById('pinStep1').style.display = 'none';
+        document.getElementById('pinStepOtp').style.display = 'block';
     }
 
     function verifySystemPinOtp() {
         let userOtp = document.getElementById('systemOtpInput').value.trim();
         if (userOtp === systemPinOtp) {
-            SYSTEM_PIN = "6060";
-            localStorage.setItem('system_custom_pin', "6060");
-            if (pinRef) pinRef.set("6060");
-            alert("✅ PIN successfully reset to default: 6060");
-            document.getElementById('appPinModal').style.display = 'none';
+            document.getElementById('pinStepOtp').style.display = 'none';
+            document.getElementById('pinStepNew').style.display = 'block';
         } else {
             alert("❌ Incorrect OTP!");
         }
     }
 
-    function updateSystemPin() {
+    function saveNewSystemPin() {
+        let newPin = document.getElementById('newSystemPinField').value.trim();
+        let confirmPin = document.getElementById('confirmSystemPinField').value.trim();
+        if (newPin.length < 4 || newPin !== confirmPin) {
+            alert("PINs do not match or must be at least 4 characters!");
+            return;
+        }
+        SYSTEM_PIN = newPin;
+        localStorage.setItem('system_custom_pin', SYSTEM_PIN);
+        if (pinRef) pinRef.set(SYSTEM_PIN);
+        alert("✅ PIN successfully updated and saved!");
+        document.getElementById('appPinModal').style.display = 'none';
+    }
+
+    function updateSystemPinFromSettings() {
         if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); return; }
         let newPin = document.getElementById('newSystemPinInput').value.trim();
         if (newPin.length < 4) {
@@ -655,94 +774,99 @@
         alert("✅ System PIN updated successfully!");
     }
 
-    function toggleAuthRole() {
-        if (!isAdminLoggedIn) {
-            let pwd = prompt("🔐 Enter Admin Password:");
-            if (pwd === ADMIN_PASSWORD) {
-                isAdminLoggedIn = true;
-                updateUIMode();
-                alert("✅ Admin Mode Activated!");
-            } else if (pwd !== null) {
-                alert("❌ Incorrect Password!");
-            }
-        } else {
-            isAdminLoggedIn = false;
+    function requestSettingsAccess() {
+        let pwd = prompt("🔐 Enter Admin Password to open Settings:");
+        if (pwd === ADMIN_PASSWORD) {
+            isAdminLoggedIn = true;
             updateUIMode();
-            alert("🔒 Switched to Viewer Mode.");
+            document.getElementById('settingsModal').style.display = 'block';
+        } else if (pwd !== null) {
+            alert("❌ Incorrect Password!");
         }
     }
 
+    function lockAdminMode() {
+        isAdminLoggedIn = false;
+        updateUIMode();
+        closeSettings();
+        alert("🔒 Locked / Exited Admin Mode.");
+    }
+
     function updateUIMode() {
-        let authBtn = document.getElementById('authRoleBtn');
-        let settingsAuthBtn = document.getElementById('settingsAuthBtn');
-        let settingsRoleStatus = document.getElementById('settingsRoleStatus');
         let processBtn = document.getElementById('processBtn');
         let inputs = document.querySelectorAll('.form-grid input, .form-grid select');
 
         if (isAdminLoggedIn) {
-            authBtn.innerText = "👑 Admin Mode (Click to Switch)";
-            authBtn.style.background = "#10b981";
-            
-            settingsAuthBtn.innerText = "🔒 Switch to Viewer";
-            settingsAuthBtn.style.background = "#f43f5e";
-            settingsRoleStatus.innerText = "Status: 👑 Admin Mode Active";
-            settingsRoleStatus.style.color = "#34d399";
-
             processBtn.style.display = "block";
             inputs.forEach(el => el.removeAttribute('disabled'));
         } else {
-            authBtn.innerText = "🔑 Viewer Mode (Click to Switch)";
-            authBtn.style.background = "#0284c7";
-            
-            settingsAuthBtn.innerText = "🔑 Switch to Admin";
-            settingsAuthBtn.style.background = "#0284c7";
-            settingsRoleStatus.innerText = "Status: 🔑 Viewer Mode Active";
-            settingsRoleStatus.style.color = "#38bdf8";
-
             processBtn.style.display = "none";
             inputs.forEach(el => el.setAttribute('disabled', 'true'));
         }
     }
 
-    async function setupAutoBackupFolder() {
-        if (!window.showDirectoryPicker) {
-            alert("⚠️ Your browser does not support automatic folder access. Please use Google Chrome or Microsoft Edge.");
+    function saveToLocalStorage() {
+        localStorage.setItem('viola_stock_list', JSON.stringify(stockList));
+        localStorage.setItem('viola_item_db', JSON.stringify(itemDatabase));
+        if (dbRef) dbRef.set(stockList);
+        if (itemDbRef) itemDbRef.set(itemDatabase);
+    }
+
+    function downloadSystemBackup() {
+        let backupData = {
+            storeName: storeName,
+            systemPin: SYSTEM_PIN,
+            adminPassword: ADMIN_PASSWORD,
+            itemDatabase: itemDatabase,
+            stockList: stockList,
+            customHeaderLogo: customHeaderLogo,
+            customLogoOpacity: customLogoOpacity,
+            backupDate: new Date().toISOString()
+        };
+        let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData, null, 2));
+        let downloadAnchor = document.createElement('a');
+        downloadAnchor.setAttribute("href", dataStr);
+        downloadAnchor.setAttribute("download", "viola_stock_backup_" + new Date().toISOString().slice(0,10) + ".json");
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        downloadAnchor.remove();
+        alert("✅ Complete Database Backup Downloaded Successfully!");
+    }
+
+    function restoreSystemBackup(event) {
+        if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); event.target.value = ''; return; }
+        let file = event.target.files[0];
+        if (!file) return;
+
+        if (!confirm("⚠️ Warning: Restoring a backup will overwrite current system data. Proceed?")) {
+            event.target.value = '';
             return;
         }
-        try {
-            backupDirHandle = await window.showDirectoryPicker();
-            document.getElementById('backupStatusText').innerText = "Backup Folder: Connected Successfully! ✅";
-            alert("✅ Backup folder linked successfully! All updates will now automatically save to your PC folder.");
-            triggerAutoBackup();
-        } catch (err) {
-            console.error(err);
-        }
-    }
 
-    async function triggerAutoBackup() {
-        if (!backupDirHandle) return;
-        try {
-            const fileHandle = await backupDirHandle.getFileHandle("stock_backup.json", { create: true });
-            const writable = await fileHandle.createWritable();
-            const backupData = {
-                storeName: storeName,
-                lastUpdated: new Date().toISOString(),
-                stockList: stockList,
-                itemDatabase: itemDatabase
-            };
-            await writable.write(JSON.stringify(backupData, null, 2));
-            await writable.close();
-        } catch (e) {
-            console.error("Auto backup failed:", e);
-        }
-    }
+        let reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                let backupData = JSON.parse(e.target.result);
+                if (backupData.storeName) { storeName = backupData.storeName; localStorage.setItem('viola_store_name', storeName); }
+                if (backupData.systemPin) { SYSTEM_PIN = backupData.systemPin; localStorage.setItem('system_custom_pin', SYSTEM_PIN); if (pinRef) pinRef.set(SYSTEM_PIN); }
+                if (backupData.adminPassword) { ADMIN_PASSWORD = backupData.adminPassword; localStorage.setItem('admin_custom_pwd', ADMIN_PASSWORD); if (pwdRef) pwdRef.set(ADMIN_PASSWORD); }
+                if (backupData.itemDatabase) { itemDatabase = backupData.itemDatabase; localStorage.setItem('viola_item_db', JSON.stringify(itemDatabase)); if (itemDbRef) itemDbRef.set(itemDatabase); }
+                if (backupData.stockList) { stockList = backupData.stockList; localStorage.setItem('viola_stock_list', JSON.stringify(stockList)); if (dbRef) dbRef.set(stockList); }
+                if (backupData.customHeaderLogo !== undefined) { customHeaderLogo = backupData.customHeaderLogo; localStorage.setItem('viola_header_logo', customHeaderLogo); }
+                if (backupData.customLogoOpacity !== undefined) { customLogoOpacity = backupData.customLogoOpacity; localStorage.setItem('viola_logo_opacity', customLogoOpacity); }
 
-    function saveToLocalStorage() {
-        localStorage.setItem('stock_list_items', JSON.stringify(stockList));
-        localStorage.setItem('stock_boxes', JSON.stringify(boxes));
-        localStorage.setItem('master_item_db', JSON.stringify(itemDatabase));
-        if (dbRef) dbRef.set(stockList);
-        triggerAutoBackup();
+                applyStoreIdentity();
+                updateBoxDropdown();
+                populateDatalists();
+                updateDbCount();
+                renderTable();
+                alert("✅ System successfully restored from backup file!");
+            } catch (err) {
+                alert("❌ Invalid backup file format!");
+            }
+            event.target.value = '';
+        };
+        reader.readAsText(file);
     }
 
     function updateModeColor() {
@@ -755,19 +879,20 @@
         }
     }
 
-    function showSuccessToast(itemName, qty, mode) {
-        let container = document.getElementById('toastContainer');
-        let toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.innerHTML = `<div><b>✅ Success!</b> ${itemName} (${qty} Pcs) processed successfully.</div>`;
-        container.appendChild(toast);
-        setTimeout(() => toast.remove(), 3000);
-    }
-
     function applyStoreIdentity() {
         document.getElementById('displayStoreName').innerText = storeName;
         document.getElementById('pageTitle').innerText = storeName;
         document.getElementById('storeNameInput').value = storeName;
+
+        let headerArea = document.getElementById('headerArea');
+        if (customHeaderLogo) {
+            headerArea.style.setProperty('--header-bg-image', `url(${customHeaderLogo})`);
+        } else {
+            headerArea.style.removeProperty('--header-bg-image');
+        }
+        headerArea.style.setProperty('--header-bg-opacity', customLogoOpacity);
+        document.getElementById('logoOpacityRange').value = customLogoOpacity;
+        document.getElementById('opacityValLabel').innerText = customLogoOpacity;
     }
 
     function saveStoreSettings() {
@@ -775,10 +900,48 @@
         let nameInput = document.getElementById('storeNameInput').value.trim();
         if (nameInput) {
             storeName = nameInput;
-            localStorage.setItem('store_custom_name', storeName);
+            localStorage.setItem('viola_store_name', storeName);
             applyStoreIdentity();
             alert("Store name updated!");
         }
+    }
+
+    function handleHeaderLogoUpload(event) {
+        if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); event.target.value = ''; return; }
+        let file = event.target.files[0];
+        if (!file) return;
+        let reader = new FileReader();
+        reader.onload = function(e) {
+            customHeaderLogo = e.target.result;
+            localStorage.setItem('viola_header_logo', customHeaderLogo);
+            applyStoreIdentity();
+            alert("✅ Header background logo uploaded successfully!");
+            event.target.value = '';
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function updateLogoOpacity(val) {
+        customLogoOpacity = parseFloat(val);
+        localStorage.setItem('viola_logo_opacity', customLogoOpacity);
+        document.getElementById('opacityValLabel').innerText = customLogoOpacity;
+        let headerArea = document.getElementById('headerArea');
+        headerArea.style.setProperty('--header-bg-opacity', customLogoOpacity);
+    }
+
+    function resetHeaderLogo() {
+        if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); return; }
+        customHeaderLogo = "";
+        localStorage.removeItem('viola_header_logo');
+        applyStoreIdentity();
+        alert("✅ Custom logo removed!");
+    }
+
+    function switchSettingsTab(tabId, btnEl) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        btnEl.classList.add('active');
     }
 
     function updateBoxDropdown() {
@@ -806,20 +969,6 @@
         document.getElementById('dbCount').innerText = Object.keys(itemDatabase).length;
     }
 
-    function openSettings() {
-        if (!isAdminLoggedIn) {
-            let pwd = prompt("⚙️ Enter Admin Password to open Settings:");
-            if (pwd === ADMIN_PASSWORD) { 
-                isAdminLoggedIn = true; 
-                updateUIMode(); 
-            } else { 
-                alert("❌ Incorrect Password!"); 
-                return; 
-            }
-        }
-        document.getElementById('settingsModal').style.display = 'block';
-    }
-
     function closeSettings() { document.getElementById('settingsModal').style.display = 'none'; }
     function openPasswordChangeModal() { document.getElementById('passwordModal').style.display = 'block'; }
     function closePasswordModal() { document.getElementById('passwordModal').style.display = 'none'; }
@@ -834,7 +983,7 @@
     function triggerOtpRequest() {
         generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
         let formData = new FormData();
-        formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY");
+        formData.append("access_key", "8d706dba-27ef-40b8-8bae-06ea72d014da");
         formData.append("email", targetEmail);
         formData.append("subject", "Password Reset OTP");
         formData.append("message", "Your OTP is: " + generatedOtp);
@@ -862,7 +1011,7 @@
         ADMIN_PASSWORD = newPwd;
         localStorage.setItem('admin_custom_pwd', ADMIN_PASSWORD);
         if (pwdRef) pwdRef.set(ADMIN_PASSWORD);
-        alert("✅ Password updated successfully across all devices!");
+        alert("✅ Password updated successfully and saved!");
         closePasswordModal();
     }
 
@@ -881,13 +1030,13 @@
                 let sku = String(row['sku'] || row['SKU'] || '').trim().toUpperCase();
                 let name = String(row['product_name'] || row['Name'] || '').trim();
                 if (sku) {
-                    itemDatabase[sku] = { name: name || "Item", category: row['category'] || "Gen", unit_qty: parseInt(row['quantity'] || 0) || 0, brand: row['brand'] || "" };
+                    itemDatabase[sku] = { name: name || "Item", category: row['category'] || "Gen", unit_qty: parseInt(row['quantity'] || row['unit_quantity'] || 0) || 0, brand: row['brand'] || "" };
                 }
             });
             saveToLocalStorage();
             populateDatalists();
             updateDbCount();
-            alert("Excel uploaded successfully!");
+            alert("✅ Additional Excel items uploaded & saved to database!");
         };
         reader.readAsArrayBuffer(file);
     }
@@ -902,11 +1051,10 @@
             document.getElementById('brandName').value = item.brand || "";
         }
     }
-    function autoFillByName() {}
 
     function addItem() {
         if (!isAdminLoggedIn) { alert("⚠️ Admin privilege required!"); return; }
-        let mode = document.getElementById('operationMode').value;
+        let mode = document.getElementById('operationMode').value || 'add';
         let boxNo = document.getElementById('boxNo').value;
         let sku = document.getElementById('itemCode').value.trim().toUpperCase() || "SKU-" + Date.now();
         let name = document.getElementById('itemName').value.trim();
@@ -923,7 +1071,6 @@
         }
         saveToLocalStorage();
         renderTable();
-        showSuccessToast(name, qty, mode);
         document.getElementById('itemCode').value = '';
         document.getElementById('itemName').value = '';
         document.getElementById('qty').value = '';
@@ -942,12 +1089,12 @@
     }
 
     function deleteRow(index) {
-        if (prompt("Enter Admin Password to delete:") === ADMIN_PASSWORD) {
+        if (isAdminLoggedIn) {
             stockList.splice(index, 1);
             saveToLocalStorage();
             renderTable();
             alert("Deleted successfully.");
-        } else { alert("Incorrect Password!"); }
+        } else { alert("Admin privilege required!"); }
     }
 
     function openReportModal() {
