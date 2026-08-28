@@ -225,12 +225,12 @@
     </div>
 </div>
 
-<!-- Password Reset via Web3Forms OTP Modal -->
+<!-- Password Reset Modal -->
 <div id="forgotPasswordModal" class="modal" style="z-index: 10000;">
     <div class="modal-content" style="max-width: 450px; text-align: center;">
         <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
         <h3 style="color: var(--accent-blue);">📧 Password Reset Verification</h3>
-        <p style="font-size: 13px; color: #94a3b8;">Forgotten your password? Click to send a 4-Digit Reset OTP to registered Email (<b>v***@gmail.com</b>).</p>
+        <p style="font-size: 13px; color: #94a3b8;">Forgotten your password? Click to send a 4-Digit Reset OTP to registered Email (<b>violapvt234@gmail.com</b>).</p>
         
         <button class="action-btn" style="background:var(--accent-blue);" onclick="sendWeb3FormsOTP()">Send Verification OTP Code</button>
         
@@ -342,7 +342,7 @@
     </div>
 </div>
 
-<!-- Settings Modal (With Old Password Check) -->
+<!-- Settings Modal -->
 <div id="settingsModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeSettings()">&times;</span>
@@ -413,7 +413,7 @@
 </div>
 
 <script>
-    const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY"; // Web3Forms Access Key එක මෙතැනට යොදන්න
+    const WEB3FORMS_ACCESS_KEY = "9db2e479-2819-4cd3-b3c5-3ce22be96ef5";
     const ADMIN_TARGET_EMAIL = "violapvt234@gmail.com";
 
     let ADMIN_PIN = localStorage.getItem("admin_pin") || "1234";
@@ -479,7 +479,6 @@
         }
     }
 
-    // Require Old Admin Password to Change Passwords Inside Settings
     function updateSecurityPinsWithOldCheck() {
         const currentEnteredPin = document.getElementById("currentAdminPin").value.trim();
         const newAdminPin = document.getElementById("setAdminPin").value.trim();
@@ -506,7 +505,6 @@
     function openForgotPasswordModal() { document.getElementById("forgotPasswordModal").style.display = "block"; }
     function closeForgotPasswordModal() { document.getElementById("forgotPasswordModal").style.display = "none"; }
 
-    // Live Web3Forms Email Sending
     function sendWeb3FormsOTP() {
         generatedResetCode = Math.floor(1000 + Math.random() * 9000).toString();
 
@@ -526,8 +524,7 @@
             document.getElementById("otpSection").style.display = "block";
         })
         .catch(error => {
-            // Fallback Code
-            alert(`📧 OTP Code sent to: ${ADMIN_TARGET_EMAIL}\n\n[DEMO CODE]: ${generatedResetCode}`);
+            alert(`📧 OTP Code sent to: ${ADMIN_TARGET_EMAIL}\n\n[FALLBACK CODE]: ${generatedResetCode}`);
             document.getElementById("otpSection").style.display = "block";
         });
     }
